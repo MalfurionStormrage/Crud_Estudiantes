@@ -2,6 +2,10 @@
 
 Public Class Form_Agregar_Notas
 
+    Private nota1 As Double = 0
+    Private nota2 As Double = 0
+    Private nota3 As Double = 0
+
 #Region "Codigo para mover elementos"
 
     'dependencia para asignar movilidad a lementos'
@@ -16,39 +20,39 @@ Public Class Form_Agregar_Notas
 
 #Region "Efecto placeholder"
     'Se utiliza los evento enter y leave para realiar efecto "placeholder" '
-    Private Sub InputNota1_Enter(sender As Object, e As EventArgs) Handles TextBox1.Enter
-        If Me.TextBox1.Text = "Escribe La Nota 1" Then
-            Me.TextBox1.Text = ""
+    Private Sub InputNota1_Enter(sender As Object, e As EventArgs) Handles input_Nota1.Enter
+        If Me.input_Nota1.Text = "Escribe La Nota 1" Then
+            Me.input_Nota1.Text = ""
         End If
     End Sub
 
-    Private Sub InputNota2_Enter(sender As Object, e As EventArgs) Handles TextBox2.Enter
-        If Me.TextBox2.Text = "Escribe La Nota 2" Then
-            Me.TextBox2.Text = ""
+    Private Sub InputNota2_Enter(sender As Object, e As EventArgs) Handles input_Nota2.Enter
+        If Me.input_Nota2.Text = "Escribe La Nota 2" Then
+            Me.input_Nota2.Text = ""
         End If
     End Sub
 
-    Private Sub InputNota3_Enter(sender As Object, e As EventArgs) Handles TextBox3.Enter
-        If Me.TextBox3.Text = "Escribe La Nota 3" Then
-            Me.TextBox3.Text = ""
+    Private Sub InputNota3_Enter(sender As Object, e As EventArgs) Handles input_Nota3.Enter
+        If Me.input_Nota3.Text = "Escribe La Nota 3" Then
+            Me.input_Nota3.Text = ""
         End If
     End Sub
 
-    Private Sub InputNota1_Leave(sender As Object, e As EventArgs) Handles TextBox1.Leave
-        If Me.TextBox1.Text = "" Then
-            Me.TextBox1.Text = "Escribe La Nota 1"
+    Private Sub InputNota1_Leave(sender As Object, e As EventArgs) Handles input_Nota1.Leave
+        If Me.input_Nota1.Text = "" Then
+            Me.input_Nota1.Text = "Escribe La Nota 1"
         End If
     End Sub
 
-    Private Sub InputNota2_Leave(sender As Object, e As EventArgs) Handles TextBox2.Leave
-        If Me.TextBox2.Text = "" Then
-            Me.TextBox2.Text = "Escribe La Nota 2"
+    Private Sub InputNota2_Leave(sender As Object, e As EventArgs) Handles input_Nota2.Leave
+        If Me.input_Nota2.Text = "" Then
+            Me.input_Nota2.Text = "Escribe La Nota 2"
         End If
     End Sub
 
-    Private Sub InputNota3_Leave(sender As Object, e As EventArgs) Handles TextBox3.Leave
-        If Me.TextBox3.Text = "" Then
-            Me.TextBox3.Text = "Escribe La Nota 3"
+    Private Sub InputNota3_Leave(sender As Object, e As EventArgs) Handles input_Nota3.Leave
+        If Me.input_Nota3.Text = "" Then
+            Me.input_Nota3.Text = "Escribe La Nota 3"
         End If
     End Sub
 
@@ -66,7 +70,7 @@ Public Class Form_Agregar_Notas
         SendMessage(Me.Handle, &H112&, &HF012&, 0)
     End Sub
 
-    Private Sub TextBox1_KeyPress(sender As Object, e As KeyPressEventArgs) Handles TextBox1.KeyPress
+    Private Sub TextBox1_KeyPress(sender As Object, e As KeyPressEventArgs) Handles input_Nota1.KeyPress
         'solo permitir numeros en textbox'
         If Char.IsDigit(e.KeyChar) Then
             e.Handled = False
@@ -84,14 +88,31 @@ Public Class Form_Agregar_Notas
     End Sub
 
     Private Sub select_nota_SelectedIndexChanged(sender As Object, e As EventArgs) Handles select_nota.SelectedIndexChanged
-        If (select_nota.SelectedIndex <> "0") Then
-            Me.panel_Notas.Visible = True
-        Else
-            Me.panel_Notas.Visible = False
-        End If
-    End Sub
 
-    Private Sub TextBox1_Enter(sender As Object, e As EventArgs) Handles TextBox1.Enter
+
+        Select Case select_nota.SelectedIndex
+            Case "0"
+                Me.input_Nota1.Visible = False
+                Me.input_Nota2.Visible = False
+                Me.input_Nota3.Visible = False
+
+            Case "1"
+
+                Me.input_Nota1.Visible = True
+                Me.input_Nota2.Visible = False
+                Me.input_Nota3.Visible = False
+
+            Case "2"
+                Me.input_Nota1.Visible = False
+                Me.input_Nota2.Visible = True
+                Me.input_Nota3.Visible = False
+
+            Case "3"
+                Me.input_Nota1.Visible = False
+                Me.input_Nota2.Visible = False
+                Me.input_Nota3.Visible = True
+
+        End Select
 
     End Sub
 

@@ -165,7 +165,7 @@ Partial Class Aplicacion
         Me.IconButton4.IconColor = System.Drawing.Color.FromArgb(CType(CType(220, Byte), Integer), CType(CType(53, Byte), Integer), CType(CType(69, Byte), Integer))
         Me.IconButton4.IconFont = FontAwesome.Sharp.IconFont.[Auto]
         Me.IconButton4.IconSize = 20
-        Me.IconButton4.Location = New System.Drawing.Point(682, 92)
+        Me.IconButton4.Location = New System.Drawing.Point(682, 96)
         Me.IconButton4.Name = "IconButton4"
         Me.IconButton4.Rotation = 180.0R
         Me.IconButton4.Size = New System.Drawing.Size(30, 30)
