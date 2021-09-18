@@ -164,7 +164,7 @@ Partial Class Aplicacion
         Me.IconButton4.IconColor = System.Drawing.Color.FromArgb(CType(CType(220, Byte), Integer), CType(CType(53, Byte), Integer), CType(CType(69, Byte), Integer))
         Me.IconButton4.IconFont = FontAwesome.Sharp.IconFont.[Auto]
         Me.IconButton4.IconSize = 20
-        Me.IconButton4.Location = New System.Drawing.Point(1153, 92)
+        Me.IconButton4.Location = New System.Drawing.Point(682, 96)
         Me.IconButton4.Name = "IconButton4"
         Me.IconButton4.Rotation = 180.0R
         Me.IconButton4.Size = New System.Drawing.Size(30, 30)
@@ -190,7 +190,7 @@ Partial Class Aplicacion
         Me.Combobox_Seleccionar_carreras_fil.FormattingEnabled = True
         Me.Combobox_Seleccionar_carreras_fil.Location = New System.Drawing.Point(32, 100)
         Me.Combobox_Seleccionar_carreras_fil.Name = "Combobox_Seleccionar_carreras_fil"
-        Me.Combobox_Seleccionar_carreras_fil.Size = New System.Drawing.Size(1115, 25)
+        Me.Combobox_Seleccionar_carreras_fil.Size = New System.Drawing.Size(644, 25)
         Me.Combobox_Seleccionar_carreras_fil.TabIndex = 5
         '
         'Label3
@@ -215,7 +215,7 @@ Partial Class Aplicacion
         Me.DataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.DataGridView2.Location = New System.Drawing.Point(33, 174)
         Me.DataGridView2.Name = "DataGridView2"
-        Me.DataGridView2.Size = New System.Drawing.Size(1151, 249)
+        Me.DataGridView2.Size = New System.Drawing.Size(680, 249)
         Me.DataGridView2.TabIndex = 7
         '
         'Btn_Agregar_Estudiantes
@@ -233,7 +233,7 @@ Partial Class Aplicacion
         Me.Btn_Agregar_Estudiantes.Location = New System.Drawing.Point(32, 128)
         Me.Btn_Agregar_Estudiantes.Name = "Btn_Agregar_Estudiantes"
         Me.Btn_Agregar_Estudiantes.Padding = New System.Windows.Forms.Padding(140, 0, 0, 0)
-        Me.Btn_Agregar_Estudiantes.Size = New System.Drawing.Size(1151, 39)
+        Me.Btn_Agregar_Estudiantes.Size = New System.Drawing.Size(680, 39)
         Me.Btn_Agregar_Estudiantes.TabIndex = 8
         Me.Btn_Agregar_Estudiantes.Text = "Agregar Nuevo Estudiantes"
         Me.Btn_Agregar_Estudiantes.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
