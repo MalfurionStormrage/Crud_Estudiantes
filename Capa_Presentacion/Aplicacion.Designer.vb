@@ -43,6 +43,7 @@ Partial Class Aplicacion
         Me.Btn_Eliminar_Estudiante = New FontAwesome.Sharp.IconButton()
         Me.select_Eliminar_Estudiantes = New System.Windows.Forms.ComboBox()
         Me.Panel2 = New System.Windows.Forms.Panel()
+        Me.IconButton5 = New FontAwesome.Sharp.IconButton()
         Me.Panel1.SuspendLayout()
         CType(Me.table_estudiantes, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.table_notas, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -164,7 +165,7 @@ Partial Class Aplicacion
         Me.IconButton4.IconColor = System.Drawing.Color.FromArgb(CType(CType(220, Byte), Integer), CType(CType(53, Byte), Integer), CType(CType(69, Byte), Integer))
         Me.IconButton4.IconFont = FontAwesome.Sharp.IconFont.[Auto]
         Me.IconButton4.IconSize = 20
-        Me.IconButton4.Location = New System.Drawing.Point(682, 96)
+        Me.IconButton4.Location = New System.Drawing.Point(682, 92)
         Me.IconButton4.Name = "IconButton4"
         Me.IconButton4.Rotation = 180.0R
         Me.IconButton4.Size = New System.Drawing.Size(30, 30)
@@ -215,6 +216,7 @@ Partial Class Aplicacion
         Me.table_estudiantes.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.table_estudiantes.Location = New System.Drawing.Point(33, 174)
         Me.table_estudiantes.Name = "table_estudiantes"
+        Me.table_estudiantes.ReadOnly = True
         Me.table_estudiantes.Size = New System.Drawing.Size(680, 249)
         Me.table_estudiantes.TabIndex = 7
         '
@@ -260,6 +262,7 @@ Partial Class Aplicacion
         Me.table_notas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.table_notas.Location = New System.Drawing.Point(33, 473)
         Me.table_notas.Name = "table_notas"
+        Me.table_notas.ReadOnly = True
         Me.table_notas.Size = New System.Drawing.Size(680, 100)
         Me.table_notas.TabIndex = 11
         '
@@ -321,6 +324,7 @@ Partial Class Aplicacion
         '
         Me.Panel2.BackColor = System.Drawing.Color.White
         Me.Panel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.Panel2.Controls.Add(Me.IconButton5)
         Me.Panel2.Controls.Add(Me.Label8)
         Me.Panel2.Controls.Add(Me.Label10)
         Me.Panel2.Controls.Add(Me.Label2)
@@ -334,6 +338,23 @@ Partial Class Aplicacion
         Me.Panel2.Name = "Panel2"
         Me.Panel2.Size = New System.Drawing.Size(1200, 600)
         Me.Panel2.TabIndex = 16
+        '
+        'IconButton5
+        '
+        Me.IconButton5.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.IconButton5.BackColor = System.Drawing.Color.Gainsboro
+        Me.IconButton5.FlatAppearance.BorderSize = 0
+        Me.IconButton5.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.IconButton5.IconChar = FontAwesome.Sharp.IconChar.Brush
+        Me.IconButton5.IconColor = System.Drawing.Color.FromArgb(CType(CType(220, Byte), Integer), CType(CType(53, Byte), Integer), CType(CType(69, Byte), Integer))
+        Me.IconButton5.IconFont = FontAwesome.Sharp.IconFont.[Auto]
+        Me.IconButton5.IconSize = 20
+        Me.IconButton5.Location = New System.Drawing.Point(682, 436)
+        Me.IconButton5.Name = "IconButton5"
+        Me.IconButton5.Rotation = 180.0R
+        Me.IconButton5.Size = New System.Drawing.Size(30, 30)
+        Me.IconButton5.TabIndex = 14
+        Me.IconButton5.UseVisualStyleBackColor = False
         '
         'Aplicacion
         '
@@ -381,4 +402,5 @@ Partial Class Aplicacion
     Friend WithEvents Btn_Eliminar_Estudiante As FontAwesome.Sharp.IconButton
     Friend WithEvents select_Eliminar_Estudiantes As ComboBox
     Friend WithEvents Panel2 As Panel
+    Friend WithEvents IconButton5 As FontAwesome.Sharp.IconButton
 End Class

@@ -132,6 +132,35 @@ Public Class Aplicacion
         End If
     End Sub
 
+    Private Sub Btn_Eliminar_Estudiante_Click(sender As Object, e As EventArgs) Handles Btn_Eliminar_Estudiante.Click
+        If select_Eliminar_Estudiantes.SelectedIndex <> "0" Then
+            If MessageBox.Show("¿  Estas seguro de eliminar este estudiante ?", "Eliminar estudiante", MessageBoxButtons.OKCancel, MessageBoxIcon.Question, MessageBoxDefaultButton.Button1) = DialogResult.OK Then
+
+                MsgBox("this does not working right now....")
+
+                select_Eliminar_Estudiantes.SelectedIndex = 0
+            End If
+        Else
+            MessageBox.Show(" Debes seleccionar un estudiante para poder eliminar. ", "Eliminar estudiante", MessageBoxButtons.YesNo, MessageBoxIcon.Information)
+        End If
+    End Sub
+
+    Private Sub table_estudiantes_CellClick(sender As Object, e As DataGridViewCellEventArgs) Handles table_estudiantes.CellClick
+
+        Dim numero = table_estudiantes.Rows.Count
+        'realizar consulta de notas a los estudiantes siempre y cuando se de click en fila con datos'
+        If e.RowIndex >= 0 And e.RowIndex < numero - 1 Then
+            Dim notas As New Notas()
+            Dim dato = table_estudiantes.Item(0, e.RowIndex).Value.ToString
+            Me.table_notas.DataSource = Notas.obtenerNotaPorIdDeEstudiante(dato)
+        End If
+    End Sub
+
+    Private Sub IconButton5_Click(sender As Object, e As EventArgs) Handles IconButton5.Click
+        table_notas.DataSource = ""
+    End Sub
+
+
 #End Region
 
 End Class
