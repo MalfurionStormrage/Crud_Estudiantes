@@ -51,7 +51,9 @@
     <Reference Include="FontAwesome.Sharp">
       <HintPath>..\packages\FontAwesome.Sharp.5.15.3\lib\net472\FontAwesome.Sharp.dll</HintPath>
     </Reference>
+    <Reference Include="Microsoft.VisualBasic.PowerPacks, Version=12.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
     <Reference Include="System" />
+    <Reference Include="System.Configuration" />
     <Reference Include="System.Data" />
     <Reference Include="System.Deployment" />
     <Reference Include="System.Drawing" />
@@ -87,6 +89,18 @@
     <Compile Include="consult\Estudiantes.vb" />
     <Compile Include="consult\Materias.vb" />
     <Compile Include="consult\Notas.vb" />
+    <Compile Include="formularios\Form_Agregar_Estudiante.Designer.vb">
+      <DependentUpon>Form_Agregar_Estudiante.vb</DependentUpon>
+    </Compile>
+    <Compile Include="formularios\Form_Agregar_Estudiante.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="formularios\Form_Agregar_Notas.Designer.vb">
+      <DependentUpon>Form_Agregar_Notas.vb</DependentUpon>
+    </Compile>
+    <Compile Include="formularios\Form_Agregar_Notas.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="My Project\AssemblyInfo.vb" />
     <Compile Include="My Project\Application.Designer.vb">
       <AutoGen>True</AutoGen>
@@ -107,6 +121,12 @@
   <ItemGroup>
     <EmbeddedResource Include="Aplicacion.resx">
       <DependentUpon>Aplicacion.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="formularios\Form_Agregar_Estudiante.resx">
+      <DependentUpon>Form_Agregar_Estudiante.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="formularios\Form_Agregar_Notas.resx">
+      <DependentUpon>Form_Agregar_Notas.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="My Project\Resources.resx">
       <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
@@ -139,5 +159,6 @@
     <Content Include="Content\font-awesome.min.css" />
     <Content Include="fonts\fontawesome-webfont.svg" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
 </Project>

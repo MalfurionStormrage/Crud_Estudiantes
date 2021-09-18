@@ -77,6 +77,10 @@ Public Class Aplicacion
         btnViewport()
     End Sub
 
+    Private Sub Btn_Agregar_Estudiantes_Click(sender As Object, e As EventArgs) Handles Btn_Agregar_Estudiantes.Click
+        Form_Agregar_Estudiante.Show()
+    End Sub
+
 
 #End Region
 

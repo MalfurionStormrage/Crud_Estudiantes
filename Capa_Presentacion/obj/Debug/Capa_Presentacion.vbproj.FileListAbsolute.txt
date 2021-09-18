@@ -12,3 +12,7 @@ F:\Crud_Estudiantes\Capa_Presentacion\obj\Debug\Capa_Presentacion.exe
 F:\Crud_Estudiantes\Capa_Presentacion\obj\Debug\Capa_Presentacion.xml
 F:\Crud_Estudiantes\Capa_Presentacion\obj\Debug\Capa_Presentacion.pdb
 F:\Crud_Estudiantes\Capa_Presentacion\obj\Debug\Capa_Presentacion.vbproj.AssemblyReference.cache
+F:\Crud_Estudiantes\Capa_Presentacion\obj\Debug\Capa_Presentacion.Form_Agregar_Estudiante.resources
+F:\Crud_Estudiantes\Capa_Presentacion\bin\Debug\Microsoft.VisualBasic.PowerPacks.dll
+F:\Crud_Estudiantes\Capa_Presentacion\bin\Debug\es\Microsoft.VisualBasic.PowerPacks.resources.dll
+F:\Crud_Estudiantes\Capa_Presentacion\obj\Debug\Capa_Presentacion.Form_Agregar_Notas.resources
