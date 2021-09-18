@@ -22,6 +22,7 @@ Partial Class Form_Agregar_Notas
     'No lo modifique con el editor de código.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Form_Agregar_Notas))
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.Label7 = New System.Windows.Forms.Label()
         Me.IconButton2 = New FontAwesome.Sharp.IconButton()
@@ -33,13 +34,23 @@ Partial Class Form_Agregar_Notas
         Me.TextBox1 = New System.Windows.Forms.TextBox()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Panel2 = New System.Windows.Forms.Panel()
+        Me.panel_Notas = New System.Windows.Forms.Panel()
         Me.Label8 = New System.Windows.Forms.Label()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.select_nota = New System.Windows.Forms.ComboBox()
         Me.ShapeContainer1 = New Microsoft.VisualBasic.PowerPacks.ShapeContainer()
         Me.LineShape1 = New Microsoft.VisualBasic.PowerPacks.LineShape()
+        Me.Panel3 = New System.Windows.Forms.Panel()
+        Me.Label3 = New System.Windows.Forms.Label()
+        Me.TextBox2 = New System.Windows.Forms.TextBox()
+        Me.Panel4 = New System.Windows.Forms.Panel()
+        Me.Label4 = New System.Windows.Forms.Label()
+        Me.TextBox3 = New System.Windows.Forms.TextBox()
         Me.Panel1.SuspendLayout()
         Me.Panel2.SuspendLayout()
+        Me.panel_Notas.SuspendLayout()
+        Me.Panel3.SuspendLayout()
+        Me.Panel4.SuspendLayout()
         Me.SuspendLayout()
         '
         'Panel1
@@ -140,31 +151,30 @@ Partial Class Form_Agregar_Notas
         'TextBox1
         '
         Me.TextBox1.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TextBox1.Location = New System.Drawing.Point(29, 293)
+        Me.TextBox1.Location = New System.Drawing.Point(30, 27)
         Me.TextBox1.MaxLength = 3
         Me.TextBox1.Name = "TextBox1"
         Me.TextBox1.Size = New System.Drawing.Size(320, 27)
         Me.TextBox1.TabIndex = 13
-        Me.TextBox1.Text = "Escribe La Nota"
+        Me.TextBox1.Text = "Escribe La Nota 1"
         '
         'Label2
         '
         Me.Label2.AutoSize = True
         Me.Label2.Font = New System.Drawing.Font("Century Gothic", 12.0!)
-        Me.Label2.Location = New System.Drawing.Point(25, 269)
+        Me.Label2.Location = New System.Drawing.Point(30, 3)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(50, 21)
+        Me.Label2.Size = New System.Drawing.Size(63, 21)
         Me.Label2.TabIndex = 11
-        Me.Label2.Text = "Nota"
+        Me.Label2.Text = "Nota 1"
         '
         'Panel2
         '
         Me.Panel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.Panel2.Controls.Add(Me.panel_Notas)
         Me.Panel2.Controls.Add(Me.Label8)
         Me.Panel2.Controls.Add(Me.Label1)
         Me.Panel2.Controls.Add(Me.select_nota)
-        Me.Panel2.Controls.Add(Me.TextBox1)
-        Me.Panel2.Controls.Add(Me.Label2)
         Me.Panel2.Controls.Add(Me.Btn_Agregar_Notas)
         Me.Panel2.Controls.Add(Me.ShapeContainer1)
         Me.Panel2.Dock = System.Windows.Forms.DockStyle.Fill
@@ -172,6 +182,16 @@ Partial Class Form_Agregar_Notas
         Me.Panel2.Name = "Panel2"
         Me.Panel2.Size = New System.Drawing.Size(380, 450)
         Me.Panel2.TabIndex = 17
+        '
+        'panel_Notas
+        '
+        Me.panel_Notas.Controls.Add(Me.Panel3)
+        Me.panel_Notas.Controls.Add(Me.Label2)
+        Me.panel_Notas.Controls.Add(Me.TextBox1)
+        Me.panel_Notas.Location = New System.Drawing.Point(-1, 272)
+        Me.panel_Notas.Name = "panel_Notas"
+        Me.panel_Notas.Size = New System.Drawing.Size(380, 73)
+        Me.panel_Notas.TabIndex = 21
         '
         'Label8
         '
@@ -197,6 +217,7 @@ Partial Class Form_Agregar_Notas
         '
         Me.select_nota.Font = New System.Drawing.Font("Century Gothic", 12.0!)
         Me.select_nota.FormattingEnabled = True
+        Me.select_nota.Items.AddRange(New Object() {"-- Selecciona nota a asignar --", "Nota 1", "Nota 2", "Nota 3"})
         Me.select_nota.Location = New System.Drawing.Point(29, 237)
         Me.select_nota.Name = "select_nota"
         Me.select_nota.Size = New System.Drawing.Size(320, 29)
@@ -222,6 +243,65 @@ Partial Class Form_Agregar_Notas
         Me.LineShape1.Y1 = 81
         Me.LineShape1.Y2 = 81
         '
+        'Panel3
+        '
+        Me.Panel3.Controls.Add(Me.Panel4)
+        Me.Panel3.Controls.Add(Me.Label3)
+        Me.Panel3.Controls.Add(Me.TextBox2)
+        Me.Panel3.Location = New System.Drawing.Point(0, 0)
+        Me.Panel3.Name = "Panel3"
+        Me.Panel3.Size = New System.Drawing.Size(380, 73)
+        Me.Panel3.TabIndex = 22
+        '
+        'Label3
+        '
+        Me.Label3.AutoSize = True
+        Me.Label3.Font = New System.Drawing.Font("Century Gothic", 12.0!)
+        Me.Label3.Location = New System.Drawing.Point(30, 3)
+        Me.Label3.Name = "Label3"
+        Me.Label3.Size = New System.Drawing.Size(63, 21)
+        Me.Label3.TabIndex = 11
+        Me.Label3.Text = "Nota 2"
+        '
+        'TextBox2
+        '
+        Me.TextBox2.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.TextBox2.Location = New System.Drawing.Point(30, 27)
+        Me.TextBox2.MaxLength = 3
+        Me.TextBox2.Name = "TextBox2"
+        Me.TextBox2.Size = New System.Drawing.Size(320, 27)
+        Me.TextBox2.TabIndex = 13
+        Me.TextBox2.Text = "Escribe La Nota 2"
+        '
+        'Panel4
+        '
+        Me.Panel4.Controls.Add(Me.Label4)
+        Me.Panel4.Controls.Add(Me.TextBox3)
+        Me.Panel4.Location = New System.Drawing.Point(0, 0)
+        Me.Panel4.Name = "Panel4"
+        Me.Panel4.Size = New System.Drawing.Size(380, 73)
+        Me.Panel4.TabIndex = 22
+        '
+        'Label4
+        '
+        Me.Label4.AutoSize = True
+        Me.Label4.Font = New System.Drawing.Font("Century Gothic", 12.0!)
+        Me.Label4.Location = New System.Drawing.Point(30, 3)
+        Me.Label4.Name = "Label4"
+        Me.Label4.Size = New System.Drawing.Size(63, 21)
+        Me.Label4.TabIndex = 11
+        Me.Label4.Text = "Nota 3"
+        '
+        'TextBox3
+        '
+        Me.TextBox3.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.TextBox3.Location = New System.Drawing.Point(30, 27)
+        Me.TextBox3.MaxLength = 3
+        Me.TextBox3.Name = "TextBox3"
+        Me.TextBox3.Size = New System.Drawing.Size(320, 27)
+        Me.TextBox3.TabIndex = 13
+        Me.TextBox3.Text = "Escribe La Nota 4"
+        '
         'Form_Agregar_Notas
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -234,12 +314,20 @@ Partial Class Form_Agregar_Notas
         Me.Controls.Add(Me.Panel1)
         Me.Controls.Add(Me.Panel2)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
+        Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Name = "Form_Agregar_Notas"
+        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Form_Agregar_Notas"
         Me.Panel1.ResumeLayout(False)
         Me.Panel1.PerformLayout()
         Me.Panel2.ResumeLayout(False)
         Me.Panel2.PerformLayout()
+        Me.panel_Notas.ResumeLayout(False)
+        Me.panel_Notas.PerformLayout()
+        Me.Panel3.ResumeLayout(False)
+        Me.Panel3.PerformLayout()
+        Me.Panel4.ResumeLayout(False)
+        Me.Panel4.PerformLayout()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -261,4 +349,11 @@ Partial Class Form_Agregar_Notas
     Friend WithEvents select_nota As ComboBox
     Friend WithEvents ShapeContainer1 As PowerPacks.ShapeContainer
     Friend WithEvents LineShape1 As PowerPacks.LineShape
+    Friend WithEvents panel_Notas As Panel
+    Friend WithEvents Panel3 As Panel
+    Friend WithEvents Panel4 As Panel
+    Friend WithEvents Label4 As Label
+    Friend WithEvents TextBox3 As TextBox
+    Friend WithEvents Label3 As Label
+    Friend WithEvents TextBox2 As TextBox
 End Class
