@@ -78,7 +78,7 @@ Public Class Aplicacion
     End Sub
 
     Private Sub Btn_Agregar_Estudiantes_Click(sender As Object, e As EventArgs) Handles Btn_Agregar_Estudiantes.Click
-        Form_Agregar_Estudiante.Show()
+        Form_Agregar_Notas.Show()
     End Sub
 
 

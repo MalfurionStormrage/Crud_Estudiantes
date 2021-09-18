@@ -154,10 +154,10 @@ Partial Class Form_Agregar_Estudiante
         Me.Btn_Agregar_Estudiantes.IconSize = 35
         Me.Btn_Agregar_Estudiantes.Location = New System.Drawing.Point(11, 358)
         Me.Btn_Agregar_Estudiantes.Name = "Btn_Agregar_Estudiantes"
-        Me.Btn_Agregar_Estudiantes.Padding = New System.Windows.Forms.Padding(80, 0, 0, 0)
+        Me.Btn_Agregar_Estudiantes.Padding = New System.Windows.Forms.Padding(70, 0, 0, 0)
         Me.Btn_Agregar_Estudiantes.Size = New System.Drawing.Size(355, 40)
         Me.Btn_Agregar_Estudiantes.TabIndex = 17
-        Me.Btn_Agregar_Estudiantes.Text = "Asignar"
+        Me.Btn_Agregar_Estudiantes.Text = "Agregar estudiante"
         Me.Btn_Agregar_Estudiantes.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
         Me.Btn_Agregar_Estudiantes.UseVisualStyleBackColor = False
         '
