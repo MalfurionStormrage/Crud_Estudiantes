@@ -341,7 +341,7 @@ Partial Class Aplicacion
         '
         'IconButton5
         '
-        Me.IconButton5.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.IconButton5.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.IconButton5.BackColor = System.Drawing.Color.Gainsboro
         Me.IconButton5.FlatAppearance.BorderSize = 0
         Me.IconButton5.FlatStyle = System.Windows.Forms.FlatStyle.Flat
