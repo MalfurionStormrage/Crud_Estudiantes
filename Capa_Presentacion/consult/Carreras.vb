@@ -12,7 +12,7 @@
 
             'consulta sql'
             sqlComand.Connection = connectionString
-            sqlComand.CommandText = "OCGN_Proce_ObtenerIdCarreras"
+            sqlComand.CommandText = "OCGN_Proce_ObtenerIdCarrerasPorDescripcion"
             sqlComand.CommandType = CommandType.StoredProcedure
             sqlComand.Parameters.Add("@des", des)
             Dim resultado = sqlComand.ExecuteReader()

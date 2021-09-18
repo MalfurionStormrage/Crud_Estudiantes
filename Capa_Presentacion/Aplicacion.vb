@@ -120,20 +120,11 @@ Public Class Aplicacion
         select_Seleccionar_carreras_fil.SelectedIndex = 0
     End Sub
 
-    'Private Sub select_Seleccionar_carreras_fil_MouseClick(sender As Object, e As MouseEventArgs) Handles select_Seleccionar_carreras_fil.MouseClick
-    '    If (select_Seleccionar_carreras_fil.SelectedIndex <> "0") Then
-    '        MsgBox("ok 1")
-    '    Else
-    '        MsgBox("ok 2")
-    '    End If
-    'End Sub
-
     Private Sub select_Seleccionar_carreras_fil_SelectedIndexChanged(sender As Object, e As EventArgs) Handles select_Seleccionar_carreras_fil.SelectedIndexChanged
         Dim estudiante As New Estudiantes()
         Dim carreras As New Carreras()
         If select_Seleccionar_carreras_fil.SelectedIndex.ToString <> "0" Then
-            Dim codigo = carreras.obtenerIdCarrerasPorDescripcion(select_Seleccionar_carreras_fil.SelectedValue.ToString())
-
+            Dim codigo = carreras.obtenerIdCarrerasPorDescripcion(select_Seleccionar_carreras_fil.Text)
             Dim cod = codigo.Rows(0).Item(0).ToString()
             Me.table_estudiantes.DataSource = estudiante.getEstudiantesPorFiltro(cod)
         Else
