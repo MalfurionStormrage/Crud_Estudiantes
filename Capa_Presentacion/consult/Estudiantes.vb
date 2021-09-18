@@ -79,4 +79,26 @@
         End Try
     End Sub
 
+    Public Sub deleteEstudiante(id As String)
+        Try
+
+            If (connectionString.State.ToString() = "Closed") Then
+                connectionString.Open()
+            End If
+
+            sqlComand.Connection = connectionString
+            sqlComand.CommandText = "DELETE FROM notas WHERE ID_E = '" & id & "'"
+            sqlComand.CommandType = CommandType.Text
+            sqlComand.ExecuteNonQuery()
+
+            sqlComand.CommandText = "DELETE FROM estudiantes WHERE ID_E = '" & id & "'"
+            sqlComand.ExecuteNonQuery()
+
+            connectionString.Close()
+        Catch ex As Exception
+
+            MsgBox("Error en la consulta sql, causa: " + ex.ToString())
+        End Try
+    End Sub
+
 End Class

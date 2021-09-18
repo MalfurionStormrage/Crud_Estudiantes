@@ -136,9 +136,12 @@ Public Class Aplicacion
         If select_Eliminar_Estudiantes.SelectedIndex <> "0" Then
             If MessageBox.Show("¿  Estas seguro de eliminar este estudiante ?", "Eliminar estudiante", MessageBoxButtons.OKCancel, MessageBoxIcon.Question, MessageBoxDefaultButton.Button1) = DialogResult.OK Then
 
-                MsgBox("this does not working right now....")
-
+                Dim estudiante = New Estudiantes()
+                estudiante.deleteEstudiante(select_Eliminar_Estudiantes.Text)
                 select_Eliminar_Estudiantes.SelectedIndex = 0
+                cargarDatos()
+                table_notas.DataSource = ""
+
             End If
         Else
             MessageBox.Show(" Debes seleccionar un estudiante para poder eliminar. ", "Eliminar estudiante", MessageBoxButtons.YesNo, MessageBoxIcon.Information)
