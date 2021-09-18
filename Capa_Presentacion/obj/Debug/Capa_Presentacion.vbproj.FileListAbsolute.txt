@@ -1,0 +1,14 @@
+F:\Crud_Estudiantes\Capa_Presentacion\obj\Debug\Capa_Presentacion.Aplicacion.resources
+F:\Crud_Estudiantes\Capa_Presentacion\obj\Debug\Capa_Presentacion.Resources.resources
+F:\Crud_Estudiantes\Capa_Presentacion\obj\Debug\Capa_Presentacion.vbproj.GenerateResource.cache
+F:\Crud_Estudiantes\Capa_Presentacion\obj\Debug\Capa_Presentacion.vbproj.CoreCompileInputs.cache
+F:\Crud_Estudiantes\Capa_Presentacion\bin\Debug\Capa_Presentacion.exe.config
+F:\Crud_Estudiantes\Capa_Presentacion\bin\Debug\Capa_Presentacion.exe
+F:\Crud_Estudiantes\Capa_Presentacion\bin\Debug\Capa_Presentacion.pdb
+F:\Crud_Estudiantes\Capa_Presentacion\bin\Debug\Capa_Presentacion.xml
+F:\Crud_Estudiantes\Capa_Presentacion\bin\Debug\FontAwesome.Sharp.dll
+F:\Crud_Estudiantes\Capa_Presentacion\obj\Debug\Capa_Presentacion.vbproj.CopyComplete
+F:\Crud_Estudiantes\Capa_Presentacion\obj\Debug\Capa_Presentacion.exe
+F:\Crud_Estudiantes\Capa_Presentacion\obj\Debug\Capa_Presentacion.xml
+F:\Crud_Estudiantes\Capa_Presentacion\obj\Debug\Capa_Presentacion.pdb
+F:\Crud_Estudiantes\Capa_Presentacion\obj\Debug\Capa_Presentacion.vbproj.AssemblyReference.cache
