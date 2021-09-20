@@ -162,48 +162,31 @@ Public Class Form_Agregar_Notas
         'Se debe seleccionar una materia para asignar notas'
         If Me.select_materia.SelectedIndex.ToString() <> "0" Then
 
+            'iniciar clase'
+            Dim notas As New Notas()
+
+            'datos a insertar'
+            Dim id_e As Integer = Convert.ToInt32(Me.TextBox4.Text)
+            Dim descripcion_Materia As String = Me.select_materia.SelectedValue.ToString()
+
+
+            'obtengo valor del id de la materia para asignar nota
+            Dim resultado = notas.GetIdNotas(descripcion_Materia)
+            Dim cod = resultado.Rows(0).Item(0).ToString()
+
             If TextBox1.Text = "false" Then
-                'iniciar clase'
-                Dim notas As New Notas()
-
-                'datos a insertar'
-                Dim id_e As Integer = Convert.ToInt32(Me.TextBox4.Text)
-                Dim descripcion_Materia As String = Me.select_materia.SelectedValue.ToString()
-
-
-                'obtengo valor del id de la materia para asignar nota
-                Dim resultado = notas.GetIdNotas(descripcion_Materia)
-                Dim cod = resultado.Rows(0).Item(0).ToString()
-
                 'consulta sql / asignar notas'
                 notas.setNotas(id_e:=id_e, id_m:=cod, nota1:=nota1, nota2:=nota2, nota3:=nota3)
-
-                'refresco el form principal'
-                Aplicacion.cargarDatos()
-                Aplicacion.Refresh()
-                Me.Close()
             Else
-                'iniciar clase'
-                Dim notas As New Notas()
-
-                'datos a insertar'
-                Dim id_e As Integer = Convert.ToInt32(Me.TextBox4.Text)
-                Dim descripcion_Materia As String = Me.select_materia.SelectedValue.ToString()
-
-
-                'obtengo valor del id de la materia para asignar nota
-                Dim resultado = notas.GetIdNotas(descripcion_Materia)
-                Dim cod = resultado.Rows(0).Item(0).ToString()
-
                 'consulta sql / asignar notas'
                 notas.updatenotas(id_e:=id_e, id_m:=cod, nota1:=nota1, nota2:=nota2, nota3:=nota3)
-
-                'refresco el form principal'
-                Aplicacion.cargarDatos()
-                Aplicacion.Refresh()
-                Me.Close()
             End If
 
+            'refresco el form principal'
+            Aplicacion.cargarDatos()
+            Aplicacion.Refresh()
+            Aplicacion.table_notas.DataSource = ""
+            Me.Close()
 
         Else
 
