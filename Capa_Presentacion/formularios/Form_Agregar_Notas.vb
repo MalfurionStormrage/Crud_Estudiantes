@@ -102,11 +102,6 @@ Public Class Form_Agregar_Notas
         Me.select_materia.DropDownStyle = ComboBoxStyle.DropDownList
         Me.select_nota.SelectedIndex = 0
 
-        If TextBox1.Text = "true" Then
-            Me.Btn_Agregar_Notas.Text = "Actualizar las notas"
-            Me.Btn_Agregar_Notas.BackColor = Color.FromArgb(255, 185, 7)
-        End If
-
     End Sub
 
     Private Sub select_nota_SelectedIndexChanged(sender As Object, e As EventArgs) Handles select_nota.SelectedIndexChanged
