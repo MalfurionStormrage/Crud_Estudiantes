@@ -53,7 +53,7 @@ Partial Class Form_Agregar_Notas
         Me.Panel1.Location = New System.Drawing.Point(0, 0)
         Me.Panel1.Name = "Panel1"
         Me.Panel1.Size = New System.Drawing.Size(380, 40)
-        Me.Panel1.TabIndex = 1
+        Me.Panel1.TabIndex = 0
         '
         'Label7
         '
@@ -78,7 +78,7 @@ Partial Class Form_Agregar_Notas
         Me.IconButton2.Location = New System.Drawing.Point(340, 0)
         Me.IconButton2.Name = "IconButton2"
         Me.IconButton2.Size = New System.Drawing.Size(40, 40)
-        Me.IconButton2.TabIndex = 0
+        Me.IconButton2.TabIndex = 8
         Me.IconButton2.UseVisualStyleBackColor = True
         '
         'Label6
@@ -88,7 +88,7 @@ Partial Class Form_Agregar_Notas
         Me.Label6.Location = New System.Drawing.Point(30, 105)
         Me.Label6.Name = "Label6"
         Me.Label6.Size = New System.Drawing.Size(119, 21)
-        Me.Label6.TabIndex = 6
+        Me.Label6.TabIndex = 0
         Me.Label6.Text = "ID_Estudiante"
         '
         'TextBox4
@@ -98,7 +98,7 @@ Partial Class Form_Agregar_Notas
         Me.TextBox4.Location = New System.Drawing.Point(30, 129)
         Me.TextBox4.Name = "TextBox4"
         Me.TextBox4.Size = New System.Drawing.Size(320, 27)
-        Me.TextBox4.TabIndex = 7
+        Me.TextBox4.TabIndex = 1
         '
         'Label5
         '
@@ -107,7 +107,7 @@ Partial Class Form_Agregar_Notas
         Me.Label5.Location = New System.Drawing.Point(30, 159)
         Me.Label5.Name = "Label5"
         Me.Label5.Size = New System.Drawing.Size(72, 21)
-        Me.Label5.TabIndex = 8
+        Me.Label5.TabIndex = 0
         Me.Label5.Text = "Materia"
         '
         'select_materia
@@ -117,7 +117,7 @@ Partial Class Form_Agregar_Notas
         Me.select_materia.Location = New System.Drawing.Point(30, 181)
         Me.select_materia.Name = "select_materia"
         Me.select_materia.Size = New System.Drawing.Size(320, 29)
-        Me.select_materia.TabIndex = 12
+        Me.select_materia.TabIndex = 2
         '
         'Btn_Agregar_Notas
         '
@@ -134,7 +134,7 @@ Partial Class Form_Agregar_Notas
         Me.Btn_Agregar_Notas.Name = "Btn_Agregar_Notas"
         Me.Btn_Agregar_Notas.Padding = New System.Windows.Forms.Padding(70, 0, 0, 0)
         Me.Btn_Agregar_Notas.Size = New System.Drawing.Size(320, 40)
-        Me.Btn_Agregar_Notas.TabIndex = 16
+        Me.Btn_Agregar_Notas.TabIndex = 7
         Me.Btn_Agregar_Notas.Text = "Asignar notas"
         Me.Btn_Agregar_Notas.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
         Me.Btn_Agregar_Notas.UseVisualStyleBackColor = False
@@ -147,7 +147,7 @@ Partial Class Form_Agregar_Notas
         Me.select_nota.Location = New System.Drawing.Point(29, 237)
         Me.select_nota.Name = "select_nota"
         Me.select_nota.Size = New System.Drawing.Size(320, 29)
-        Me.select_nota.TabIndex = 19
+        Me.select_nota.TabIndex = 3
         Me.select_nota.Text = "Notas"
         '
         'Label1
@@ -157,7 +157,7 @@ Partial Class Form_Agregar_Notas
         Me.Label1.Location = New System.Drawing.Point(122, 52)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(154, 24)
-        Me.Label1.TabIndex = 1
+        Me.Label1.TabIndex = 0
         Me.Label1.Text = "Asignar Notas "
         '
         'Label8
@@ -167,7 +167,7 @@ Partial Class Form_Agregar_Notas
         Me.Label8.Location = New System.Drawing.Point(29, 215)
         Me.Label8.Name = "Label8"
         Me.Label8.Size = New System.Drawing.Size(56, 21)
-        Me.Label8.TabIndex = 18
+        Me.Label8.TabIndex = 0
         Me.Label8.Text = "Notas"
         '
         'input_Nota1
@@ -177,7 +177,7 @@ Partial Class Form_Agregar_Notas
         Me.input_Nota1.MaxLength = 3
         Me.input_Nota1.Name = "input_Nota1"
         Me.input_Nota1.Size = New System.Drawing.Size(320, 27)
-        Me.input_Nota1.TabIndex = 13
+        Me.input_Nota1.TabIndex = 4
         Me.input_Nota1.Text = "Escribe La Nota 1"
         '
         'input_Nota3
@@ -187,7 +187,7 @@ Partial Class Form_Agregar_Notas
         Me.input_Nota3.MaxLength = 3
         Me.input_Nota3.Name = "input_Nota3"
         Me.input_Nota3.Size = New System.Drawing.Size(320, 27)
-        Me.input_Nota3.TabIndex = 13
+        Me.input_Nota3.TabIndex = 6
         Me.input_Nota3.Text = "Escribe La Nota 3"
         '
         'Panel2
@@ -214,7 +214,7 @@ Partial Class Form_Agregar_Notas
         Me.input_Nota2.MaxLength = 3
         Me.input_Nota2.Name = "input_Nota2"
         Me.input_Nota2.Size = New System.Drawing.Size(320, 27)
-        Me.input_Nota2.TabIndex = 13
+        Me.input_Nota2.TabIndex = 5
         Me.input_Nota2.Text = "Escribe La Nota 2"
         '
         'ShapeContainer1

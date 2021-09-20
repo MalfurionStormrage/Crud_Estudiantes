@@ -34,6 +34,24 @@ Public Class Form_Agregar_Estudiante
         Input_Identificacion.Focus()
     End Sub
 
+    Sub comparar(e As KeyPressEventArgs)
+        If e.KeyChar = Convert.ToChar(Keys.Enter) Then
+            If Input_Identificacion.Text = "" Then
+                Input_Identificacion.Focus()
+            ElseIf Input_Nombre.Text = "" Then
+                Input_Nombre.Focus()
+            ElseIf Input_Edad.Text = "" Then
+                Input_Edad.Focus()
+            ElseIf Select_Carrera.SelectedIndex = "0" Then
+                Select_Carrera.Focus()
+            ElseIf Input_Usuario.Text = "" Then
+                Input_Usuario.Focus()
+            Else
+                Btn_Agregar_Estudiantes.Focus()
+            End If
+        End If
+    End Sub
+
     Private Sub TextBox3_KeyPress(sender As Object, e As KeyPressEventArgs) Handles Input_Edad.KeyPress, Input_Identificacion.KeyPress
         'solo permitir numeros en textbox'
         If Char.IsDigit(e.KeyChar) Then
@@ -43,44 +61,7 @@ Public Class Form_Agregar_Estudiante
         Else
             e.Handled = True
         End If
-
-        'If e.KeyChar = Convert.ToChar(Keys.Enter) Then
-
-        '    'If Input_Identificacion.Text <> "" Then
-        '    '    Input_Nombre.Focus()
-        '    'ElseIf Input_Nombre.Text <> "" Then
-        '    '    Input_Edad.Focus()
-        '    'ElseIf Input_Edad.Text <> "" Then
-        '    '    Me.Select_Carrera.Focus()
-        '    'ElseIf (Me.Select_Carrera.SelectedIndex.ToString() <> "1") Then
-        '    '    Btn_Agregar_Estudiantes.Focus()
-        '    'End If
-
-        '    If Input_Identificacion.Text <> "" Then
-        '        Input_Nombre.Focus()
-        '    Else
-        '        Input_Identificacion.Focus()
-        '    End If
-
-        '    If Input_Nombre.Text <> "" Then
-        '        Input_Edad.Focus()
-        '    Else
-        '        Input_Nombre.Focus()
-        '    End If
-
-        '    If Input_Edad.Text <> "" Then
-        '        Select_Carrera.Focus()
-        '    Else
-        '        Input_Edad.Focus()
-        '    End If
-
-        '    If Select_Carrera.SelectedIndex <> "0" Then
-        '        Btn_Agregar_Estudiantes.Focus()
-        '    Else
-        '        Select_Carrera.Focus()
-        '    End If
-
-        'End If
+        comparar(e)
     End Sub
 
     Private Sub Form_Agregar_Estudiante_Load(sender As Object, e As EventArgs) Handles MyBase.Load
@@ -129,6 +110,10 @@ Public Class Form_Agregar_Estudiante
         Else
             MessageBox.Show("Todos los campos son obligatios.", "Informacion", MessageBoxButtons.OK, MessageBoxIcon.Information)
         End If
+    End Sub
+
+    Private Sub Input_Nombre_KeyPress(sender As Object, e As KeyPressEventArgs) Handles Input_Nombre.KeyPress, Select_Carrera.KeyPress, Input_Usuario.KeyPress
+        comparar(e)
     End Sub
 
 #End Region
