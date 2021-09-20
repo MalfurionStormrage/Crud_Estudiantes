@@ -181,6 +181,10 @@ Public Class Aplicacion
         table_notas.DataSource = ""
     End Sub
 
+    Private Sub IconButton7_Click(sender As Object, e As EventArgs) Handles IconButton7.Click
+        MessageBox.Show("Para utilizar este apartado debes seleccionar un estudiante de la tabla estudiantes y posterior a ello editar sus datos.", "Apartado de ediccion", MessageBoxButtons.OK, MessageBoxIcon.Information)
+    End Sub
+
 
 #End Region
 

@@ -62,6 +62,9 @@ Partial Class Aplicacion
         Me.input_Edit_Edad_Estu = New System.Windows.Forms.TextBox()
         Me.Label4 = New System.Windows.Forms.Label()
         Me.input_Edit_Nombre_Estu = New System.Windows.Forms.TextBox()
+        Me.IconButton7 = New FontAwesome.Sharp.IconButton()
+        Me.ShapeContainer1 = New Microsoft.VisualBasic.PowerPacks.ShapeContainer()
+        Me.LineShape1 = New Microsoft.VisualBasic.PowerPacks.LineShape()
         Me.Panel1.SuspendLayout()
         CType(Me.table_notas, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panel2.SuspendLayout()
@@ -304,7 +307,7 @@ Partial Class Aplicacion
         Me.Label10.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.Label10.AutoSize = True
         Me.Label10.Font = New System.Drawing.Font("Century Gothic", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label10.Location = New System.Drawing.Point(884, 440)
+        Me.Label10.Location = New System.Drawing.Point(869, 440)
         Me.Label10.Name = "Label10"
         Me.Label10.Size = New System.Drawing.Size(178, 22)
         Me.Label10.TabIndex = 12
@@ -368,6 +371,7 @@ Partial Class Aplicacion
         Me.Panel2.Controls.Add(Me.IconButton4)
         Me.Panel2.Controls.Add(Me.select_Seleccionar_carreras_fil)
         Me.Panel2.Controls.Add(Me.GroupBox1)
+        Me.Panel2.Controls.Add(Me.ShapeContainer1)
         Me.Panel2.Dock = System.Windows.Forms.DockStyle.Fill
         Me.Panel2.Location = New System.Drawing.Point(0, 0)
         Me.Panel2.Name = "Panel2"
@@ -436,6 +440,7 @@ Partial Class Aplicacion
         'GroupBox1
         '
         Me.GroupBox1.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.GroupBox1.Controls.Add(Me.IconButton7)
         Me.GroupBox1.Controls.Add(Me.Label9)
         Me.GroupBox1.Controls.Add(Me.input_Edit_Ide_Estu)
         Me.GroupBox1.Controls.Add(Me.Select_Edit_Carrera_Estu)
@@ -447,10 +452,11 @@ Partial Class Aplicacion
         Me.GroupBox1.Controls.Add(Me.input_Edit_Edad_Estu)
         Me.GroupBox1.Controls.Add(Me.Label4)
         Me.GroupBox1.Controls.Add(Me.input_Edit_Nombre_Estu)
+        Me.GroupBox1.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.GroupBox1.Font = New System.Drawing.Font("Century Gothic", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.GroupBox1.Location = New System.Drawing.Point(722, 96)
+        Me.GroupBox1.Location = New System.Drawing.Point(722, 50)
         Me.GroupBox1.Name = "GroupBox1"
-        Me.GroupBox1.Size = New System.Drawing.Size(477, 341)
+        Me.GroupBox1.Size = New System.Drawing.Size(473, 363)
         Me.GroupBox1.TabIndex = 17
         Me.GroupBox1.TabStop = False
         Me.GroupBox1.Text = "Editar Datos De Estudiante"
@@ -460,7 +466,7 @@ Partial Class Aplicacion
         Me.Label9.Anchor = System.Windows.Forms.AnchorStyles.Bottom
         Me.Label9.AutoSize = True
         Me.Label9.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label9.Location = New System.Drawing.Point(8, 19)
+        Me.Label9.Location = New System.Drawing.Point(6, 35)
         Me.Label9.Name = "Label9"
         Me.Label9.Size = New System.Drawing.Size(118, 21)
         Me.Label9.TabIndex = 11
@@ -471,7 +477,7 @@ Partial Class Aplicacion
         Me.input_Edit_Ide_Estu.Anchor = System.Windows.Forms.AnchorStyles.Bottom
         Me.input_Edit_Ide_Estu.Enabled = False
         Me.input_Edit_Ide_Estu.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.input_Edit_Ide_Estu.Location = New System.Drawing.Point(8, 43)
+        Me.input_Edit_Ide_Estu.Location = New System.Drawing.Point(6, 59)
         Me.input_Edit_Ide_Estu.Name = "input_Edit_Ide_Estu"
         Me.input_Edit_Ide_Estu.ReadOnly = True
         Me.input_Edit_Ide_Estu.Size = New System.Drawing.Size(459, 27)
@@ -482,7 +488,7 @@ Partial Class Aplicacion
         Me.Select_Edit_Carrera_Estu.Anchor = System.Windows.Forms.AnchorStyles.Bottom
         Me.Select_Edit_Carrera_Estu.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.Select_Edit_Carrera_Estu.FormattingEnabled = True
-        Me.Select_Edit_Carrera_Estu.Location = New System.Drawing.Point(8, 207)
+        Me.Select_Edit_Carrera_Estu.Location = New System.Drawing.Point(6, 221)
         Me.Select_Edit_Carrera_Estu.Name = "Select_Edit_Carrera_Estu"
         Me.Select_Edit_Carrera_Estu.Size = New System.Drawing.Size(459, 25)
         Me.Select_Edit_Carrera_Estu.TabIndex = 9
@@ -498,7 +504,7 @@ Partial Class Aplicacion
         Me.IconButton6.IconColor = System.Drawing.Color.White
         Me.IconButton6.IconFont = FontAwesome.Sharp.IconFont.[Auto]
         Me.IconButton6.IconSize = 25
-        Me.IconButton6.Location = New System.Drawing.Point(6, 292)
+        Me.IconButton6.Location = New System.Drawing.Point(4, 308)
         Me.IconButton6.Name = "IconButton6"
         Me.IconButton6.Size = New System.Drawing.Size(459, 41)
         Me.IconButton6.TabIndex = 8
@@ -512,7 +518,7 @@ Partial Class Aplicacion
         Me.Label7.Anchor = System.Windows.Forms.AnchorStyles.Bottom
         Me.Label7.AutoSize = True
         Me.Label7.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label7.Location = New System.Drawing.Point(8, 235)
+        Me.Label7.Location = New System.Drawing.Point(6, 249)
         Me.Label7.Name = "Label7"
         Me.Label7.Size = New System.Drawing.Size(173, 21)
         Me.Label7.TabIndex = 7
@@ -522,16 +528,17 @@ Partial Class Aplicacion
         '
         Me.input_Edit_Usuario_Estu.Anchor = System.Windows.Forms.AnchorStyles.Bottom
         Me.input_Edit_Usuario_Estu.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.input_Edit_Usuario_Estu.Location = New System.Drawing.Point(8, 259)
+        Me.input_Edit_Usuario_Estu.Location = New System.Drawing.Point(6, 273)
         Me.input_Edit_Usuario_Estu.Name = "input_Edit_Usuario_Estu"
         Me.input_Edit_Usuario_Estu.Size = New System.Drawing.Size(459, 27)
         Me.input_Edit_Usuario_Estu.TabIndex = 6
         '
         'Label6
         '
+        Me.Label6.Anchor = System.Windows.Forms.AnchorStyles.Bottom
         Me.Label6.AutoSize = True
         Me.Label6.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label6.Location = New System.Drawing.Point(8, 181)
+        Me.Label6.Location = New System.Drawing.Point(8, 197)
         Me.Label6.Name = "Label6"
         Me.Label6.Size = New System.Drawing.Size(70, 21)
         Me.Label6.TabIndex = 5
@@ -542,7 +549,7 @@ Partial Class Aplicacion
         Me.Label5.Anchor = System.Windows.Forms.AnchorStyles.Bottom
         Me.Label5.AutoSize = True
         Me.Label5.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label5.Location = New System.Drawing.Point(8, 127)
+        Me.Label5.Location = New System.Drawing.Point(6, 143)
         Me.Label5.Name = "Label5"
         Me.Label5.Size = New System.Drawing.Size(169, 21)
         Me.Label5.TabIndex = 3
@@ -552,7 +559,7 @@ Partial Class Aplicacion
         '
         Me.input_Edit_Edad_Estu.Anchor = System.Windows.Forms.AnchorStyles.Bottom
         Me.input_Edit_Edad_Estu.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.input_Edit_Edad_Estu.Location = New System.Drawing.Point(8, 151)
+        Me.input_Edit_Edad_Estu.Location = New System.Drawing.Point(6, 167)
         Me.input_Edit_Edad_Estu.Name = "input_Edit_Edad_Estu"
         Me.input_Edit_Edad_Estu.Size = New System.Drawing.Size(459, 27)
         Me.input_Edit_Edad_Estu.TabIndex = 2
@@ -562,7 +569,7 @@ Partial Class Aplicacion
         Me.Label4.Anchor = System.Windows.Forms.AnchorStyles.Bottom
         Me.Label4.AutoSize = True
         Me.Label4.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label4.Location = New System.Drawing.Point(8, 73)
+        Me.Label4.Location = New System.Drawing.Point(6, 89)
         Me.Label4.Name = "Label4"
         Me.Label4.Size = New System.Drawing.Size(190, 21)
         Me.Label4.TabIndex = 1
@@ -572,10 +579,43 @@ Partial Class Aplicacion
         '
         Me.input_Edit_Nombre_Estu.Anchor = System.Windows.Forms.AnchorStyles.Bottom
         Me.input_Edit_Nombre_Estu.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.input_Edit_Nombre_Estu.Location = New System.Drawing.Point(8, 97)
+        Me.input_Edit_Nombre_Estu.Location = New System.Drawing.Point(6, 113)
         Me.input_Edit_Nombre_Estu.Name = "input_Edit_Nombre_Estu"
         Me.input_Edit_Nombre_Estu.Size = New System.Drawing.Size(459, 27)
         Me.input_Edit_Nombre_Estu.TabIndex = 0
+        '
+        'IconButton7
+        '
+        Me.IconButton7.FlatAppearance.BorderSize = 0
+        Me.IconButton7.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.IconButton7.IconChar = FontAwesome.Sharp.IconChar.ExclamationCircle
+        Me.IconButton7.IconColor = System.Drawing.Color.FromArgb(CType(CType(13, Byte), Integer), CType(CType(110, Byte), Integer), CType(CType(253, Byte), Integer))
+        Me.IconButton7.IconFont = FontAwesome.Sharp.IconFont.[Auto]
+        Me.IconButton7.IconSize = 30
+        Me.IconButton7.Location = New System.Drawing.Point(428, 12)
+        Me.IconButton7.Name = "IconButton7"
+        Me.IconButton7.Size = New System.Drawing.Size(35, 35)
+        Me.IconButton7.TabIndex = 12
+        Me.IconButton7.UseVisualStyleBackColor = True
+        '
+        'ShapeContainer1
+        '
+        Me.ShapeContainer1.Location = New System.Drawing.Point(0, 0)
+        Me.ShapeContainer1.Margin = New System.Windows.Forms.Padding(0)
+        Me.ShapeContainer1.Name = "ShapeContainer1"
+        Me.ShapeContainer1.Shapes.AddRange(New Microsoft.VisualBasic.PowerPacks.Shape() {Me.LineShape1})
+        Me.ShapeContainer1.Size = New System.Drawing.Size(1198, 598)
+        Me.ShapeContainer1.TabIndex = 18
+        Me.ShapeContainer1.TabStop = False
+        '
+        'LineShape1
+        '
+        Me.LineShape1.Anchor = System.Windows.Forms.AnchorStyles.Right
+        Me.LineShape1.Name = "LineShape1"
+        Me.LineShape1.X1 = 723
+        Me.LineShape1.X2 = 1193
+        Me.LineShape1.Y1 = 427
+        Me.LineShape1.Y2 = 427
         '
         'Aplicacion
         '
@@ -637,4 +677,7 @@ Partial Class Aplicacion
     Friend WithEvents input_Edit_Edad_Estu As TextBox
     Friend WithEvents Label4 As Label
     Friend WithEvents input_Edit_Nombre_Estu As TextBox
+    Friend WithEvents IconButton7 As FontAwesome.Sharp.IconButton
+    Friend WithEvents ShapeContainer1 As PowerPacks.ShapeContainer
+    Friend WithEvents LineShape1 As PowerPacks.LineShape
 End Class
