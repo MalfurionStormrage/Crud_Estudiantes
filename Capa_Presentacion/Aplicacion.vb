@@ -176,11 +176,13 @@ Public Class Aplicacion
             Me.table_notas.DataSource = td
 
             If td.rows(0).item(2).ToString = "0" Or td.rows(0).item(3).ToString = "0" Or td.rows(0).item(4).ToString = "0" Then
-                Form_Agregar_Notas.TextBox1.Text = "true"
-                Form_Agregar_Notas.input_Nota1.Text = td.rows(0).item(2).ToString
-                Form_Agregar_Notas.input_Nota2.Text = td.rows(0).item(2).ToString
-                Form_Agregar_Notas.input_Nota3.Text = td.rows(0).item(2).ToString
                 Form_Agregar_Notas.Show()
+                Form_Agregar_Notas.TextBox1.Text = "true"
+                Form_Agregar_Notas.TextBox4.Text = td.rows(0).item(0).ToString
+                Form_Agregar_Notas.select_materia.SelectedIndex = td.rows(0).item(1)
+                Form_Agregar_Notas.input_Nota1.Text = td.rows(0).item(2)
+                Form_Agregar_Notas.input_Nota2.Text = td.rows(0).item(3)
+                Form_Agregar_Notas.input_Nota3.Text = td.rows(0).item(4)
             End If
 
             Me.input_Edit_Ide_Estu.Text = table_estudiantes.Item(0, e.RowIndex).Value.ToString

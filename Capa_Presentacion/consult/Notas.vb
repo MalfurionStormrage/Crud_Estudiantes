@@ -53,6 +53,27 @@
         End Try
     End Sub
 
+    Public Sub updatenotas(id_e As Integer, id_m As String, nota1 As Integer, nota2 As Integer, nota3 As Integer)
+        Try
+            'iniciar conexion db'
+            If (connectionString.State.ToString() = "Closed") Then
+                connectionString.Open()
+            End If
+
+            'se realiza la conexion sql'
+            sqlComand.Connection = connectionString
+            sqlComand.CommandText = "UPDATE notas set(ID_M , Nota1 , Nota2 , Nota3) values ('" & id_m & "' , '" & nota1 & "' , '" & nota2 & "' , '" & nota3 & "' ) where ID_E = '" & id_e & "'"
+            sqlComand.CommandType = CommandType.Text
+            sqlComand.ExecuteNonQuery()
+            sqlComand.Parameters.Clear()
+            connectionString.Close()
+
+        Catch ex As Exception
+            MsgBox("Error en la consulta sql, causa: " + ex.ToString())
+        End Try
+    End Sub
+
+
     Public Function obtenerNotaPorIdDeEstudiante(id_estudiante As String)
 
         Dim tabla As New DataTable()
