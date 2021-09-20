@@ -101,6 +101,8 @@ Public Class Form_Agregar_Notas
         Me.select_nota.DropDownStyle = ComboBoxStyle.DropDownList
         Me.select_materia.DropDownStyle = ComboBoxStyle.DropDownList
         Me.select_nota.SelectedIndex = 0
+
+        MsgBox(TextBox1.Text)
     End Sub
 
     Private Sub select_nota_SelectedIndexChanged(sender As Object, e As EventArgs) Handles select_nota.SelectedIndexChanged

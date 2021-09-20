@@ -36,10 +36,10 @@ Public Class Aplicacion
         WindowState = FormWindowState.Minimized
     End Sub
 
-
 #End Region
 
 #Region "funciones"
+
     Sub cargarDatos()
         'cargar datos en tablas'
         Dim estudiante = New Estudiantes()
@@ -77,9 +77,19 @@ Public Class Aplicacion
         Me.Select_Edit_Carrera_Estu.DisplayMember = "Descripcion"
 
     End Sub
+
+    Sub LimpiarFormEditar()
+        input_Edit_Ide_Estu.Text = ""
+        input_Edit_Nombre_Estu.Text = ""
+        input_Edit_Edad_Estu.Text = ""
+        input_Edit_Usuario_Estu.Text = ""
+        Me.Select_Edit_Carrera_Estu.SelectedIndex = 0
+    End Sub
+
 #End Region
 
 #Region "eventos"
+
     Sub btnViewport()
         If Me.IconButton2.Visible = True Then
             IconButton3.Visible = True
@@ -162,9 +172,18 @@ Public Class Aplicacion
             Dim notas As New Notas()
             Dim carrera As New Carreras()
             Dim dato = table_estudiantes.Item(0, e.RowIndex).Value.ToString
-            Me.table_notas.DataSource = notas.obtenerNotaPorIdDeEstudiante(dato)
+            Dim td = notas.obtenerNotaPorIdDeEstudiante(dato)
+            Me.table_notas.DataSource = td
 
-            input_Edit_Ide_Estu.Text = table_estudiantes.Item(0, e.RowIndex).Value.ToString
+            If td.rows(0).item(2).ToString = "0" Or td.rows(0).item(3).ToString = "0" Or td.rows(0).item(4).ToString = "0" Then
+                Form_Agregar_Notas.TextBox1.Text = "true"
+                Form_Agregar_Notas.input_Nota1.Text = td.rows(0).item(2).ToString
+                Form_Agregar_Notas.input_Nota2.Text = td.rows(0).item(2).ToString
+                Form_Agregar_Notas.input_Nota3.Text = td.rows(0).item(2).ToString
+                Form_Agregar_Notas.Show()
+            End If
+
+            Me.input_Edit_Ide_Estu.Text = table_estudiantes.Item(0, e.RowIndex).Value.ToString
             Me.input_Edit_Nombre_Estu.Text = Me.table_estudiantes.Item(1, e.RowIndex).Value.ToString
             Me.input_Edit_Edad_Estu.Text = Me.table_estudiantes.Item(2, e.RowIndex).Value.ToString
 
@@ -176,7 +195,7 @@ Public Class Aplicacion
                 Me.Select_Edit_Carrera_Estu.SelectedIndex = Me.table_estudiantes.Item(3, e.RowIndex).Value.ToString
             End If
 
-        End If
+            End If
     End Sub
 
     Private Sub IconButton5_Click(sender As Object, e As EventArgs) Handles IconButton5.Click
@@ -185,14 +204,6 @@ Public Class Aplicacion
 
     Private Sub IconButton7_Click(sender As Object, e As EventArgs) Handles IconButton7.Click
         MessageBox.Show("Para utilizar este apartado debes seleccionar un estudiante de la tabla estudiantes y posterior a ello editar sus datos.", "Apartado de ediccion", MessageBoxButtons.OK, MessageBoxIcon.Information)
-    End Sub
-
-    Sub LimpiarFormEditar()
-        input_Edit_Ide_Estu.Text = ""
-        input_Edit_Nombre_Estu.Text = ""
-        input_Edit_Edad_Estu.Text = ""
-        input_Edit_Usuario_Estu.Text = ""
-        Me.Select_Edit_Carrera_Estu.SelectedIndex = 0
     End Sub
 
     Private Sub IconButton6_Click(sender As Object, e As EventArgs) Handles IconButton6.Click
@@ -225,6 +236,10 @@ Public Class Aplicacion
 
     Private Sub IconButton9_Click(sender As Object, e As EventArgs) Handles IconButton9.Click
         Me.select_Eliminar_Estudiantes.SelectedIndex = 0
+    End Sub
+
+    Private Sub table_notas_CellClick(sender As Object, e As DataGridViewCellEventArgs) Handles table_notas.CellClick
+
     End Sub
 
 #End Region
