@@ -16,3 +16,21 @@ F:\Crud_Estudiantes\Capa_Presentacion\bin\Debug\Microsoft.VisualBasic.PowerPacks
 F:\Crud_Estudiantes\Capa_Presentacion\bin\Debug\es\Microsoft.VisualBasic.PowerPacks.resources.dll
 F:\Crud_Estudiantes\Capa_Presentacion\obj\Debug\Capa_Presentacion.Form_Agregar_Notas.resources
 F:\Crud_Estudiantes\Capa_Presentacion\obj\Debug\Capa_Presentacion.vbproj.AssemblyReference.cache
+D:\archivos desarrollo7\Desktop\Crud_Estudiantes\Capa_Presentacion\bin\Debug\Capa_Presentacion.exe.config
+D:\archivos desarrollo7\Desktop\Crud_Estudiantes\Capa_Presentacion\bin\Debug\Capa_Presentacion.exe
+D:\archivos desarrollo7\Desktop\Crud_Estudiantes\Capa_Presentacion\bin\Debug\Capa_Presentacion.pdb
+D:\archivos desarrollo7\Desktop\Crud_Estudiantes\Capa_Presentacion\bin\Debug\Capa_Presentacion.xml
+D:\archivos desarrollo7\Desktop\Crud_Estudiantes\Capa_Presentacion\bin\Debug\FontAwesome.Sharp.dll
+D:\archivos desarrollo7\Desktop\Crud_Estudiantes\Capa_Presentacion\bin\Debug\Microsoft.VisualBasic.PowerPacks.dll
+D:\archivos desarrollo7\Desktop\Crud_Estudiantes\Capa_Presentacion\bin\Debug\es\Microsoft.VisualBasic.PowerPacks.resources.dll
+D:\archivos desarrollo7\Desktop\Crud_Estudiantes\Capa_Presentacion\obj\Debug\Capa_Presentacion.vbproj.AssemblyReference.cache
+D:\archivos desarrollo7\Desktop\Crud_Estudiantes\Capa_Presentacion\obj\Debug\Capa_Presentacion.Aplicacion.resources
+D:\archivos desarrollo7\Desktop\Crud_Estudiantes\Capa_Presentacion\obj\Debug\Capa_Presentacion.Form_Agregar_Estudiante.resources
+D:\archivos desarrollo7\Desktop\Crud_Estudiantes\Capa_Presentacion\obj\Debug\Capa_Presentacion.Form_Agregar_Notas.resources
+D:\archivos desarrollo7\Desktop\Crud_Estudiantes\Capa_Presentacion\obj\Debug\Capa_Presentacion.Resources.resources
+D:\archivos desarrollo7\Desktop\Crud_Estudiantes\Capa_Presentacion\obj\Debug\Capa_Presentacion.vbproj.GenerateResource.cache
+D:\archivos desarrollo7\Desktop\Crud_Estudiantes\Capa_Presentacion\obj\Debug\Capa_Presentacion.vbproj.CoreCompileInputs.cache
+D:\archivos desarrollo7\Desktop\Crud_Estudiantes\Capa_Presentacion\obj\Debug\Capa_Presentacion.vbproj.CopyComplete
+D:\archivos desarrollo7\Desktop\Crud_Estudiantes\Capa_Presentacion\obj\Debug\Capa_Presentacion.exe
+D:\archivos desarrollo7\Desktop\Crud_Estudiantes\Capa_Presentacion\obj\Debug\Capa_Presentacion.xml
+D:\archivos desarrollo7\Desktop\Crud_Estudiantes\Capa_Presentacion\obj\Debug\Capa_Presentacion.pdb

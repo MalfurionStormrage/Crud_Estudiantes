@@ -66,6 +66,16 @@ Public Class Aplicacion
         Me.select_Seleccionar_carreras_fil.DataSource = result
         Me.select_Seleccionar_carreras_fil.DisplayMember = "Descripcion"
 
+        '--------------------------------------------------------------------------------'
+
+        result = carrera.ObtenerDesCarreras()
+        fila = result.NewRow()
+        fila("Descripcion") = "-- Selecciona un carrera --"
+        result.Rows.InsertAt(fila, 0)
+
+        Me.Select_Edit_Carrera_Estu.DataSource = result
+        Me.Select_Edit_Carrera_Estu.DisplayMember = "Descripcion"
+
     End Sub
 #End Region
 
@@ -154,8 +164,16 @@ Public Class Aplicacion
         'realizar consulta de notas a los estudiantes siempre y cuando se de click en fila con datos'
         If e.RowIndex >= 0 And e.RowIndex < numero - 1 Then
             Dim notas As New Notas()
+            Dim carrera As New Carreras()
             Dim dato = table_estudiantes.Item(0, e.RowIndex).Value.ToString
             Me.table_notas.DataSource = notas.obtenerNotaPorIdDeEstudiante(dato)
+
+            input_Edit_Ide_Estu.Text = table_estudiantes.Item(0, e.RowIndex).Value.ToString
+            Me.input_Edit_Nombre_Estu.Text = Me.table_estudiantes.Item(1, e.RowIndex).Value.ToString
+            Me.input_Edit_Edad_Estu.Text = Me.table_estudiantes.Item(2, e.RowIndex).Value.ToString
+            Dim codigo = carrera.obtenerIdCarrerasPorDescripcion(Me.table_estudiantes.Item(3, e.RowIndex).Value.ToString)
+            Dim cod = codigo.Rows(0).Item(0).ToString()
+            Me.Select_Edit_Carrera_Estu.SelectedIndex = cod
         End If
     End Sub
 

@@ -22,6 +22,12 @@ Partial Class Aplicacion
     'No lo modifique con el editor de código.
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
+        Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle3 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle4 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle5 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle6 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Aplicacion))
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.IconButton3 = New FontAwesome.Sharp.IconButton()
@@ -42,12 +48,25 @@ Partial Class Aplicacion
         Me.Btn_Eliminar_Estudiante = New FontAwesome.Sharp.IconButton()
         Me.select_Eliminar_Estudiantes = New System.Windows.Forms.ComboBox()
         Me.Panel2 = New System.Windows.Forms.Panel()
-        Me.IconButton5 = New FontAwesome.Sharp.IconButton()
         Me.table_estudiantes = New System.Windows.Forms.DataGridView()
+        Me.IconButton5 = New FontAwesome.Sharp.IconButton()
+        Me.GroupBox1 = New System.Windows.Forms.GroupBox()
+        Me.Label9 = New System.Windows.Forms.Label()
+        Me.input_Edit_Ide_Estu = New System.Windows.Forms.TextBox()
+        Me.Select_Edit_Carrera_Estu = New System.Windows.Forms.ComboBox()
+        Me.IconButton6 = New FontAwesome.Sharp.IconButton()
+        Me.Label7 = New System.Windows.Forms.Label()
+        Me.input_Edit_Usuario_Estu = New System.Windows.Forms.TextBox()
+        Me.Label6 = New System.Windows.Forms.Label()
+        Me.Label5 = New System.Windows.Forms.Label()
+        Me.input_Edit_Edad_Estu = New System.Windows.Forms.TextBox()
+        Me.Label4 = New System.Windows.Forms.Label()
+        Me.input_Edit_Nombre_Estu = New System.Windows.Forms.TextBox()
         Me.Panel1.SuspendLayout()
         CType(Me.table_notas, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panel2.SuspendLayout()
         CType(Me.table_estudiantes, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.GroupBox1.SuspendLayout()
         Me.SuspendLayout()
         '
         'Panel1
@@ -245,10 +264,38 @@ Partial Class Aplicacion
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.table_notas.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill
         Me.table_notas.BorderStyle = System.Windows.Forms.BorderStyle.None
+        Me.table_notas.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.[Single]
+        DataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+        DataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle1.Font = New System.Drawing.Font("Century Gothic", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle1.ForeColor = System.Drawing.Color.White
+        DataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.table_notas.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle1
         Me.table_notas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        DataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+        DataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window
+        DataGridViewCellStyle2.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText
+        DataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
+        Me.table_notas.DefaultCellStyle = DataGridViewCellStyle2
+        Me.table_notas.EnableHeadersVisualStyles = False
+        Me.table_notas.GridColor = System.Drawing.Color.Black
         Me.table_notas.Location = New System.Drawing.Point(33, 473)
         Me.table_notas.Name = "table_notas"
         Me.table_notas.ReadOnly = True
+        DataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+        DataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Control
+        DataGridViewCellStyle3.Font = New System.Drawing.Font("Century Gothic", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText
+        DataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.table_notas.RowHeadersDefaultCellStyle = DataGridViewCellStyle3
+        Me.table_notas.RowHeadersVisible = False
         Me.table_notas.Size = New System.Drawing.Size(680, 100)
         Me.table_notas.TabIndex = 11
         '
@@ -320,11 +367,54 @@ Partial Class Aplicacion
         Me.Panel2.Controls.Add(Me.Label11)
         Me.Panel2.Controls.Add(Me.IconButton4)
         Me.Panel2.Controls.Add(Me.select_Seleccionar_carreras_fil)
+        Me.Panel2.Controls.Add(Me.GroupBox1)
         Me.Panel2.Dock = System.Windows.Forms.DockStyle.Fill
         Me.Panel2.Location = New System.Drawing.Point(0, 0)
         Me.Panel2.Name = "Panel2"
         Me.Panel2.Size = New System.Drawing.Size(1200, 600)
         Me.Panel2.TabIndex = 16
+        '
+        'table_estudiantes
+        '
+        Me.table_estudiantes.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
+            Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.table_estudiantes.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill
+        Me.table_estudiantes.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.DisplayedCells
+        Me.table_estudiantes.BorderStyle = System.Windows.Forms.BorderStyle.None
+        Me.table_estudiantes.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.[Single]
+        DataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+        DataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle4.Font = New System.Drawing.Font("Century Gothic", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle4.ForeColor = System.Drawing.Color.White
+        DataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.table_estudiantes.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle4
+        Me.table_estudiantes.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        DataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+        DataGridViewCellStyle5.BackColor = System.Drawing.SystemColors.Window
+        DataGridViewCellStyle5.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle5.ForeColor = System.Drawing.SystemColors.ControlText
+        DataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
+        Me.table_estudiantes.DefaultCellStyle = DataGridViewCellStyle5
+        Me.table_estudiantes.EnableHeadersVisualStyles = False
+        Me.table_estudiantes.GridColor = System.Drawing.Color.Black
+        Me.table_estudiantes.Location = New System.Drawing.Point(32, 173)
+        Me.table_estudiantes.Name = "table_estudiantes"
+        DataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+        DataGridViewCellStyle6.BackColor = System.Drawing.SystemColors.Control
+        DataGridViewCellStyle6.Font = New System.Drawing.Font("Century Gothic", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle6.ForeColor = System.Drawing.SystemColors.WindowText
+        DataGridViewCellStyle6.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.table_estudiantes.RowHeadersDefaultCellStyle = DataGridViewCellStyle6
+        Me.table_estudiantes.RowHeadersVisible = False
+        Me.table_estudiantes.Size = New System.Drawing.Size(680, 257)
+        Me.table_estudiantes.TabIndex = 15
         '
         'IconButton5
         '
@@ -343,19 +433,149 @@ Partial Class Aplicacion
         Me.IconButton5.TabIndex = 14
         Me.IconButton5.UseVisualStyleBackColor = False
         '
-        'table_estudiantes
+        'GroupBox1
         '
-        Me.table_estudiantes.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
-            Or System.Windows.Forms.AnchorStyles.Left) _
-            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.table_estudiantes.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill
-        Me.table_estudiantes.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.DisplayedCells
-        Me.table_estudiantes.BorderStyle = System.Windows.Forms.BorderStyle.None
-        Me.table_estudiantes.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.table_estudiantes.Location = New System.Drawing.Point(32, 173)
-        Me.table_estudiantes.Name = "table_estudiantes"
-        Me.table_estudiantes.Size = New System.Drawing.Size(680, 257)
-        Me.table_estudiantes.TabIndex = 15
+        Me.GroupBox1.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.GroupBox1.Controls.Add(Me.Label9)
+        Me.GroupBox1.Controls.Add(Me.input_Edit_Ide_Estu)
+        Me.GroupBox1.Controls.Add(Me.Select_Edit_Carrera_Estu)
+        Me.GroupBox1.Controls.Add(Me.IconButton6)
+        Me.GroupBox1.Controls.Add(Me.Label7)
+        Me.GroupBox1.Controls.Add(Me.input_Edit_Usuario_Estu)
+        Me.GroupBox1.Controls.Add(Me.Label6)
+        Me.GroupBox1.Controls.Add(Me.Label5)
+        Me.GroupBox1.Controls.Add(Me.input_Edit_Edad_Estu)
+        Me.GroupBox1.Controls.Add(Me.Label4)
+        Me.GroupBox1.Controls.Add(Me.input_Edit_Nombre_Estu)
+        Me.GroupBox1.Font = New System.Drawing.Font("Century Gothic", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.GroupBox1.Location = New System.Drawing.Point(722, 96)
+        Me.GroupBox1.Name = "GroupBox1"
+        Me.GroupBox1.Size = New System.Drawing.Size(477, 341)
+        Me.GroupBox1.TabIndex = 17
+        Me.GroupBox1.TabStop = False
+        Me.GroupBox1.Text = "Editar Datos De Estudiante"
+        '
+        'Label9
+        '
+        Me.Label9.Anchor = System.Windows.Forms.AnchorStyles.Bottom
+        Me.Label9.AutoSize = True
+        Me.Label9.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label9.Location = New System.Drawing.Point(8, 19)
+        Me.Label9.Name = "Label9"
+        Me.Label9.Size = New System.Drawing.Size(118, 21)
+        Me.Label9.TabIndex = 11
+        Me.Label9.Text = "Identificacion"
+        '
+        'input_Edit_Ide_Estu
+        '
+        Me.input_Edit_Ide_Estu.Anchor = System.Windows.Forms.AnchorStyles.Bottom
+        Me.input_Edit_Ide_Estu.Enabled = False
+        Me.input_Edit_Ide_Estu.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.input_Edit_Ide_Estu.Location = New System.Drawing.Point(8, 43)
+        Me.input_Edit_Ide_Estu.Name = "input_Edit_Ide_Estu"
+        Me.input_Edit_Ide_Estu.ReadOnly = True
+        Me.input_Edit_Ide_Estu.Size = New System.Drawing.Size(459, 27)
+        Me.input_Edit_Ide_Estu.TabIndex = 10
+        '
+        'Select_Edit_Carrera_Estu
+        '
+        Me.Select_Edit_Carrera_Estu.Anchor = System.Windows.Forms.AnchorStyles.Bottom
+        Me.Select_Edit_Carrera_Estu.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
+        Me.Select_Edit_Carrera_Estu.FormattingEnabled = True
+        Me.Select_Edit_Carrera_Estu.Location = New System.Drawing.Point(8, 207)
+        Me.Select_Edit_Carrera_Estu.Name = "Select_Edit_Carrera_Estu"
+        Me.Select_Edit_Carrera_Estu.Size = New System.Drawing.Size(459, 25)
+        Me.Select_Edit_Carrera_Estu.TabIndex = 9
+        '
+        'IconButton6
+        '
+        Me.IconButton6.Anchor = System.Windows.Forms.AnchorStyles.Bottom
+        Me.IconButton6.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(185, Byte), Integer), CType(CType(7, Byte), Integer))
+        Me.IconButton6.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.IconButton6.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.IconButton6.ForeColor = System.Drawing.Color.White
+        Me.IconButton6.IconChar = FontAwesome.Sharp.IconChar.UserEdit
+        Me.IconButton6.IconColor = System.Drawing.Color.White
+        Me.IconButton6.IconFont = FontAwesome.Sharp.IconFont.[Auto]
+        Me.IconButton6.IconSize = 25
+        Me.IconButton6.Location = New System.Drawing.Point(6, 292)
+        Me.IconButton6.Name = "IconButton6"
+        Me.IconButton6.Size = New System.Drawing.Size(459, 41)
+        Me.IconButton6.TabIndex = 8
+        Me.IconButton6.Text = "Editar Datos"
+        Me.IconButton6.TextAlign = System.Drawing.ContentAlignment.MiddleRight
+        Me.IconButton6.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
+        Me.IconButton6.UseVisualStyleBackColor = False
+        '
+        'Label7
+        '
+        Me.Label7.Anchor = System.Windows.Forms.AnchorStyles.Bottom
+        Me.Label7.AutoSize = True
+        Me.Label7.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label7.Location = New System.Drawing.Point(8, 235)
+        Me.Label7.Name = "Label7"
+        Me.Label7.Size = New System.Drawing.Size(173, 21)
+        Me.Label7.TabIndex = 7
+        Me.Label7.Text = "Usuario que modifica"
+        '
+        'input_Edit_Usuario_Estu
+        '
+        Me.input_Edit_Usuario_Estu.Anchor = System.Windows.Forms.AnchorStyles.Bottom
+        Me.input_Edit_Usuario_Estu.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.input_Edit_Usuario_Estu.Location = New System.Drawing.Point(8, 259)
+        Me.input_Edit_Usuario_Estu.Name = "input_Edit_Usuario_Estu"
+        Me.input_Edit_Usuario_Estu.Size = New System.Drawing.Size(459, 27)
+        Me.input_Edit_Usuario_Estu.TabIndex = 6
+        '
+        'Label6
+        '
+        Me.Label6.AutoSize = True
+        Me.Label6.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label6.Location = New System.Drawing.Point(8, 181)
+        Me.Label6.Name = "Label6"
+        Me.Label6.Size = New System.Drawing.Size(70, 21)
+        Me.Label6.TabIndex = 5
+        Me.Label6.Text = "Carrera"
+        '
+        'Label5
+        '
+        Me.Label5.Anchor = System.Windows.Forms.AnchorStyles.Bottom
+        Me.Label5.AutoSize = True
+        Me.Label5.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label5.Location = New System.Drawing.Point(8, 127)
+        Me.Label5.Name = "Label5"
+        Me.Label5.Size = New System.Drawing.Size(169, 21)
+        Me.Label5.TabIndex = 3
+        Me.Label5.Text = "Edad Del Estudiante"
+        '
+        'input_Edit_Edad_Estu
+        '
+        Me.input_Edit_Edad_Estu.Anchor = System.Windows.Forms.AnchorStyles.Bottom
+        Me.input_Edit_Edad_Estu.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.input_Edit_Edad_Estu.Location = New System.Drawing.Point(8, 151)
+        Me.input_Edit_Edad_Estu.Name = "input_Edit_Edad_Estu"
+        Me.input_Edit_Edad_Estu.Size = New System.Drawing.Size(459, 27)
+        Me.input_Edit_Edad_Estu.TabIndex = 2
+        '
+        'Label4
+        '
+        Me.Label4.Anchor = System.Windows.Forms.AnchorStyles.Bottom
+        Me.Label4.AutoSize = True
+        Me.Label4.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label4.Location = New System.Drawing.Point(8, 73)
+        Me.Label4.Name = "Label4"
+        Me.Label4.Size = New System.Drawing.Size(190, 21)
+        Me.Label4.TabIndex = 1
+        Me.Label4.Text = "Nombre Del Estudiante"
+        '
+        'input_Edit_Nombre_Estu
+        '
+        Me.input_Edit_Nombre_Estu.Anchor = System.Windows.Forms.AnchorStyles.Bottom
+        Me.input_Edit_Nombre_Estu.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.input_Edit_Nombre_Estu.Location = New System.Drawing.Point(8, 97)
+        Me.input_Edit_Nombre_Estu.Name = "input_Edit_Nombre_Estu"
+        Me.input_Edit_Nombre_Estu.Size = New System.Drawing.Size(459, 27)
+        Me.input_Edit_Nombre_Estu.TabIndex = 0
         '
         'Aplicacion
         '
@@ -378,6 +598,8 @@ Partial Class Aplicacion
         Me.Panel2.ResumeLayout(False)
         Me.Panel2.PerformLayout()
         CType(Me.table_estudiantes, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.GroupBox1.ResumeLayout(False)
+        Me.GroupBox1.PerformLayout()
         Me.ResumeLayout(False)
 
     End Sub
@@ -403,4 +625,16 @@ Partial Class Aplicacion
     Friend WithEvents Panel2 As Panel
     Friend WithEvents IconButton5 As FontAwesome.Sharp.IconButton
     Friend WithEvents table_estudiantes As DataGridView
+    Friend WithEvents GroupBox1 As GroupBox
+    Friend WithEvents Label9 As Label
+    Friend WithEvents input_Edit_Ide_Estu As TextBox
+    Friend WithEvents Select_Edit_Carrera_Estu As ComboBox
+    Friend WithEvents IconButton6 As FontAwesome.Sharp.IconButton
+    Friend WithEvents Label7 As Label
+    Friend WithEvents input_Edit_Usuario_Estu As TextBox
+    Friend WithEvents Label6 As Label
+    Friend WithEvents Label5 As Label
+    Friend WithEvents input_Edit_Edad_Estu As TextBox
+    Friend WithEvents Label4 As Label
+    Friend WithEvents input_Edit_Nombre_Estu As TextBox
 End Class
