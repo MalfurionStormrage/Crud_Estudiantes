@@ -37,9 +37,9 @@ Partial Class Form_Agregar_Notas
         Me.input_Nota1 = New System.Windows.Forms.TextBox()
         Me.input_Nota3 = New System.Windows.Forms.TextBox()
         Me.Panel2 = New System.Windows.Forms.Panel()
+        Me.input_Nota2 = New System.Windows.Forms.TextBox()
         Me.ShapeContainer1 = New Microsoft.VisualBasic.PowerPacks.ShapeContainer()
         Me.LineShape1 = New Microsoft.VisualBasic.PowerPacks.LineShape()
-        Me.input_Nota2 = New System.Windows.Forms.TextBox()
         Me.Panel1.SuspendLayout()
         Me.Panel2.SuspendLayout()
         Me.SuspendLayout()
@@ -130,7 +130,7 @@ Partial Class Form_Agregar_Notas
         Me.Btn_Agregar_Notas.IconColor = System.Drawing.Color.White
         Me.Btn_Agregar_Notas.IconFont = FontAwesome.Sharp.IconFont.[Auto]
         Me.Btn_Agregar_Notas.IconSize = 30
-        Me.Btn_Agregar_Notas.Location = New System.Drawing.Point(29, 397)
+        Me.Btn_Agregar_Notas.Location = New System.Drawing.Point(29, 375)
         Me.Btn_Agregar_Notas.Name = "Btn_Agregar_Notas"
         Me.Btn_Agregar_Notas.Padding = New System.Windows.Forms.Padding(70, 0, 0, 0)
         Me.Btn_Agregar_Notas.Size = New System.Drawing.Size(320, 40)
@@ -207,6 +207,16 @@ Partial Class Form_Agregar_Notas
         Me.Panel2.Size = New System.Drawing.Size(380, 450)
         Me.Panel2.TabIndex = 17
         '
+        'input_Nota2
+        '
+        Me.input_Nota2.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.input_Nota2.Location = New System.Drawing.Point(29, 290)
+        Me.input_Nota2.MaxLength = 3
+        Me.input_Nota2.Name = "input_Nota2"
+        Me.input_Nota2.Size = New System.Drawing.Size(320, 27)
+        Me.input_Nota2.TabIndex = 13
+        Me.input_Nota2.Text = "Escribe La Nota 2"
+        '
         'ShapeContainer1
         '
         Me.ShapeContainer1.Location = New System.Drawing.Point(0, 0)
@@ -225,16 +235,6 @@ Partial Class Form_Agregar_Notas
         Me.LineShape1.X2 = 327
         Me.LineShape1.Y1 = 81
         Me.LineShape1.Y2 = 81
-        '
-        'input_Nota2
-        '
-        Me.input_Nota2.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.input_Nota2.Location = New System.Drawing.Point(29, 290)
-        Me.input_Nota2.MaxLength = 3
-        Me.input_Nota2.Name = "input_Nota2"
-        Me.input_Nota2.Size = New System.Drawing.Size(320, 27)
-        Me.input_Nota2.TabIndex = 13
-        Me.input_Nota2.Text = "Escribe La Nota 2"
         '
         'Form_Agregar_Notas
         '

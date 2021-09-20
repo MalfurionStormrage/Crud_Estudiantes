@@ -26,9 +26,21 @@ Public Class Form_Agregar_Notas
         End If
     End Sub
 
+    Private Sub InputNota1_Leave(sender As Object, e As EventArgs) Handles input_Nota1.Leave
+        If Me.input_Nota1.Text <> "" And Me.input_Nota1.Text <> "Escribe La Nota 1" Then
+            nota1 = input_Nota1.Text
+        End If
+    End Sub
+
     Private Sub InputNota2_Enter(sender As Object, e As EventArgs) Handles input_Nota2.Enter
         If Me.input_Nota2.Text = "Escribe La Nota 2" Then
             Me.input_Nota2.Text = ""
+        End If
+    End Sub
+
+    Private Sub InputNota2_Leave(sender As Object, e As EventArgs) Handles input_Nota2.Leave
+        If Me.input_Nota2.Text <> "" And Me.input_Nota2.Text <> "Escribe La Nota 2" Then
+            nota2 = Me.input_Nota2.Text
         End If
     End Sub
 
@@ -38,21 +50,9 @@ Public Class Form_Agregar_Notas
         End If
     End Sub
 
-    Private Sub InputNota1_Leave(sender As Object, e As EventArgs) Handles input_Nota1.Leave
-        If Me.input_Nota1.Text = "" Then
-            Me.input_Nota1.Text = "Escribe La Nota 1"
-        End If
-    End Sub
-
-    Private Sub InputNota2_Leave(sender As Object, e As EventArgs) Handles input_Nota2.Leave
-        If Me.input_Nota2.Text = "" Then
-            Me.input_Nota2.Text = "Escribe La Nota 2"
-        End If
-    End Sub
-
     Private Sub InputNota3_Leave(sender As Object, e As EventArgs) Handles input_Nota3.Leave
-        If Me.input_Nota3.Text = "" Then
-            Me.input_Nota3.Text = "Escribe La Nota 3"
+        If Me.input_Nota3.Text <> "" And Me.input_Nota3.Text <> "Escribe La Nota 3" Then
+            nota3 = Me.input_Nota3.Text
         End If
     End Sub
 
@@ -82,6 +82,22 @@ Public Class Form_Agregar_Notas
     End Sub
 
     Private Sub Form_Agregar_Notas_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+
+        Dim fila As DataRow
+        ''inicializar la clase GestionEstudiantes'
+        Dim Materias As New Materias()
+        'consulta sql para cargar combobox'
+        Dim tabla = Materias.GetDescripcionMaterias()
+
+        ''asignar valor por default'
+        fila = tabla.NewRow()
+        fila("Descripcion") = "-- Selecciona una materia --"
+        tabla.Rows.InsertAt(fila, 0)
+
+        ''se cargan los datos en el combobox'
+        Me.select_materia.DataSource = tabla
+        Me.select_materia.ValueMember = "Descripcion"
+
         Me.select_nota.DropDownStyle = ComboBoxStyle.DropDownList
         Me.select_materia.DropDownStyle = ComboBoxStyle.DropDownList
         Me.select_nota.SelectedIndex = 0
@@ -90,30 +106,81 @@ Public Class Form_Agregar_Notas
     Private Sub select_nota_SelectedIndexChanged(sender As Object, e As EventArgs) Handles select_nota.SelectedIndexChanged
 
 
-        Select Case select_nota.SelectedIndex
+        Select Case Me.select_nota.SelectedIndex
             Case "0"
-                Me.input_Nota1.Visible = False
-                Me.input_Nota2.Visible = False
-                Me.input_Nota3.Visible = False
+                input_Nota1.Visible = False
+                input_Nota2.Visible = False
+                input_Nota3.Visible = False
 
             Case "1"
 
-                Me.input_Nota1.Visible = True
-                Me.input_Nota2.Visible = False
-                Me.input_Nota3.Visible = False
+                If nota1 = 0 Then
+                    input_Nota1.Text = "Escribe La Nota 1"
+                Else
+                    input_Nota1.Text = nota1
+                End If
+
+                input_Nota1.Visible = True
+                input_Nota2.Visible = False
+                input_Nota3.Visible = False
 
             Case "2"
-                Me.input_Nota1.Visible = False
-                Me.input_Nota2.Visible = True
-                Me.input_Nota3.Visible = False
+
+                If nota2 = 0 Then
+                    input_Nota2.Text = "Escribe La Nota 2"
+                Else
+                    input_Nota2.Text = nota2
+                End If
+
+                input_Nota1.Visible = False
+                input_Nota2.Visible = True
+                input_Nota3.Visible = False
 
             Case "3"
-                Me.input_Nota1.Visible = False
-                Me.input_Nota2.Visible = False
-                Me.input_Nota3.Visible = True
+
+                If nota3 = 0 Then
+                    input_Nota3.Text = "Escribe La Nota 3"
+                Else
+                    input_Nota3.Text = nota3
+                End If
+
+                input_Nota1.Visible = False
+                input_Nota2.Visible = False
+                input_Nota3.Visible = True
 
         End Select
 
+    End Sub
+
+    Private Sub Btn_Agregar_Notas_Click(sender As Object, e As EventArgs) Handles Btn_Agregar_Notas.Click
+        'Se debe seleccionar una materia para asignar notas'
+        If Me.select_materia.SelectedIndex.ToString() <> "0" Then
+
+            'iniciar clase'
+            Dim notas As New Notas()
+
+            'datos a insertar'
+            Dim id_e As Integer = Convert.ToInt32(Me.TextBox4.Text)
+            Dim descripcion_Materia As String = Me.select_materia.SelectedValue.ToString()
+
+
+            'obtengo valor del id de la materia para asignar nota
+            Dim resultado = notas.GetIdNotas(descripcion_Materia)
+            Dim cod = resultado.Rows(0).Item(0).ToString()
+
+            'consulta sql / asignar notas'
+            notas.setNotas(id_e:=id_e, id_m:=cod, nota1:=Nota1, nota2:=Nota2, nota3:=Nota3)
+
+            'refresco el form principal'
+            Aplicacion.cargarDatos()
+            Aplicacion.Refresh()
+            Me.Close()
+
+        Else
+
+            MessageBox.Show("Selecciona una materia para asignar las notas", "Alerta", MessageBoxButtons.OK, MessageBoxIcon.Warning)
+
+        End If
     End Sub
 
 #End Region
