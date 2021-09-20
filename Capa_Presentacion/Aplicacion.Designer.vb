@@ -48,9 +48,11 @@ Partial Class Aplicacion
         Me.Btn_Eliminar_Estudiante = New FontAwesome.Sharp.IconButton()
         Me.select_Eliminar_Estudiantes = New System.Windows.Forms.ComboBox()
         Me.Panel2 = New System.Windows.Forms.Panel()
+        Me.IconButton9 = New FontAwesome.Sharp.IconButton()
         Me.table_estudiantes = New System.Windows.Forms.DataGridView()
         Me.IconButton5 = New FontAwesome.Sharp.IconButton()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
+        Me.IconButton8 = New FontAwesome.Sharp.IconButton()
         Me.IconButton7 = New FontAwesome.Sharp.IconButton()
         Me.Label9 = New System.Windows.Forms.Label()
         Me.input_Edit_Ide_Estu = New System.Windows.Forms.TextBox()
@@ -65,8 +67,6 @@ Partial Class Aplicacion
         Me.input_Edit_Nombre_Estu = New System.Windows.Forms.TextBox()
         Me.ShapeContainer1 = New Microsoft.VisualBasic.PowerPacks.ShapeContainer()
         Me.LineShape1 = New Microsoft.VisualBasic.PowerPacks.LineShape()
-        Me.IconButton8 = New FontAwesome.Sharp.IconButton()
-        Me.IconButton9 = New FontAwesome.Sharp.IconButton()
         Me.Panel1.SuspendLayout()
         CType(Me.table_notas, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panel2.SuspendLayout()
@@ -193,7 +193,7 @@ Partial Class Aplicacion
         Me.IconButton4.Name = "IconButton4"
         Me.IconButton4.Rotation = 180.0R
         Me.IconButton4.Size = New System.Drawing.Size(30, 30)
-        Me.IconButton4.TabIndex = 4
+        Me.IconButton4.TabIndex = 0
         Me.IconButton4.UseVisualStyleBackColor = False
         '
         'Label11
@@ -203,7 +203,7 @@ Partial Class Aplicacion
         Me.Label11.Location = New System.Drawing.Point(32, 76)
         Me.Label11.Name = "Label11"
         Me.Label11.Size = New System.Drawing.Size(246, 21)
-        Me.Label11.TabIndex = 9
+        Me.Label11.TabIndex = 0
         Me.Label11.Text = "Filtrar estudiantes por carrera :"
         '
         'select_Seleccionar_carreras_fil
@@ -228,7 +228,7 @@ Partial Class Aplicacion
         Me.Label3.Location = New System.Drawing.Point(282, 50)
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(241, 24)
-        Me.Label3.TabIndex = 6
+        Me.Label3.TabIndex = 0
         Me.Label3.Text = "Gestion De Estudiantes"
         '
         'Btn_Agregar_Estudiantes
@@ -247,7 +247,7 @@ Partial Class Aplicacion
         Me.Btn_Agregar_Estudiantes.Name = "Btn_Agregar_Estudiantes"
         Me.Btn_Agregar_Estudiantes.Padding = New System.Windows.Forms.Padding(140, 0, 0, 0)
         Me.Btn_Agregar_Estudiantes.Size = New System.Drawing.Size(680, 39)
-        Me.Btn_Agregar_Estudiantes.TabIndex = 8
+        Me.Btn_Agregar_Estudiantes.TabIndex = 0
         Me.Btn_Agregar_Estudiantes.Text = "Agregar Nuevo Estudiantes"
         Me.Btn_Agregar_Estudiantes.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
         Me.Btn_Agregar_Estudiantes.UseVisualStyleBackColor = False
@@ -303,7 +303,7 @@ Partial Class Aplicacion
         Me.table_notas.RowHeadersDefaultCellStyle = DataGridViewCellStyle3
         Me.table_notas.RowHeadersVisible = False
         Me.table_notas.Size = New System.Drawing.Size(680, 100)
-        Me.table_notas.TabIndex = 11
+        Me.table_notas.TabIndex = 0
         '
         'Label10
         '
@@ -313,7 +313,7 @@ Partial Class Aplicacion
         Me.Label10.Location = New System.Drawing.Point(869, 440)
         Me.Label10.Name = "Label10"
         Me.Label10.Size = New System.Drawing.Size(178, 22)
-        Me.Label10.TabIndex = 12
+        Me.Label10.TabIndex = 0
         Me.Label10.Text = "Eliminar Estudiante"
         '
         'Label8
@@ -324,7 +324,7 @@ Partial Class Aplicacion
         Me.Label8.Location = New System.Drawing.Point(731, 472)
         Me.Label8.Name = "Label8"
         Me.Label8.Size = New System.Drawing.Size(197, 17)
-        Me.Label8.TabIndex = 13
+        Me.Label8.TabIndex = 0
         Me.Label8.Text = "Identificacion De Estudiante :"
         '
         'Btn_Eliminar_Estudiante
@@ -342,7 +342,7 @@ Partial Class Aplicacion
         Me.Btn_Eliminar_Estudiante.Name = "Btn_Eliminar_Estudiante"
         Me.Btn_Eliminar_Estudiante.Padding = New System.Windows.Forms.Padding(120, 0, 0, 0)
         Me.Btn_Eliminar_Estudiante.Size = New System.Drawing.Size(455, 40)
-        Me.Btn_Eliminar_Estudiante.TabIndex = 15
+        Me.Btn_Eliminar_Estudiante.TabIndex = 0
         Me.Btn_Eliminar_Estudiante.Text = "Remover estudiante"
         Me.Btn_Eliminar_Estudiante.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
         Me.Btn_Eliminar_Estudiante.UseVisualStyleBackColor = False
@@ -357,7 +357,7 @@ Partial Class Aplicacion
         Me.select_Eliminar_Estudiantes.Location = New System.Drawing.Point(731, 493)
         Me.select_Eliminar_Estudiantes.Name = "select_Eliminar_Estudiantes"
         Me.select_Eliminar_Estudiantes.Size = New System.Drawing.Size(453, 25)
-        Me.select_Eliminar_Estudiantes.TabIndex = 14
+        Me.select_Eliminar_Estudiantes.TabIndex = 0
         '
         'Panel2
         '
@@ -381,6 +381,23 @@ Partial Class Aplicacion
         Me.Panel2.Name = "Panel2"
         Me.Panel2.Size = New System.Drawing.Size(1200, 600)
         Me.Panel2.TabIndex = 16
+        '
+        'IconButton9
+        '
+        Me.IconButton9.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.IconButton9.BackColor = System.Drawing.Color.FromArgb(CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer))
+        Me.IconButton9.FlatAppearance.BorderSize = 0
+        Me.IconButton9.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.IconButton9.IconChar = FontAwesome.Sharp.IconChar.Brush
+        Me.IconButton9.IconColor = System.Drawing.Color.FromArgb(CType(CType(220, Byte), Integer), CType(CType(53, Byte), Integer), CType(CType(69, Byte), Integer))
+        Me.IconButton9.IconFont = FontAwesome.Sharp.IconFont.[Auto]
+        Me.IconButton9.IconSize = 20
+        Me.IconButton9.Location = New System.Drawing.Point(1153, 459)
+        Me.IconButton9.Name = "IconButton9"
+        Me.IconButton9.Rotation = 180.0R
+        Me.IconButton9.Size = New System.Drawing.Size(30, 30)
+        Me.IconButton9.TabIndex = 0
+        Me.IconButton9.UseVisualStyleBackColor = False
         '
         'table_estudiantes
         '
@@ -422,7 +439,7 @@ Partial Class Aplicacion
         Me.table_estudiantes.RowHeadersDefaultCellStyle = DataGridViewCellStyle6
         Me.table_estudiantes.RowHeadersVisible = False
         Me.table_estudiantes.Size = New System.Drawing.Size(680, 257)
-        Me.table_estudiantes.TabIndex = 15
+        Me.table_estudiantes.TabIndex = 0
         '
         'IconButton5
         '
@@ -438,7 +455,7 @@ Partial Class Aplicacion
         Me.IconButton5.Name = "IconButton5"
         Me.IconButton5.Rotation = 180.0R
         Me.IconButton5.Size = New System.Drawing.Size(30, 30)
-        Me.IconButton5.TabIndex = 14
+        Me.IconButton5.TabIndex = 0
         Me.IconButton5.UseVisualStyleBackColor = False
         '
         'GroupBox1
@@ -462,9 +479,26 @@ Partial Class Aplicacion
         Me.GroupBox1.Location = New System.Drawing.Point(722, 58)
         Me.GroupBox1.Name = "GroupBox1"
         Me.GroupBox1.Size = New System.Drawing.Size(473, 363)
-        Me.GroupBox1.TabIndex = 17
+        Me.GroupBox1.TabIndex = 0
         Me.GroupBox1.TabStop = False
         Me.GroupBox1.Text = "Editar Datos De Estudiante"
+        '
+        'IconButton8
+        '
+        Me.IconButton8.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.IconButton8.BackColor = System.Drawing.Color.FromArgb(CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer))
+        Me.IconButton8.FlatAppearance.BorderSize = 0
+        Me.IconButton8.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.IconButton8.IconChar = FontAwesome.Sharp.IconChar.Brush
+        Me.IconButton8.IconColor = System.Drawing.Color.FromArgb(CType(CType(220, Byte), Integer), CType(CType(53, Byte), Integer), CType(CType(69, Byte), Integer))
+        Me.IconButton8.IconFont = FontAwesome.Sharp.IconFont.[Auto]
+        Me.IconButton8.IconSize = 20
+        Me.IconButton8.Location = New System.Drawing.Point(435, 12)
+        Me.IconButton8.Name = "IconButton8"
+        Me.IconButton8.Rotation = 180.0R
+        Me.IconButton8.Size = New System.Drawing.Size(30, 30)
+        Me.IconButton8.TabIndex = 0
+        Me.IconButton8.UseVisualStyleBackColor = False
         '
         'IconButton7
         '
@@ -490,7 +524,7 @@ Partial Class Aplicacion
         Me.Label9.Location = New System.Drawing.Point(6, 35)
         Me.Label9.Name = "Label9"
         Me.Label9.Size = New System.Drawing.Size(118, 21)
-        Me.Label9.TabIndex = 11
+        Me.Label9.TabIndex = 0
         Me.Label9.Text = "Identificacion"
         '
         'input_Edit_Ide_Estu
@@ -503,7 +537,7 @@ Partial Class Aplicacion
         Me.input_Edit_Ide_Estu.Name = "input_Edit_Ide_Estu"
         Me.input_Edit_Ide_Estu.ReadOnly = True
         Me.input_Edit_Ide_Estu.Size = New System.Drawing.Size(459, 27)
-        Me.input_Edit_Ide_Estu.TabIndex = 10
+        Me.input_Edit_Ide_Estu.TabIndex = 0
         '
         'Select_Edit_Carrera_Estu
         '
@@ -514,7 +548,7 @@ Partial Class Aplicacion
         Me.Select_Edit_Carrera_Estu.Location = New System.Drawing.Point(6, 221)
         Me.Select_Edit_Carrera_Estu.Name = "Select_Edit_Carrera_Estu"
         Me.Select_Edit_Carrera_Estu.Size = New System.Drawing.Size(459, 25)
-        Me.Select_Edit_Carrera_Estu.TabIndex = 9
+        Me.Select_Edit_Carrera_Estu.TabIndex = 0
         '
         'IconButton6
         '
@@ -530,7 +564,7 @@ Partial Class Aplicacion
         Me.IconButton6.Location = New System.Drawing.Point(4, 308)
         Me.IconButton6.Name = "IconButton6"
         Me.IconButton6.Size = New System.Drawing.Size(459, 41)
-        Me.IconButton6.TabIndex = 8
+        Me.IconButton6.TabIndex = 0
         Me.IconButton6.Text = "Editar Datos"
         Me.IconButton6.TextAlign = System.Drawing.ContentAlignment.MiddleRight
         Me.IconButton6.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
@@ -545,7 +579,7 @@ Partial Class Aplicacion
         Me.Label7.Location = New System.Drawing.Point(6, 249)
         Me.Label7.Name = "Label7"
         Me.Label7.Size = New System.Drawing.Size(173, 21)
-        Me.Label7.TabIndex = 7
+        Me.Label7.TabIndex = 0
         Me.Label7.Text = "Usuario que modifica"
         '
         'input_Edit_Usuario_Estu
@@ -556,7 +590,7 @@ Partial Class Aplicacion
         Me.input_Edit_Usuario_Estu.Location = New System.Drawing.Point(6, 273)
         Me.input_Edit_Usuario_Estu.Name = "input_Edit_Usuario_Estu"
         Me.input_Edit_Usuario_Estu.Size = New System.Drawing.Size(459, 27)
-        Me.input_Edit_Usuario_Estu.TabIndex = 6
+        Me.input_Edit_Usuario_Estu.TabIndex = 0
         '
         'Label6
         '
@@ -567,7 +601,7 @@ Partial Class Aplicacion
         Me.Label6.Location = New System.Drawing.Point(8, 197)
         Me.Label6.Name = "Label6"
         Me.Label6.Size = New System.Drawing.Size(70, 21)
-        Me.Label6.TabIndex = 5
+        Me.Label6.TabIndex = 0
         Me.Label6.Text = "Carrera"
         '
         'Label5
@@ -579,7 +613,7 @@ Partial Class Aplicacion
         Me.Label5.Location = New System.Drawing.Point(6, 143)
         Me.Label5.Name = "Label5"
         Me.Label5.Size = New System.Drawing.Size(169, 21)
-        Me.Label5.TabIndex = 3
+        Me.Label5.TabIndex = 0
         Me.Label5.Text = "Edad Del Estudiante"
         '
         'input_Edit_Edad_Estu
@@ -590,7 +624,7 @@ Partial Class Aplicacion
         Me.input_Edit_Edad_Estu.Location = New System.Drawing.Point(6, 167)
         Me.input_Edit_Edad_Estu.Name = "input_Edit_Edad_Estu"
         Me.input_Edit_Edad_Estu.Size = New System.Drawing.Size(459, 27)
-        Me.input_Edit_Edad_Estu.TabIndex = 2
+        Me.input_Edit_Edad_Estu.TabIndex = 0
         '
         'Label4
         '
@@ -601,7 +635,7 @@ Partial Class Aplicacion
         Me.Label4.Location = New System.Drawing.Point(6, 89)
         Me.Label4.Name = "Label4"
         Me.Label4.Size = New System.Drawing.Size(190, 21)
-        Me.Label4.TabIndex = 1
+        Me.Label4.TabIndex = 0
         Me.Label4.Text = "Nombre Del Estudiante"
         '
         'input_Edit_Nombre_Estu
@@ -633,40 +667,6 @@ Partial Class Aplicacion
         Me.LineShape1.X2 = 1193
         Me.LineShape1.Y1 = 432
         Me.LineShape1.Y2 = 432
-        '
-        'IconButton8
-        '
-        Me.IconButton8.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.IconButton8.BackColor = System.Drawing.Color.FromArgb(CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer))
-        Me.IconButton8.FlatAppearance.BorderSize = 0
-        Me.IconButton8.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.IconButton8.IconChar = FontAwesome.Sharp.IconChar.Brush
-        Me.IconButton8.IconColor = System.Drawing.Color.FromArgb(CType(CType(220, Byte), Integer), CType(CType(53, Byte), Integer), CType(CType(69, Byte), Integer))
-        Me.IconButton8.IconFont = FontAwesome.Sharp.IconFont.[Auto]
-        Me.IconButton8.IconSize = 20
-        Me.IconButton8.Location = New System.Drawing.Point(435, 12)
-        Me.IconButton8.Name = "IconButton8"
-        Me.IconButton8.Rotation = 180.0R
-        Me.IconButton8.Size = New System.Drawing.Size(30, 30)
-        Me.IconButton8.TabIndex = 0
-        Me.IconButton8.UseVisualStyleBackColor = False
-        '
-        'IconButton9
-        '
-        Me.IconButton9.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.IconButton9.BackColor = System.Drawing.Color.FromArgb(CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer))
-        Me.IconButton9.FlatAppearance.BorderSize = 0
-        Me.IconButton9.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.IconButton9.IconChar = FontAwesome.Sharp.IconChar.Brush
-        Me.IconButton9.IconColor = System.Drawing.Color.FromArgb(CType(CType(220, Byte), Integer), CType(CType(53, Byte), Integer), CType(CType(69, Byte), Integer))
-        Me.IconButton9.IconFont = FontAwesome.Sharp.IconFont.[Auto]
-        Me.IconButton9.IconSize = 20
-        Me.IconButton9.Location = New System.Drawing.Point(1153, 459)
-        Me.IconButton9.Name = "IconButton9"
-        Me.IconButton9.Rotation = 180.0R
-        Me.IconButton9.Size = New System.Drawing.Size(30, 30)
-        Me.IconButton9.TabIndex = 19
-        Me.IconButton9.UseVisualStyleBackColor = False
         '
         'Aplicacion
         '
