@@ -51,6 +51,7 @@ Partial Class Aplicacion
         Me.table_estudiantes = New System.Windows.Forms.DataGridView()
         Me.IconButton5 = New FontAwesome.Sharp.IconButton()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
+        Me.IconButton7 = New FontAwesome.Sharp.IconButton()
         Me.Label9 = New System.Windows.Forms.Label()
         Me.input_Edit_Ide_Estu = New System.Windows.Forms.TextBox()
         Me.Select_Edit_Carrera_Estu = New System.Windows.Forms.ComboBox()
@@ -62,9 +63,10 @@ Partial Class Aplicacion
         Me.input_Edit_Edad_Estu = New System.Windows.Forms.TextBox()
         Me.Label4 = New System.Windows.Forms.Label()
         Me.input_Edit_Nombre_Estu = New System.Windows.Forms.TextBox()
-        Me.IconButton7 = New FontAwesome.Sharp.IconButton()
         Me.ShapeContainer1 = New Microsoft.VisualBasic.PowerPacks.ShapeContainer()
         Me.LineShape1 = New Microsoft.VisualBasic.PowerPacks.LineShape()
+        Me.IconButton8 = New FontAwesome.Sharp.IconButton()
+        Me.IconButton9 = New FontAwesome.Sharp.IconButton()
         Me.Panel1.SuspendLayout()
         CType(Me.table_notas, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panel2.SuspendLayout()
@@ -209,6 +211,7 @@ Partial Class Aplicacion
         Me.select_Seleccionar_carreras_fil.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.select_Seleccionar_carreras_fil.BackColor = System.Drawing.Color.White
+        Me.select_Seleccionar_carreras_fil.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.select_Seleccionar_carreras_fil.Font = New System.Drawing.Font("Century Gothic", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.select_Seleccionar_carreras_fil.FormattingEnabled = True
         Me.select_Seleccionar_carreras_fil.Location = New System.Drawing.Point(32, 100)
@@ -347,6 +350,7 @@ Partial Class Aplicacion
         'select_Eliminar_Estudiantes
         '
         Me.select_Eliminar_Estudiantes.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.select_Eliminar_Estudiantes.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.select_Eliminar_Estudiantes.FlatStyle = System.Windows.Forms.FlatStyle.System
         Me.select_Eliminar_Estudiantes.Font = New System.Drawing.Font("Century Gothic", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.select_Eliminar_Estudiantes.FormattingEnabled = True
@@ -354,12 +358,12 @@ Partial Class Aplicacion
         Me.select_Eliminar_Estudiantes.Name = "select_Eliminar_Estudiantes"
         Me.select_Eliminar_Estudiantes.Size = New System.Drawing.Size(453, 25)
         Me.select_Eliminar_Estudiantes.TabIndex = 14
-        Me.select_Eliminar_Estudiantes.Text = "Selecciona un estudiante"
         '
         'Panel2
         '
         Me.Panel2.BackColor = System.Drawing.Color.White
         Me.Panel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.Panel2.Controls.Add(Me.IconButton9)
         Me.Panel2.Controls.Add(Me.table_estudiantes)
         Me.Panel2.Controls.Add(Me.IconButton5)
         Me.Panel2.Controls.Add(Me.Label8)
@@ -439,7 +443,8 @@ Partial Class Aplicacion
         '
         'GroupBox1
         '
-        Me.GroupBox1.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.GroupBox1.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.GroupBox1.Controls.Add(Me.IconButton8)
         Me.GroupBox1.Controls.Add(Me.IconButton7)
         Me.GroupBox1.Controls.Add(Me.Label9)
         Me.GroupBox1.Controls.Add(Me.input_Edit_Ide_Estu)
@@ -461,9 +466,25 @@ Partial Class Aplicacion
         Me.GroupBox1.TabStop = False
         Me.GroupBox1.Text = "Editar Datos De Estudiante"
         '
+        'IconButton7
+        '
+        Me.IconButton7.BackColor = System.Drawing.Color.FromArgb(CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer))
+        Me.IconButton7.FlatAppearance.BorderSize = 0
+        Me.IconButton7.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.IconButton7.IconChar = FontAwesome.Sharp.IconChar.ExclamationCircle
+        Me.IconButton7.IconColor = System.Drawing.Color.FromArgb(CType(CType(13, Byte), Integer), CType(CType(110, Byte), Integer), CType(CType(253, Byte), Integer))
+        Me.IconButton7.IconFont = FontAwesome.Sharp.IconFont.[Auto]
+        Me.IconButton7.IconSize = 20
+        Me.IconButton7.Location = New System.Drawing.Point(399, 12)
+        Me.IconButton7.Name = "IconButton7"
+        Me.IconButton7.Size = New System.Drawing.Size(30, 30)
+        Me.IconButton7.TabIndex = 0
+        Me.IconButton7.UseVisualStyleBackColor = False
+        '
         'Label9
         '
-        Me.Label9.Anchor = System.Windows.Forms.AnchorStyles.Bottom
+        Me.Label9.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.Label9.AutoSize = True
         Me.Label9.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label9.Location = New System.Drawing.Point(6, 35)
@@ -474,7 +495,8 @@ Partial Class Aplicacion
         '
         'input_Edit_Ide_Estu
         '
-        Me.input_Edit_Ide_Estu.Anchor = System.Windows.Forms.AnchorStyles.Bottom
+        Me.input_Edit_Ide_Estu.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.input_Edit_Ide_Estu.Enabled = False
         Me.input_Edit_Ide_Estu.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.input_Edit_Ide_Estu.Location = New System.Drawing.Point(6, 59)
@@ -485,7 +507,8 @@ Partial Class Aplicacion
         '
         'Select_Edit_Carrera_Estu
         '
-        Me.Select_Edit_Carrera_Estu.Anchor = System.Windows.Forms.AnchorStyles.Bottom
+        Me.Select_Edit_Carrera_Estu.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.Select_Edit_Carrera_Estu.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.Select_Edit_Carrera_Estu.FormattingEnabled = True
         Me.Select_Edit_Carrera_Estu.Location = New System.Drawing.Point(6, 221)
@@ -495,7 +518,7 @@ Partial Class Aplicacion
         '
         'IconButton6
         '
-        Me.IconButton6.Anchor = System.Windows.Forms.AnchorStyles.Bottom
+        Me.IconButton6.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.IconButton6.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(185, Byte), Integer), CType(CType(7, Byte), Integer))
         Me.IconButton6.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.IconButton6.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
@@ -515,7 +538,8 @@ Partial Class Aplicacion
         '
         'Label7
         '
-        Me.Label7.Anchor = System.Windows.Forms.AnchorStyles.Bottom
+        Me.Label7.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.Label7.AutoSize = True
         Me.Label7.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label7.Location = New System.Drawing.Point(6, 249)
@@ -526,7 +550,8 @@ Partial Class Aplicacion
         '
         'input_Edit_Usuario_Estu
         '
-        Me.input_Edit_Usuario_Estu.Anchor = System.Windows.Forms.AnchorStyles.Bottom
+        Me.input_Edit_Usuario_Estu.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.input_Edit_Usuario_Estu.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.input_Edit_Usuario_Estu.Location = New System.Drawing.Point(6, 273)
         Me.input_Edit_Usuario_Estu.Name = "input_Edit_Usuario_Estu"
@@ -535,7 +560,8 @@ Partial Class Aplicacion
         '
         'Label6
         '
-        Me.Label6.Anchor = System.Windows.Forms.AnchorStyles.Bottom
+        Me.Label6.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.Label6.AutoSize = True
         Me.Label6.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label6.Location = New System.Drawing.Point(8, 197)
@@ -546,7 +572,8 @@ Partial Class Aplicacion
         '
         'Label5
         '
-        Me.Label5.Anchor = System.Windows.Forms.AnchorStyles.Bottom
+        Me.Label5.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.Label5.AutoSize = True
         Me.Label5.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label5.Location = New System.Drawing.Point(6, 143)
@@ -557,7 +584,8 @@ Partial Class Aplicacion
         '
         'input_Edit_Edad_Estu
         '
-        Me.input_Edit_Edad_Estu.Anchor = System.Windows.Forms.AnchorStyles.Bottom
+        Me.input_Edit_Edad_Estu.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.input_Edit_Edad_Estu.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.input_Edit_Edad_Estu.Location = New System.Drawing.Point(6, 167)
         Me.input_Edit_Edad_Estu.Name = "input_Edit_Edad_Estu"
@@ -566,7 +594,8 @@ Partial Class Aplicacion
         '
         'Label4
         '
-        Me.Label4.Anchor = System.Windows.Forms.AnchorStyles.Bottom
+        Me.Label4.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.Label4.AutoSize = True
         Me.Label4.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label4.Location = New System.Drawing.Point(6, 89)
@@ -577,26 +606,13 @@ Partial Class Aplicacion
         '
         'input_Edit_Nombre_Estu
         '
-        Me.input_Edit_Nombre_Estu.Anchor = System.Windows.Forms.AnchorStyles.Bottom
+        Me.input_Edit_Nombre_Estu.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.input_Edit_Nombre_Estu.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.input_Edit_Nombre_Estu.Location = New System.Drawing.Point(6, 113)
         Me.input_Edit_Nombre_Estu.Name = "input_Edit_Nombre_Estu"
         Me.input_Edit_Nombre_Estu.Size = New System.Drawing.Size(459, 27)
         Me.input_Edit_Nombre_Estu.TabIndex = 0
-        '
-        'IconButton7
-        '
-        Me.IconButton7.FlatAppearance.BorderSize = 0
-        Me.IconButton7.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.IconButton7.IconChar = FontAwesome.Sharp.IconChar.ExclamationCircle
-        Me.IconButton7.IconColor = System.Drawing.Color.FromArgb(CType(CType(13, Byte), Integer), CType(CType(110, Byte), Integer), CType(CType(253, Byte), Integer))
-        Me.IconButton7.IconFont = FontAwesome.Sharp.IconFont.[Auto]
-        Me.IconButton7.IconSize = 30
-        Me.IconButton7.Location = New System.Drawing.Point(428, 12)
-        Me.IconButton7.Name = "IconButton7"
-        Me.IconButton7.Size = New System.Drawing.Size(35, 35)
-        Me.IconButton7.TabIndex = 12
-        Me.IconButton7.UseVisualStyleBackColor = True
         '
         'ShapeContainer1
         '
@@ -617,6 +633,40 @@ Partial Class Aplicacion
         Me.LineShape1.X2 = 1193
         Me.LineShape1.Y1 = 432
         Me.LineShape1.Y2 = 432
+        '
+        'IconButton8
+        '
+        Me.IconButton8.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.IconButton8.BackColor = System.Drawing.Color.FromArgb(CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer))
+        Me.IconButton8.FlatAppearance.BorderSize = 0
+        Me.IconButton8.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.IconButton8.IconChar = FontAwesome.Sharp.IconChar.Brush
+        Me.IconButton8.IconColor = System.Drawing.Color.FromArgb(CType(CType(220, Byte), Integer), CType(CType(53, Byte), Integer), CType(CType(69, Byte), Integer))
+        Me.IconButton8.IconFont = FontAwesome.Sharp.IconFont.[Auto]
+        Me.IconButton8.IconSize = 20
+        Me.IconButton8.Location = New System.Drawing.Point(435, 12)
+        Me.IconButton8.Name = "IconButton8"
+        Me.IconButton8.Rotation = 180.0R
+        Me.IconButton8.Size = New System.Drawing.Size(30, 30)
+        Me.IconButton8.TabIndex = 0
+        Me.IconButton8.UseVisualStyleBackColor = False
+        '
+        'IconButton9
+        '
+        Me.IconButton9.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.IconButton9.BackColor = System.Drawing.Color.FromArgb(CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer))
+        Me.IconButton9.FlatAppearance.BorderSize = 0
+        Me.IconButton9.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.IconButton9.IconChar = FontAwesome.Sharp.IconChar.Brush
+        Me.IconButton9.IconColor = System.Drawing.Color.FromArgb(CType(CType(220, Byte), Integer), CType(CType(53, Byte), Integer), CType(CType(69, Byte), Integer))
+        Me.IconButton9.IconFont = FontAwesome.Sharp.IconFont.[Auto]
+        Me.IconButton9.IconSize = 20
+        Me.IconButton9.Location = New System.Drawing.Point(1153, 459)
+        Me.IconButton9.Name = "IconButton9"
+        Me.IconButton9.Rotation = 180.0R
+        Me.IconButton9.Size = New System.Drawing.Size(30, 30)
+        Me.IconButton9.TabIndex = 19
+        Me.IconButton9.UseVisualStyleBackColor = False
         '
         'Aplicacion
         '
@@ -681,4 +731,6 @@ Partial Class Aplicacion
     Friend WithEvents IconButton7 As FontAwesome.Sharp.IconButton
     Friend WithEvents ShapeContainer1 As PowerPacks.ShapeContainer
     Friend WithEvents LineShape1 As PowerPacks.LineShape
+    Friend WithEvents IconButton8 As FontAwesome.Sharp.IconButton
+    Friend WithEvents IconButton9 As FontAwesome.Sharp.IconButton
 End Class

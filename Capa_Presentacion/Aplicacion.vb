@@ -99,10 +99,6 @@ Public Class Aplicacion
     Private Sub Aplicacion_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         Me.MaximumSize = Screen.PrimaryScreen.WorkingArea.Size
         'Me.Combobox_Seleccionar_carrera.DropDownStyle = ComboBoxStyle.DropDownList
-        Me.select_Eliminar_Estudiantes.DropDownStyle = ComboBoxStyle.DropDownList
-        Me.select_Seleccionar_carreras_fil.DropDownStyle = ComboBoxStyle.DropDownList
-
-        ''
         cargarDatos()
     End Sub
 
@@ -171,9 +167,15 @@ Public Class Aplicacion
             input_Edit_Ide_Estu.Text = table_estudiantes.Item(0, e.RowIndex).Value.ToString
             Me.input_Edit_Nombre_Estu.Text = Me.table_estudiantes.Item(1, e.RowIndex).Value.ToString
             Me.input_Edit_Edad_Estu.Text = Me.table_estudiantes.Item(2, e.RowIndex).Value.ToString
-            Dim codigo = carrera.obtenerIdCarrerasPorDescripcion(Me.table_estudiantes.Item(3, e.RowIndex).Value.ToString)
-            Dim cod = codigo.Rows(0).Item(0).ToString()
-            Me.Select_Edit_Carrera_Estu.SelectedIndex = cod
+
+            If Me.table_estudiantes.Item(3, e.RowIndex).Value.ToString.Length > 1 Then
+                Dim codigo = carrera.obtenerIdCarrerasPorDescripcion(Me.table_estudiantes.Item(3, e.RowIndex).Value.ToString)
+                Dim cod = codigo.Rows(0).Item(0).ToString()
+                Me.Select_Edit_Carrera_Estu.SelectedIndex = cod
+            Else
+                Me.Select_Edit_Carrera_Estu.SelectedIndex = Me.table_estudiantes.Item(3, e.RowIndex).Value.ToString
+            End If
+
         End If
     End Sub
 
@@ -183,6 +185,14 @@ Public Class Aplicacion
 
     Private Sub IconButton7_Click(sender As Object, e As EventArgs) Handles IconButton7.Click
         MessageBox.Show("Para utilizar este apartado debes seleccionar un estudiante de la tabla estudiantes y posterior a ello editar sus datos.", "Apartado de ediccion", MessageBoxButtons.OK, MessageBoxIcon.Information)
+    End Sub
+
+    Sub LimpiarFormEditar()
+        input_Edit_Ide_Estu.Text = ""
+        input_Edit_Nombre_Estu.Text = ""
+        input_Edit_Edad_Estu.Text = ""
+        input_Edit_Usuario_Estu.Text = ""
+        Me.Select_Edit_Carrera_Estu.SelectedIndex = 0
     End Sub
 
     Private Sub IconButton6_Click(sender As Object, e As EventArgs) Handles IconButton6.Click
@@ -201,16 +211,20 @@ Public Class Aplicacion
                 cargarDatos()
 
                 'se aplica reset a los textbox y combobox'
-                input_Edit_Ide_Estu.Text = ""
-                input_Edit_Nombre_Estu.Text = ""
-                input_Edit_Edad_Estu.Text = ""
-                input_Edit_Usuario_Estu.Text = ""
-                Me.Select_Edit_Carrera_Estu.SelectedIndex = 0
+                LimpiarFormEditar()
 
             End If
         Else
             MessageBox.Show("Todo los campos son obligatorios.", "Alerta", MessageBoxButtons.OK, MessageBoxIcon.Warning)
         End If
+    End Sub
+
+    Private Sub IconButton8_Click(sender As Object, e As EventArgs) Handles IconButton8.Click
+        LimpiarFormEditar()
+    End Sub
+
+    Private Sub IconButton9_Click(sender As Object, e As EventArgs) Handles IconButton9.Click
+        Me.select_Eliminar_Estudiantes.SelectedIndex = 0
     End Sub
 
 

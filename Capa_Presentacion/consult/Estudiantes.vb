@@ -38,7 +38,7 @@
 
             'realizar la consulta sql'
             sqlComand.Connection = connectionString
-            sqlComand.CommandText = "SELECT iD_E as identificacion , Nombre , Edad FROM estudiantes where carrera = '" & codigo & "'"
+            sqlComand.CommandText = "SELECT iD_E as identificacion , Nombre , Edad , carrera FROM estudiantes where carrera = '" & codigo & "'"
             'sqlComand.CommandText = "OCGN_Proce_ObtenerEstudiantes"
             sqlComand.CommandType = CommandType.Text
             Dim resultado = sqlComand.ExecuteReader()
