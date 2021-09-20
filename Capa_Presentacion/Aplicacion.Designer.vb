@@ -439,7 +439,7 @@ Partial Class Aplicacion
         '
         'GroupBox1
         '
-        Me.GroupBox1.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.GroupBox1.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.GroupBox1.Controls.Add(Me.IconButton7)
         Me.GroupBox1.Controls.Add(Me.Label9)
         Me.GroupBox1.Controls.Add(Me.input_Edit_Ide_Estu)
@@ -454,7 +454,7 @@ Partial Class Aplicacion
         Me.GroupBox1.Controls.Add(Me.input_Edit_Nombre_Estu)
         Me.GroupBox1.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.GroupBox1.Font = New System.Drawing.Font("Century Gothic", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.GroupBox1.Location = New System.Drawing.Point(722, 50)
+        Me.GroupBox1.Location = New System.Drawing.Point(722, 58)
         Me.GroupBox1.Name = "GroupBox1"
         Me.GroupBox1.Size = New System.Drawing.Size(473, 363)
         Me.GroupBox1.TabIndex = 17
@@ -611,11 +611,12 @@ Partial Class Aplicacion
         'LineShape1
         '
         Me.LineShape1.Anchor = System.Windows.Forms.AnchorStyles.Right
+        Me.LineShape1.Enabled = False
         Me.LineShape1.Name = "LineShape1"
         Me.LineShape1.X1 = 723
         Me.LineShape1.X2 = 1193
-        Me.LineShape1.Y1 = 427
-        Me.LineShape1.Y2 = 427
+        Me.LineShape1.Y1 = 432
+        Me.LineShape1.Y2 = 432
         '
         'Aplicacion
         '

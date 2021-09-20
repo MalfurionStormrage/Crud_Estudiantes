@@ -185,6 +185,34 @@ Public Class Aplicacion
         MessageBox.Show("Para utilizar este apartado debes seleccionar un estudiante de la tabla estudiantes y posterior a ello editar sus datos.", "Apartado de ediccion", MessageBoxButtons.OK, MessageBoxIcon.Information)
     End Sub
 
+    Private Sub IconButton6_Click(sender As Object, e As EventArgs) Handles IconButton6.Click
+        'se valdia que la accion modifica no tenga campos vacios'
+        If input_Edit_Nombre_Estu.Text <> "" And input_Edit_Edad_Estu.Text <> "" And input_Edit_Usuario_Estu.Text <> "" And Select_Edit_Carrera_Estu.SelectedIndex.ToString() <> "0" Then
+            'se pregunta por la confirmacion de la edicion de datos'
+            If MessageBox.Show("¿ Estas seguro de editar los datos ?", "Actualizar los datos", MessageBoxButtons.OKCancel, MessageBoxIcon.Question, MessageBoxDefaultButton.Button1) = DialogResult.OK Then
+                'se realiza la accion sql'
+                Dim estudiante As New Estudiantes()
+
+                Dim carrera As New Carreras()
+                Dim codigo = carrera.obtenerIdCarrerasPorDescripcion(Select_Edit_Carrera_Estu.Text)
+                Dim cod = codigo.Rows(0).Item(0).ToString()
+
+                estudiante.updataEstudiante(id_Es:=input_Edit_Ide_Estu.Text, Nombre:=input_Edit_Nombre_Estu.Text, Edad:=input_Edit_Edad_Estu.Text, Carrera:=cod, Usuario_Edita:=input_Edit_Usuario_Estu.Text)
+                cargarDatos()
+
+                'se aplica reset a los textbox y combobox'
+                input_Edit_Ide_Estu.Text = ""
+                input_Edit_Nombre_Estu.Text = ""
+                input_Edit_Edad_Estu.Text = ""
+                input_Edit_Usuario_Estu.Text = ""
+                Me.Select_Edit_Carrera_Estu.SelectedIndex = 0
+
+            End If
+        Else
+            MessageBox.Show("Todo los campos son obligatorios.", "Alerta", MessageBoxButtons.OK, MessageBoxIcon.Warning)
+        End If
+    End Sub
+
 
 #End Region
 

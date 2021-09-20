@@ -79,6 +79,25 @@
         End Try
     End Sub
 
+    Public Sub updataEstudiante(id_Es, Nombre, Edad, Carrera, Usuario_Edita)
+        Try
+
+            If (connectionString.State.ToString() = "Closed") Then
+                connectionString.Open()
+            End If
+
+            sqlComand.Connection = connectionString
+            sqlComand.CommandText = "UPDATE estudiantes SET Nombre='" & Nombre & "' , Edad ='" & Edad & "' , Carrera = '" & Carrera & "' , Usuario_Modificacion = '" & Usuario_Edita & "' , F_Modificacion = '" & (Date.Today()) & "' where ID_E = '" & id_Es & "'"
+            sqlComand.CommandType = CommandType.Text
+            sqlComand.ExecuteNonQuery()
+
+            connectionString.Close()
+        Catch ex As Exception
+            MsgBox("Error en la accion sql , causa: " + ex.ToString())
+        End Try
+    End Sub
+
+
     Public Sub deleteEstudiante(id As String)
         Try
 
