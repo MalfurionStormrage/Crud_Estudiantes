@@ -1,9 +1,9 @@
-﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
+﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()>
 Partial Class Aplicacion
     Inherits System.Windows.Forms.Form
 
     'Form reemplaza a Dispose para limpiar la lista de componentes.
-    <System.Diagnostics.DebuggerNonUserCode()> _
+    <System.Diagnostics.DebuggerNonUserCode()>
     Protected Overrides Sub Dispose(ByVal disposing As Boolean)
         Try
             If disposing AndAlso components IsNot Nothing Then
@@ -20,7 +20,7 @@ Partial Class Aplicacion
     'NOTA: el Diseñador de Windows Forms necesita el siguiente procedimiento
     'Se puede modificar usando el Diseñador de Windows Forms.  
     'No lo modifique con el editor de código.
-    <System.Diagnostics.DebuggerStepThrough()> _
+    <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Aplicacion))
         Me.Panel1 = New System.Windows.Forms.Panel()
@@ -34,7 +34,6 @@ Partial Class Aplicacion
         Me.Label11 = New System.Windows.Forms.Label()
         Me.select_Seleccionar_carreras_fil = New System.Windows.Forms.ComboBox()
         Me.Label3 = New System.Windows.Forms.Label()
-        Me.table_estudiantes = New System.Windows.Forms.DataGridView()
         Me.Btn_Agregar_Estudiantes = New FontAwesome.Sharp.IconButton()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.table_notas = New System.Windows.Forms.DataGridView()
@@ -44,10 +43,11 @@ Partial Class Aplicacion
         Me.select_Eliminar_Estudiantes = New System.Windows.Forms.ComboBox()
         Me.Panel2 = New System.Windows.Forms.Panel()
         Me.IconButton5 = New FontAwesome.Sharp.IconButton()
+        Me.table_estudiantes = New System.Windows.Forms.DataGridView()
         Me.Panel1.SuspendLayout()
-        CType(Me.table_estudiantes, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.table_notas, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panel2.SuspendLayout()
+        CType(Me.table_estudiantes, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'Panel1
@@ -206,20 +206,6 @@ Partial Class Aplicacion
         Me.Label3.TabIndex = 6
         Me.Label3.Text = "Gestion De Estudiantes"
         '
-        'table_estudiantes
-        '
-        Me.table_estudiantes.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
-            Or System.Windows.Forms.AnchorStyles.Left) _
-            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.table_estudiantes.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill
-        Me.table_estudiantes.BorderStyle = System.Windows.Forms.BorderStyle.None
-        Me.table_estudiantes.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.table_estudiantes.Location = New System.Drawing.Point(33, 174)
-        Me.table_estudiantes.Name = "table_estudiantes"
-        Me.table_estudiantes.ReadOnly = True
-        Me.table_estudiantes.Size = New System.Drawing.Size(680, 249)
-        Me.table_estudiantes.TabIndex = 7
-        '
         'Btn_Agregar_Estudiantes
         '
         Me.Btn_Agregar_Estudiantes.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
@@ -324,6 +310,7 @@ Partial Class Aplicacion
         '
         Me.Panel2.BackColor = System.Drawing.Color.White
         Me.Panel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.Panel2.Controls.Add(Me.table_estudiantes)
         Me.Panel2.Controls.Add(Me.IconButton5)
         Me.Panel2.Controls.Add(Me.Label8)
         Me.Panel2.Controls.Add(Me.Label10)
@@ -356,6 +343,20 @@ Partial Class Aplicacion
         Me.IconButton5.TabIndex = 14
         Me.IconButton5.UseVisualStyleBackColor = False
         '
+        'table_estudiantes
+        '
+        Me.table_estudiantes.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
+            Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.table_estudiantes.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill
+        Me.table_estudiantes.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.DisplayedCells
+        Me.table_estudiantes.BorderStyle = System.Windows.Forms.BorderStyle.None
+        Me.table_estudiantes.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.table_estudiantes.Location = New System.Drawing.Point(32, 173)
+        Me.table_estudiantes.Name = "table_estudiantes"
+        Me.table_estudiantes.Size = New System.Drawing.Size(680, 257)
+        Me.table_estudiantes.TabIndex = 15
+        '
         'Aplicacion
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -364,7 +365,6 @@ Partial Class Aplicacion
         Me.Controls.Add(Me.Btn_Eliminar_Estudiante)
         Me.Controls.Add(Me.select_Eliminar_Estudiantes)
         Me.Controls.Add(Me.table_notas)
-        Me.Controls.Add(Me.table_estudiantes)
         Me.Controls.Add(Me.Panel1)
         Me.Controls.Add(Me.Panel2)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
@@ -374,10 +374,10 @@ Partial Class Aplicacion
         Me.Text = "Aplicacion"
         Me.Panel1.ResumeLayout(False)
         Me.Panel1.PerformLayout()
-        CType(Me.table_estudiantes, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.table_notas, System.ComponentModel.ISupportInitialize).EndInit()
         Me.Panel2.ResumeLayout(False)
         Me.Panel2.PerformLayout()
+        CType(Me.table_estudiantes, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
@@ -393,7 +393,6 @@ Partial Class Aplicacion
     Friend WithEvents Label11 As Label
     Friend WithEvents select_Seleccionar_carreras_fil As ComboBox
     Friend WithEvents Label3 As Label
-    Friend WithEvents table_estudiantes As DataGridView
     Friend WithEvents Btn_Agregar_Estudiantes As FontAwesome.Sharp.IconButton
     Friend WithEvents Label2 As Label
     Friend WithEvents table_notas As DataGridView
@@ -403,4 +402,5 @@ Partial Class Aplicacion
     Friend WithEvents select_Eliminar_Estudiantes As ComboBox
     Friend WithEvents Panel2 As Panel
     Friend WithEvents IconButton5 As FontAwesome.Sharp.IconButton
+    Friend WithEvents table_estudiantes As DataGridView
 End Class

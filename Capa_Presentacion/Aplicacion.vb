@@ -148,14 +148,14 @@ Public Class Aplicacion
         End If
     End Sub
 
-    Private Sub table_estudiantes_CellClick(sender As Object, e As DataGridViewCellEventArgs) Handles table_estudiantes.CellClick
+    Private Sub table_estudiantes_CellClick(sender As Object, e As DataGridViewCellEventArgs) Handles  table_estudiantes.CellClick
 
         Dim numero = table_estudiantes.Rows.Count
         'realizar consulta de notas a los estudiantes siempre y cuando se de click en fila con datos'
         If e.RowIndex >= 0 And e.RowIndex < numero - 1 Then
             Dim notas As New Notas()
             Dim dato = table_estudiantes.Item(0, e.RowIndex).Value.ToString
-            Me.table_notas.DataSource = Notas.obtenerNotaPorIdDeEstudiante(dato)
+            Me.table_notas.DataSource = notas.obtenerNotaPorIdDeEstudiante(dato)
         End If
     End Sub
 
