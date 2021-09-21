@@ -429,6 +429,7 @@ Partial Class Aplicacion
         Me.table_estudiantes.GridColor = System.Drawing.Color.Black
         Me.table_estudiantes.Location = New System.Drawing.Point(32, 173)
         Me.table_estudiantes.Name = "table_estudiantes"
+        Me.table_estudiantes.ReadOnly = True
         DataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
         DataGridViewCellStyle6.BackColor = System.Drawing.SystemColors.Control
         DataGridViewCellStyle6.Font = New System.Drawing.Font("Century Gothic", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))

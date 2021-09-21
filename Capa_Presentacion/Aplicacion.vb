@@ -160,7 +160,7 @@ Public Class Aplicacion
 
             End If
         Else
-            MessageBox.Show(" Debes seleccionar un estudiante para poder eliminar. ", "Eliminar estudiante", MessageBoxButtons.YesNo, MessageBoxIcon.Information)
+            MessageBox.Show(" Debes seleccionar un estudiante para poder eliminar. ", "Eliminar estudiante", MessageBoxButtons.OK, MessageBoxIcon.Information)
         End If
     End Sub
 
@@ -176,7 +176,7 @@ Public Class Aplicacion
             Me.table_notas.DataSource = td
 
             If td.rows(0).item(2).ToString = "0" Or td.rows(0).item(3).ToString = "0" Or td.rows(0).item(4).ToString = "0" Then
-                If MessageBox.Show("El presente estudiante tiene dato en cero , deseas asignar sus notas ? ", "Notas del estudiante", MessageBoxButtons.OKCancel, MessageBoxIcon.Information) = MessageBoxButtons.OK Then
+                If MessageBox.Show("El presente estudiante tiene dato en cero , deseas asignar sus notas ? ", "Notas del estudiante", MessageBoxButtons.OKCancel, MessageBoxIcon.Information) = DialogResult.OK Then
                     Form_Agregar_Notas.Show()
                     Form_Agregar_Notas.TextBox1.Text = "true"
                     Form_Agregar_Notas.TextBox4.Text = td.rows(0).item(0).ToString
