@@ -13,7 +13,6 @@
             'realizar la consulta sql'
             sqlComand.Connection = connectionString
             sqlComand.CommandText = "OCGN_Porce_ObtenerEstudaintesConCarreras"
-            'sqlComand.CommandText = "OCGN_Proce_ObtenerEstudiantes"
             sqlComand.CommandType = CommandType.Text
             Dim resultado = sqlComand.ExecuteReader()
             tabla.Load(resultado)
@@ -39,7 +38,6 @@
             'realizar la consulta sql'
             sqlComand.Connection = connectionString
             sqlComand.CommandText = "SELECT iD_E as identificacion , Nombre , Edad , carrera as Id_Carrera FROM estudiantes where carrera = '" & codigo & "'"
-            'sqlComand.CommandText = "OCGN_Proce_ObtenerEstudiantes"
             sqlComand.CommandType = CommandType.Text
             Dim resultado = sqlComand.ExecuteReader()
             tabla.Load(resultado)
@@ -63,7 +61,7 @@
 
             'Consulta sql'
             sqlComand.Connection = connectionString
-            sqlComand.CommandText = "ORGN_Proce_InsertarEstudiante"
+            sqlComand.CommandText = "OCGN_Proce_InsertarEstudiante"
             sqlComand.CommandType = CommandType.StoredProcedure
             sqlComand.Parameters.Add("@ID_E", id)
             sqlComand.Parameters.Add("@NOMBRE", nombre)

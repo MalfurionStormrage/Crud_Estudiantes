@@ -86,10 +86,6 @@ Public Class Aplicacion
         Me.Select_Edit_Carrera_Estu.SelectedIndex = 0
     End Sub
 
-#End Region
-
-#Region "eventos"
-
     Sub btnViewport()
         If Me.IconButton2.Visible = True Then
             IconButton3.Visible = True
@@ -99,6 +95,10 @@ Public Class Aplicacion
             IconButton2.Visible = True
         End If
     End Sub
+
+#End Region
+
+#Region "eventos"
 
     Private Sub Panel1_MouseDown(sender As Object, e As MouseEventArgs) Handles Panel1.MouseDown, Label1.MouseDown, IconButton1.MouseDown
         'codigo para mover ventana a partir del panel'
@@ -237,10 +237,6 @@ Public Class Aplicacion
 
     Private Sub IconButton9_Click(sender As Object, e As EventArgs) Handles IconButton9.Click
         Me.select_Eliminar_Estudiantes.SelectedIndex = 0
-    End Sub
-
-    Private Sub table_notas_CellClick(sender As Object, e As DataGridViewCellEventArgs) Handles table_notas.CellClick
-
     End Sub
 
 #End Region

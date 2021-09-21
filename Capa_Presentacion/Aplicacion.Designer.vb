@@ -623,6 +623,7 @@ Partial Class Aplicacion
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.input_Edit_Edad_Estu.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.input_Edit_Edad_Estu.Location = New System.Drawing.Point(6, 167)
+        Me.input_Edit_Edad_Estu.MaxLength = 2
         Me.input_Edit_Edad_Estu.Name = "input_Edit_Edad_Estu"
         Me.input_Edit_Edad_Estu.Size = New System.Drawing.Size(459, 27)
         Me.input_Edit_Edad_Estu.TabIndex = 0

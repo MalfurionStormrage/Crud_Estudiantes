@@ -86,7 +86,7 @@
 
             'realizar la consulta sql'
             sqlComand.Connection = connectionString
-            sqlComand.CommandText = "ObtenerNotasPorIdDeEstudiante"
+            sqlComand.CommandText = "OCGN_Proce_Obtener_Notas_Por_Id_De_Estudiantes"
             sqlComand.CommandType = CommandType.StoredProcedure
             sqlComand.Parameters.Add("@id", id_estudiante)
             Dim resultado = sqlComand.ExecuteReader()
