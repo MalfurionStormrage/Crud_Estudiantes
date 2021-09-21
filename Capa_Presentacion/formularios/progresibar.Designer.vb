@@ -37,7 +37,7 @@ Partial Class progresibar
         '
         'CircularProgressBar1
         '
-        Me.CircularProgressBar1.AnimationFunction = WinFormAnimation.KnownAnimationFunctions.Liner
+        Me.CircularProgressBar1.AnimationFunction = WinFormAnimation.KnownAnimationFunctions.CubicEaseIn
         Me.CircularProgressBar1.AnimationSpeed = 500
         Me.CircularProgressBar1.BackColor = System.Drawing.Color.Transparent
         Me.CircularProgressBar1.Font = New System.Drawing.Font("Century Gothic", 20.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
@@ -104,11 +104,11 @@ Partial Class progresibar
         '
         'Timer1
         '
-        Me.Timer1.Interval = 60
+        Me.Timer1.Interval = 30
         '
         'Timer2
         '
-        Me.Timer2.Interval = 60
+        Me.Timer2.Interval = 30
         '
         'PictureBox1
         '
