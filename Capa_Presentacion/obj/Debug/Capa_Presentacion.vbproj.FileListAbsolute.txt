@@ -33,4 +33,3 @@ D:\archivos desarrollo7\Desktop\Crud_Estudiantes\Capa_Presentacion\obj\Debug\Cap
 D:\archivos desarrollo7\Desktop\Crud_Estudiantes\Capa_Presentacion\obj\Debug\Capa_Presentacion.exe
 D:\archivos desarrollo7\Desktop\Crud_Estudiantes\Capa_Presentacion\obj\Debug\Capa_Presentacion.xml
 D:\archivos desarrollo7\Desktop\Crud_Estudiantes\Capa_Presentacion\obj\Debug\Capa_Presentacion.pdb
-D:\archivos desarrollo7\Desktop\Crud_Estudiantes\Capa_Presentacion\obj\Debug\Capa_Presentacion.vbproj.AssemblyReference.cache

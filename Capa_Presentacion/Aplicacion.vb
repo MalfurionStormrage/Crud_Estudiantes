@@ -131,6 +131,7 @@ Public Class Aplicacion
         Else
             Me.table_estudiantes.DataSource = estudiante.getEstudiantes()
         End If
+        table_notas.DataSource = ""
     End Sub
 
     Private Sub Btn_Eliminar_Estudiante_Click(sender As Object, e As EventArgs) Handles Btn_Eliminar_Estudiante.Click
@@ -157,13 +158,13 @@ Public Class Aplicacion
             Dim notas As New Notas()
             Dim carrera As New Carreras()
             Dim materias As New Materias()
-            Dim dato = table_estudiantes.Item(0, e.RowIndex).Value.ToString
-            Dim td = notas.obtenerNotaPorIdDeEstudiante(dato)
+            Dim td = notas.obtenerNotaPorIdDeEstudiante(table_estudiantes.Item(0, e.RowIndex).Value.ToString)
             Dim ID_M = td.rows(0).item(1)
 
             Dim result = materias.getDescripcionPorId(td.rows(0).item(1).ToString)
             result.rows(0).item(0).ToString()
             td.rows(0).item(1) = result.rows(0).item(0).ToString()
+
             Me.table_notas.DataSource = td
 
             If td.rows(0).item(2).ToString = "0" Or td.rows(0).item(3).ToString = "0" Or td.rows(0).item(4).ToString = "0" Then
@@ -204,13 +205,13 @@ Public Class Aplicacion
         If input_Edit_Nombre_Estu.Text <> "" And input_Edit_Edad_Estu.Text <> "" And input_Edit_Usuario_Estu.Text <> "" And Select_Edit_Carrera_Estu.SelectedIndex.ToString() <> "0" Then
             'se pregunta por la confirmacion de la edicion de datos'
             If MessageBox.Show("¿ Estas seguro de editar los datos ?", "Actualizar los datos", MessageBoxButtons.OKCancel, MessageBoxIcon.Question, MessageBoxDefaultButton.Button1) = DialogResult.OK Then
-                'se realiza la accion sql'
                 Dim estudiante As New Estudiantes()
-
                 Dim carrera As New Carreras()
+
                 Dim codigo = carrera.obtenerIdCarrerasPorDescripcion(Select_Edit_Carrera_Estu.Text)
                 Dim cod = codigo.Rows(0).Item(0).ToString()
 
+                'se realiza la accion sql'
                 estudiante.updataEstudiante(id_Es:=input_Edit_Ide_Estu.Text, Nombre:=input_Edit_Nombre_Estu.Text, Edad:=input_Edit_Edad_Estu.Text, Carrera:=cod, Usuario_Edita:=input_Edit_Usuario_Estu.Text)
                 cargarDatos()
 

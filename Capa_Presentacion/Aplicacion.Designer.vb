@@ -393,7 +393,7 @@ Partial Class Aplicacion
         Me.IconButton9.IconColor = System.Drawing.Color.FromArgb(CType(CType(220, Byte), Integer), CType(CType(53, Byte), Integer), CType(CType(69, Byte), Integer))
         Me.IconButton9.IconFont = FontAwesome.Sharp.IconFont.[Auto]
         Me.IconButton9.IconSize = 20
-        Me.IconButton9.Location = New System.Drawing.Point(1153, 459)
+        Me.IconButton9.Location = New System.Drawing.Point(1153, 456)
         Me.IconButton9.Name = "IconButton9"
         Me.IconButton9.Rotation = 180.0R
         Me.IconButton9.Size = New System.Drawing.Size(30, 30)
@@ -477,7 +477,7 @@ Partial Class Aplicacion
         Me.GroupBox1.Controls.Add(Me.Label4)
         Me.GroupBox1.Controls.Add(Me.input_Edit_Nombre_Estu)
         Me.GroupBox1.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.GroupBox1.Font = New System.Drawing.Font("Century Gothic", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.GroupBox1.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.GroupBox1.Location = New System.Drawing.Point(722, 58)
         Me.GroupBox1.Name = "GroupBox1"
         Me.GroupBox1.Size = New System.Drawing.Size(473, 363)
@@ -495,7 +495,7 @@ Partial Class Aplicacion
         Me.IconButton8.IconColor = System.Drawing.Color.FromArgb(CType(CType(220, Byte), Integer), CType(CType(53, Byte), Integer), CType(CType(69, Byte), Integer))
         Me.IconButton8.IconFont = FontAwesome.Sharp.IconFont.[Auto]
         Me.IconButton8.IconSize = 20
-        Me.IconButton8.Location = New System.Drawing.Point(435, 12)
+        Me.IconButton8.Location = New System.Drawing.Point(433, 22)
         Me.IconButton8.Name = "IconButton8"
         Me.IconButton8.Rotation = 180.0R
         Me.IconButton8.Size = New System.Drawing.Size(30, 30)
@@ -511,7 +511,7 @@ Partial Class Aplicacion
         Me.IconButton7.IconColor = System.Drawing.Color.FromArgb(CType(CType(13, Byte), Integer), CType(CType(110, Byte), Integer), CType(CType(253, Byte), Integer))
         Me.IconButton7.IconFont = FontAwesome.Sharp.IconFont.[Auto]
         Me.IconButton7.IconSize = 20
-        Me.IconButton7.Location = New System.Drawing.Point(399, 12)
+        Me.IconButton7.Location = New System.Drawing.Point(397, 22)
         Me.IconButton7.Name = "IconButton7"
         Me.IconButton7.Size = New System.Drawing.Size(30, 30)
         Me.IconButton7.TabIndex = 0
@@ -549,7 +549,7 @@ Partial Class Aplicacion
         Me.Select_Edit_Carrera_Estu.FormattingEnabled = True
         Me.Select_Edit_Carrera_Estu.Location = New System.Drawing.Point(6, 221)
         Me.Select_Edit_Carrera_Estu.Name = "Select_Edit_Carrera_Estu"
-        Me.Select_Edit_Carrera_Estu.Size = New System.Drawing.Size(459, 25)
+        Me.Select_Edit_Carrera_Estu.Size = New System.Drawing.Size(459, 29)
         Me.Select_Edit_Carrera_Estu.TabIndex = 0
         '
         'IconButton6
