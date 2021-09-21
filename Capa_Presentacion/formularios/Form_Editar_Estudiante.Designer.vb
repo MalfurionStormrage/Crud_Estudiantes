@@ -38,6 +38,7 @@ Partial Class Form_Editar_Estudiante
         Me.IconButton1 = New FontAwesome.Sharp.IconButton()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.TextBox1 = New System.Windows.Forms.TextBox()
+        Me.Panel2 = New System.Windows.Forms.Panel()
         Me.Panel1.SuspendLayout()
         Me.SuspendLayout()
         '
@@ -218,11 +219,20 @@ Partial Class Form_Editar_Estudiante
         Me.TextBox1.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
             Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
         Me.TextBox1.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TextBox1.Location = New System.Drawing.Point(24, 425)
+        Me.TextBox1.Location = New System.Drawing.Point(370, 428)
         Me.TextBox1.Name = "TextBox1"
-        Me.TextBox1.Size = New System.Drawing.Size(322, 27)
+        Me.TextBox1.Size = New System.Drawing.Size(10, 27)
         Me.TextBox1.TabIndex = 13
         Me.TextBox1.Visible = False
+        '
+        'Panel2
+        '
+        Me.Panel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.Panel2.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.Panel2.Location = New System.Drawing.Point(0, 0)
+        Me.Panel2.Name = "Panel2"
+        Me.Panel2.Size = New System.Drawing.Size(380, 450)
+        Me.Panel2.TabIndex = 14
         '
         'Form_Editar_Estudiante
         '
@@ -242,6 +252,7 @@ Partial Class Form_Editar_Estudiante
         Me.Controls.Add(Me.input_Edit_Edad_Estu)
         Me.Controls.Add(Me.Label4)
         Me.Controls.Add(Me.input_Edit_Nombre_Estu)
+        Me.Controls.Add(Me.Panel2)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Name = "Form_Editar_Estudiante"
@@ -269,4 +280,5 @@ Partial Class Form_Editar_Estudiante
     Friend WithEvents Label1 As Label
     Friend WithEvents IconButton1 As FontAwesome.Sharp.IconButton
     Friend WithEvents TextBox1 As TextBox
+    Friend WithEvents Panel2 As Panel
 End Class

@@ -1,13 +1,13 @@
 ﻿Public Class progresibar
 
     Private Sub progresibar_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        CircularProgressBar1.Value = 40
+        CircularProgressBar1.Value = 0
         Timer1.Start()
     End Sub
 
     Private Sub Timer1_Tick(sender As Object, e As EventArgs) Handles Timer1.Tick
         Dim contador As Integer = 0
-        CircularProgressBar1.Value += 1
+        CircularProgressBar1.Value += 5
         CircularProgressBar1.Text = CircularProgressBar1.Value.ToString + "%"
 
         If Me.Opacity < 1 Then
@@ -25,7 +25,8 @@
         Me.Opacity -= 0.05
         If Opacity = 0 Then
             Timer2.Stop()
-            Me.Close()
+            Aplicacion.Show()
+            Me.Visible = False
         End If
     End Sub
 End Class

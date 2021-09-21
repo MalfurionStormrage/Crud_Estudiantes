@@ -44,10 +44,10 @@ Partial Class Aplicacion
         Me.Label2 = New System.Windows.Forms.Label()
         Me.table_notas = New System.Windows.Forms.DataGridView()
         Me.Panel2 = New System.Windows.Forms.Panel()
+        Me.Btn_Eliminar_Estudiante = New FontAwesome.Sharp.IconButton()
         Me.table_estudiantes = New System.Windows.Forms.DataGridView()
         Me.IconButton5 = New FontAwesome.Sharp.IconButton()
         Me.Btn_Editar_Estudiante = New FontAwesome.Sharp.IconButton()
-        Me.Btn_Eliminar_Estudiante = New FontAwesome.Sharp.IconButton()
         Me.Panel1.SuspendLayout()
         CType(Me.table_notas, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panel2.SuspendLayout()
@@ -307,6 +307,27 @@ Partial Class Aplicacion
         Me.Panel2.Size = New System.Drawing.Size(1200, 600)
         Me.Panel2.TabIndex = 16
         '
+        'Btn_Eliminar_Estudiante
+        '
+        Me.Btn_Eliminar_Estudiante.BackColor = System.Drawing.Color.FromArgb(CType(CType(220, Byte), Integer), CType(CType(53, Byte), Integer), CType(CType(69, Byte), Integer))
+        Me.Btn_Eliminar_Estudiante.Enabled = False
+        Me.Btn_Eliminar_Estudiante.FlatAppearance.BorderSize = 0
+        Me.Btn_Eliminar_Estudiante.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Btn_Eliminar_Estudiante.Font = New System.Drawing.Font("Century Gothic", 12.0!)
+        Me.Btn_Eliminar_Estudiante.ForeColor = System.Drawing.Color.White
+        Me.Btn_Eliminar_Estudiante.IconChar = FontAwesome.Sharp.IconChar.UserTimes
+        Me.Btn_Eliminar_Estudiante.IconColor = System.Drawing.Color.White
+        Me.Btn_Eliminar_Estudiante.IconFont = FontAwesome.Sharp.IconFont.[Auto]
+        Me.Btn_Eliminar_Estudiante.IconSize = 30
+        Me.Btn_Eliminar_Estudiante.Location = New System.Drawing.Point(604, 96)
+        Me.Btn_Eliminar_Estudiante.Name = "Btn_Eliminar_Estudiante"
+        Me.Btn_Eliminar_Estudiante.Size = New System.Drawing.Size(280, 40)
+        Me.Btn_Eliminar_Estudiante.TabIndex = 0
+        Me.Btn_Eliminar_Estudiante.Text = "Remover estudiante"
+        Me.Btn_Eliminar_Estudiante.TextAlign = System.Drawing.ContentAlignment.MiddleRight
+        Me.Btn_Eliminar_Estudiante.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
+        Me.Btn_Eliminar_Estudiante.UseVisualStyleBackColor = False
+        '
         'table_estudiantes
         '
         Me.table_estudiantes.AllowUserToAddRows = False
@@ -339,6 +360,7 @@ Partial Class Aplicacion
         Me.table_estudiantes.Location = New System.Drawing.Point(32, 142)
         Me.table_estudiantes.Name = "table_estudiantes"
         Me.table_estudiantes.ReadOnly = True
+        Me.table_estudiantes.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.[Single]
         DataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
         DataGridViewCellStyle6.BackColor = System.Drawing.SystemColors.Control
         DataGridViewCellStyle6.Font = New System.Drawing.Font("Century Gothic", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
@@ -347,7 +369,6 @@ Partial Class Aplicacion
         DataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText
         DataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
         Me.table_estudiantes.RowHeadersDefaultCellStyle = DataGridViewCellStyle6
-        Me.table_estudiantes.RowHeadersVisible = False
         Me.table_estudiantes.Size = New System.Drawing.Size(1153, 349)
         Me.table_estudiantes.TabIndex = 0
         '
@@ -387,27 +408,6 @@ Partial Class Aplicacion
         Me.Btn_Editar_Estudiante.TextAlign = System.Drawing.ContentAlignment.MiddleRight
         Me.Btn_Editar_Estudiante.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
         Me.Btn_Editar_Estudiante.UseVisualStyleBackColor = False
-        '
-        'Btn_Eliminar_Estudiante
-        '
-        Me.Btn_Eliminar_Estudiante.BackColor = System.Drawing.Color.FromArgb(CType(CType(220, Byte), Integer), CType(CType(53, Byte), Integer), CType(CType(69, Byte), Integer))
-        Me.Btn_Eliminar_Estudiante.Enabled = False
-        Me.Btn_Eliminar_Estudiante.FlatAppearance.BorderSize = 0
-        Me.Btn_Eliminar_Estudiante.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Btn_Eliminar_Estudiante.Font = New System.Drawing.Font("Century Gothic", 12.0!)
-        Me.Btn_Eliminar_Estudiante.ForeColor = System.Drawing.Color.White
-        Me.Btn_Eliminar_Estudiante.IconChar = FontAwesome.Sharp.IconChar.UserTimes
-        Me.Btn_Eliminar_Estudiante.IconColor = System.Drawing.Color.White
-        Me.Btn_Eliminar_Estudiante.IconFont = FontAwesome.Sharp.IconFont.[Auto]
-        Me.Btn_Eliminar_Estudiante.IconSize = 30
-        Me.Btn_Eliminar_Estudiante.Location = New System.Drawing.Point(604, 96)
-        Me.Btn_Eliminar_Estudiante.Name = "Btn_Eliminar_Estudiante"
-        Me.Btn_Eliminar_Estudiante.Size = New System.Drawing.Size(280, 40)
-        Me.Btn_Eliminar_Estudiante.TabIndex = 0
-        Me.Btn_Eliminar_Estudiante.Text = "Remover estudiante"
-        Me.Btn_Eliminar_Estudiante.TextAlign = System.Drawing.ContentAlignment.MiddleRight
-        Me.Btn_Eliminar_Estudiante.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
-        Me.Btn_Eliminar_Estudiante.UseVisualStyleBackColor = False
         '
         'Aplicacion
         '

@@ -98,10 +98,12 @@ Public Class Form_Agregar_Estudiante
 
             'se envia el id del estudiante el cual se le asignara las notas y ademas se abre la venta de asignacion de notas'
             Form_Agregar_Notas.TextBox4.Text = Input_Identificacion.Text
+
             Form_Agregar_Notas.ShowDialog()
 
             'cierro formulario'
             Me.Close()
+            Me.Visible = False
 
         Else
             MessageBox.Show("Todos los campos son obligatios.", "Informacion", MessageBoxButtons.OK, MessageBoxIcon.Information)

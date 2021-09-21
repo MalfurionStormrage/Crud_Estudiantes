@@ -24,7 +24,17 @@ Capa_Presentacion
 </member>
 <member name="P:Capa_Presentacion.My.Resources.Resources.logo">
 <summary>
-  Busca un recurso adaptado de tipo System.Drawing.Icon similar a (Icono).
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:Capa_Presentacion.My.Resources.Resources.logo_Form">
+<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:Capa_Presentacion.My.Resources.Resources.logo1">
+<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
 </summary>
 </member>
 </members>

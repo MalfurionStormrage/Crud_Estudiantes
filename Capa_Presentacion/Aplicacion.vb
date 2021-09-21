@@ -21,6 +21,8 @@ Public Class Aplicacion
     Private Sub Btn_Cerrar_Click(sender As Object, e As EventArgs) Handles Btn_Cerrar.Click
         If MessageBox.Show("¿ Estas seguro de cerrar la aplicacion ?", "Cerrar aplicacion", MessageBoxButtons.OKCancel, MessageBoxIcon.Question, MessageBoxDefaultButton.Button1) = DialogResult.OK Then
             Me.Close()
+            progresibar.Close()
+            Application.Exit()
         End If
     End Sub
 
@@ -147,10 +149,10 @@ Public Class Aplicacion
 
             If td.rows(0).item(2).ToString = "0" Or td.rows(0).item(3).ToString = "0" Or td.rows(0).item(4).ToString = "0" Then
                 If MessageBox.Show("El presente estudiante tiene dato en cero , deseas asignar sus notas ? ", "Notas del estudiante", MessageBoxButtons.OKCancel, MessageBoxIcon.Information) = DialogResult.OK Then
-                    Form_Agregar_Notas.ShowDialog()
                     Form_Agregar_Notas.TextBox1.Text = "true"
                     Form_Agregar_Notas.TextBox4.Text = td.rows(0).item(0).ToString
                     Form_Agregar_Notas.select_materia.SelectedIndex = ID_M
+                    Form_Agregar_Notas.ShowDialog()
                 End If
             End If
 
@@ -161,7 +163,9 @@ Public Class Aplicacion
             Form_Editar_Estudiante.input_Edit_Ide_Estu.Text = id_E
             Form_Editar_Estudiante.input_Edit_Nombre_Estu.Text = Me.table_estudiantes.Item(1, e.RowIndex).Value.ToString
             Form_Editar_Estudiante.input_Edit_Edad_Estu.Text = Me.table_estudiantes.Item(2, e.RowIndex).Value.ToString
+            Form_Editar_Estudiante.TextBox1.Text = Me.table_estudiantes.Item(3, e.RowIndex).Value.ToString
             'Form_Editar_Estudiante.Select_Edit_Carrera_Estu.SelectedIndex = 1
+
 
             'If Me.table_estudiantes.Item(3, e.RowIndex).Value.ToString.Length > 1 Then
             '    Dim codigo = carrera.obtenerIdCarrerasPorDescripcion(Me.table_estudiantes.Item(3, e.RowIndex).Value.ToString)
