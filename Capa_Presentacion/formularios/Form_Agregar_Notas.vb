@@ -159,14 +159,14 @@ Public Class Form_Agregar_Notas
 
             'iniciar clase'
             Dim notas As New Notas()
-
+            Dim materias As New Materias()
             'datos a insertar'
             Dim id_e As Integer = Convert.ToInt32(Me.TextBox4.Text)
             Dim descripcion_Materia As String = Me.select_materia.SelectedValue.ToString()
 
 
             'obtengo valor del id de la materia para asignar nota
-            Dim resultado = notas.GetIdNotas(descripcion_Materia)
+            Dim resultado = materias.GetIdMateria(descripcion_Materia)
             Dim cod = resultado.Rows(0).Item(0).ToString()
 
             If TextBox1.Text = "false" Then

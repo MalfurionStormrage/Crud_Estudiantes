@@ -2,32 +2,6 @@
 
     Inherits Conexion
 
-    Public Function GetIdNotas(descripcion As String)
-        Try
-            'iniciar conexion db'
-            If (connectionString.State.ToString() = "Closed") Then
-                connectionString.Open()
-            End If
-
-            'consulta sql'
-            sqlComand.Connection = connectionString
-            sqlComand.CommandText = "OCGN_Proce_ObtenerIdMaterias"
-            sqlComand.CommandType = CommandType.StoredProcedure
-            sqlComand.Parameters.Add("@Des", descripcion)
-            Dim resultado = sqlComand.ExecuteReader()
-            tabla.Load(resultado)
-            connectionString.Close()
-            sqlComand.Parameters.Clear()
-
-            'se retorna la tabla con datos'
-            Return tabla
-
-        Catch ex As Exception
-            MsgBox("Error en la consulta, casusa: " + ex.ToString())
-        End Try
-
-    End Function
-
     Public Sub setNotas(id_e As Integer, id_m As String, nota1 As Integer, nota2 As Integer, nota3 As Integer)
         Try
             'iniciar conexion db'
