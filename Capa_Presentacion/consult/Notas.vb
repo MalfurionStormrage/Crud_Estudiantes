@@ -72,7 +72,6 @@
         End Try
     End Sub
 
-
     Public Function obtenerNotaPorIdDeEstudiante(id_estudiante As String)
 
         Dim tabla As New DataTable()
