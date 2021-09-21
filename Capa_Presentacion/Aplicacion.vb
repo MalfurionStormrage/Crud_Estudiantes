@@ -106,34 +106,19 @@ Public Class Aplicacion
         SendMessage(Me.Handle, &H112&, &HF012&, 0)
     End Sub
 
+    Private Sub Aplicacion_Shown(sender As Object, e As EventArgs) Handles MyBase.Shown
+        WindowState = FormWindowState.Maximized
+        btnViewport()
+    End Sub
+
     Private Sub Aplicacion_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         Me.MaximumSize = Screen.PrimaryScreen.WorkingArea.Size
         'Me.Combobox_Seleccionar_carrera.DropDownStyle = ComboBoxStyle.DropDownList
         cargarDatos()
     End Sub
 
-    Private Sub Panel1_DoubleClick(sender As Object, e As EventArgs) Handles Panel1.DoubleClick
-        If (WindowState = FormWindowState.Maximized) Then
-            WindowState = FormWindowState.Normal
-            btnViewport()
-        Else
-            WindowState = FormWindowState.Maximized
-            btnViewport()
-        End If
-
-    End Sub
-
-    Private Sub Panel1_MouseClick(sender As Object, e As MouseEventArgs) Handles Panel1.MouseClick
-        WindowState = FormWindowState.Maximized
-        btnViewport()
-    End Sub
-
     Private Sub Btn_Agregar_Estudiantes_Click(sender As Object, e As EventArgs) Handles Btn_Agregar_Estudiantes.Click
         Form_Agregar_Estudiante.Show()
-    End Sub
-
-    Private Sub IconButton4_Click(sender As Object, e As EventArgs) Handles IconButton4.Click
-        select_Seleccionar_carreras_fil.SelectedIndex = 0
     End Sub
 
     Private Sub select_Seleccionar_carreras_fil_SelectedIndexChanged(sender As Object, e As EventArgs) Handles select_Seleccionar_carreras_fil.SelectedIndexChanged
@@ -164,15 +149,21 @@ Public Class Aplicacion
         End If
     End Sub
 
-    Private Sub table_estudiantes_CellClick(sender As Object, e As DataGridViewCellEventArgs) Handles  table_estudiantes.CellClick
+    Private Sub table_estudiantes_CellClick(sender As Object, e As DataGridViewCellEventArgs) Handles table_estudiantes.CellClick
 
         Dim numero = table_estudiantes.Rows.Count
         'realizar consulta de notas a los estudiantes siempre y cuando se de click en fila con datos'
         If e.RowIndex >= 0 And e.RowIndex < numero - 1 Then
             Dim notas As New Notas()
             Dim carrera As New Carreras()
+            Dim materias As New Materias()
             Dim dato = table_estudiantes.Item(0, e.RowIndex).Value.ToString
             Dim td = notas.obtenerNotaPorIdDeEstudiante(dato)
+            Dim ID_M = td.rows(0).item(1)
+
+            Dim result = materias.getDescripcionPorId(td.rows(0).item(1).ToString)
+            result.rows(0).item(0).ToString()
+            td.rows(0).item(1) = result.rows(0).item(0).ToString()
             Me.table_notas.DataSource = td
 
             If td.rows(0).item(2).ToString = "0" Or td.rows(0).item(3).ToString = "0" Or td.rows(0).item(4).ToString = "0" Then
@@ -180,7 +171,8 @@ Public Class Aplicacion
                     Form_Agregar_Notas.Show()
                     Form_Agregar_Notas.TextBox1.Text = "true"
                     Form_Agregar_Notas.TextBox4.Text = td.rows(0).item(0).ToString
-                    Form_Agregar_Notas.select_materia.SelectedIndex = td.rows(0).item(1)
+
+                    Form_Agregar_Notas.select_materia.SelectedIndex = ID_M
                 End If
             End If
 
@@ -196,15 +188,15 @@ Public Class Aplicacion
                 Me.Select_Edit_Carrera_Estu.SelectedIndex = Me.table_estudiantes.Item(3, e.RowIndex).Value.ToString
             End If
 
-            End If
+        End If
+    End Sub
+
+    Private Sub IconButton4_Click(sender As Object, e As EventArgs) Handles IconButton4.Click
+        select_Seleccionar_carreras_fil.SelectedIndex = 0
     End Sub
 
     Private Sub IconButton5_Click(sender As Object, e As EventArgs) Handles IconButton5.Click
         table_notas.DataSource = ""
-    End Sub
-
-    Private Sub IconButton7_Click(sender As Object, e As EventArgs) Handles IconButton7.Click
-        MessageBox.Show("Para utilizar este apartado debes seleccionar un estudiante de la tabla estudiantes y posterior a ello editar sus datos.", "Apartado de ediccion", MessageBoxButtons.OK, MessageBoxIcon.Information)
     End Sub
 
     Private Sub IconButton6_Click(sender As Object, e As EventArgs) Handles IconButton6.Click
@@ -229,6 +221,10 @@ Public Class Aplicacion
         Else
             MessageBox.Show("Todo los campos son obligatorios.", "Alerta", MessageBoxButtons.OK, MessageBoxIcon.Warning)
         End If
+    End Sub
+
+    Private Sub IconButton7_Click(sender As Object, e As EventArgs) Handles IconButton7.Click
+        MessageBox.Show("Para utilizar este apartado debes seleccionar un estudiante de la tabla estudiantes y posterior a ello editar sus datos.", "Apartado de ediccion", MessageBoxButtons.OK, MessageBoxIcon.Information)
     End Sub
 
     Private Sub IconButton8_Click(sender As Object, e As EventArgs) Handles IconButton8.Click

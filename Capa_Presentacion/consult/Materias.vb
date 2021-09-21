@@ -2,6 +2,30 @@
 
     Inherits Conexion
 
+    Public Function getDescripcionPorId(id As String)
+        Try
+            'iniciar conexion db'
+            If (connectionString.State.ToString() = "Closed") Then
+                connectionString.Open()
+            End If
+
+            'consulta sql'
+            sqlComand.Connection = connectionString
+            sqlComand.CommandText = "select descripcion from materias where ID_M = '" & id & "'"
+            sqlComand.CommandType = CommandType.Text
+
+            Dim resultado = sqlComand.ExecuteReader()
+            tabla.Load(resultado)
+            connectionString.Close()
+
+            'se retorna la tabla con datos'
+            Return tabla
+
+        Catch ex As Exception
+            MsgBox("Error en la consulta, casusa: " + ex.ToString())
+        End Try
+    End Function
+
     Public Function GetIdMateria(descripcion As String)
         Try
             'iniciar conexion db'

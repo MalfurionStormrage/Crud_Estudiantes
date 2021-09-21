@@ -76,6 +76,8 @@ Partial Class Aplicacion
         '
         'Panel1
         '
+        Me.Panel1.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.Panel1.BackColor = System.Drawing.Color.FromArgb(CType(CType(23, Byte), Integer), CType(CType(32, Byte), Integer), CType(CType(42, Byte), Integer))
         Me.Panel1.Controls.Add(Me.IconButton3)
         Me.Panel1.Controls.Add(Me.IconButton2)
@@ -83,7 +85,6 @@ Partial Class Aplicacion
         Me.Panel1.Controls.Add(Me.Label1)
         Me.Panel1.Controls.Add(Me.Btn_Minimizar)
         Me.Panel1.Controls.Add(Me.Btn_Cerrar)
-        Me.Panel1.Dock = System.Windows.Forms.DockStyle.Top
         Me.Panel1.Location = New System.Drawing.Point(0, 0)
         Me.Panel1.Name = "Panel1"
         Me.Panel1.Size = New System.Drawing.Size(1200, 40)
@@ -675,10 +676,10 @@ Partial Class Aplicacion
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(1200, 600)
+        Me.Controls.Add(Me.Panel1)
         Me.Controls.Add(Me.Btn_Eliminar_Estudiante)
         Me.Controls.Add(Me.select_Eliminar_Estudiantes)
         Me.Controls.Add(Me.table_notas)
-        Me.Controls.Add(Me.Panel1)
         Me.Controls.Add(Me.Panel2)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
