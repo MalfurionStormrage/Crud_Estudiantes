@@ -2,6 +2,8 @@
 
 Public Class Aplicacion
 
+    Private id_E As String
+
 #Region "Codigo para mover elementos"
 
     <DllImport("user32.DLL", EntryPoint:="ReleaseCapture")>
@@ -45,21 +47,12 @@ Public Class Aplicacion
         Dim estudiante = New Estudiantes()
         Dim result = estudiante.getEstudiantes()
         Me.table_estudiantes.DataSource = result
-        '--------------------------------------------------------------------------------'
-
-        result = estudiante.getEstudiantes()
-        Dim fila = result.NewRow()
-        fila("ID_E") = "-- Selecciona un estudiante --"
-        result.Rows.InsertAt(fila, 0)
-
-        Me.select_Eliminar_Estudiantes.DataSource = result
-        Me.select_Eliminar_Estudiantes.DisplayMember = "ID_E"
 
         '--------------------------------------------------------------------------------'
 
         Dim carrera As New Carreras()
         result = carrera.ObtenerDesCarreras()
-        fila = result.NewRow()
+        Dim fila = result.NewRow()
         fila("Descripcion") = "-- Selecciona un carrera --"
         result.Rows.InsertAt(fila, 0)
 
@@ -68,22 +61,6 @@ Public Class Aplicacion
 
         '--------------------------------------------------------------------------------'
 
-        result = carrera.ObtenerDesCarreras()
-        fila = result.NewRow()
-        fila("Descripcion") = "-- Selecciona un carrera --"
-        result.Rows.InsertAt(fila, 0)
-
-        Me.Select_Edit_Carrera_Estu.DataSource = result
-        Me.Select_Edit_Carrera_Estu.DisplayMember = "Descripcion"
-
-    End Sub
-
-    Sub LimpiarFormEditar()
-        input_Edit_Ide_Estu.Text = ""
-        input_Edit_Nombre_Estu.Text = ""
-        input_Edit_Edad_Estu.Text = ""
-        input_Edit_Usuario_Estu.Text = ""
-        Me.Select_Edit_Carrera_Estu.SelectedIndex = 0
     End Sub
 
     Sub btnViewport()
@@ -113,12 +90,12 @@ Public Class Aplicacion
 
     Private Sub Aplicacion_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         Me.MaximumSize = Screen.PrimaryScreen.WorkingArea.Size
-        'Me.Combobox_Seleccionar_carrera.DropDownStyle = ComboBoxStyle.DropDownList
         cargarDatos()
+        Me.table_estudiantes.ClearSelection()
     End Sub
 
     Private Sub Btn_Agregar_Estudiantes_Click(sender As Object, e As EventArgs) Handles Btn_Agregar_Estudiantes.Click
-        Form_Agregar_Estudiante.Show()
+        Form_Agregar_Estudiante.ShowDialog()
     End Sub
 
     Private Sub select_Seleccionar_carreras_fil_SelectedIndexChanged(sender As Object, e As EventArgs) Handles select_Seleccionar_carreras_fil.SelectedIndexChanged
@@ -135,12 +112,11 @@ Public Class Aplicacion
     End Sub
 
     Private Sub Btn_Eliminar_Estudiante_Click(sender As Object, e As EventArgs) Handles Btn_Eliminar_Estudiante.Click
-        If select_Eliminar_Estudiantes.SelectedIndex <> "0" Then
+        If table_estudiantes.Rows.Count > 0 Then
             If MessageBox.Show("¿  Estas seguro de eliminar este estudiante ?", "Eliminar estudiante", MessageBoxButtons.OKCancel, MessageBoxIcon.Question, MessageBoxDefaultButton.Button1) = DialogResult.OK Then
 
                 Dim estudiante = New Estudiantes()
-                estudiante.deleteEstudiante(select_Eliminar_Estudiantes.Text)
-                select_Eliminar_Estudiantes.SelectedIndex = 0
+                estudiante.deleteEstudiante(id_E)
                 cargarDatos()
                 table_notas.DataSource = ""
 
@@ -154,40 +130,50 @@ Public Class Aplicacion
 
         Dim numero = table_estudiantes.Rows.Count
         'realizar consulta de notas a los estudiantes siempre y cuando se de click en fila con datos'
-        If e.RowIndex >= 0 And e.RowIndex < numero - 1 Then
+        If e.RowIndex >= 0 And e.RowIndex < numero Then
+
             Dim notas As New Notas()
             Dim carrera As New Carreras()
             Dim materias As New Materias()
             Dim td = notas.obtenerNotaPorIdDeEstudiante(table_estudiantes.Item(0, e.RowIndex).Value.ToString)
             Dim ID_M = td.rows(0).item(1)
-
             Dim result = materias.getDescripcionPorId(td.rows(0).item(1).ToString)
+
             result.rows(0).item(0).ToString()
             td.rows(0).item(1) = result.rows(0).item(0).ToString()
 
             Me.table_notas.DataSource = td
+            Me.table_notas.ClearSelection()
 
             If td.rows(0).item(2).ToString = "0" Or td.rows(0).item(3).ToString = "0" Or td.rows(0).item(4).ToString = "0" Then
                 If MessageBox.Show("El presente estudiante tiene dato en cero , deseas asignar sus notas ? ", "Notas del estudiante", MessageBoxButtons.OKCancel, MessageBoxIcon.Information) = DialogResult.OK Then
-                    Form_Agregar_Notas.Show()
+                    Form_Agregar_Notas.ShowDialog()
                     Form_Agregar_Notas.TextBox1.Text = "true"
                     Form_Agregar_Notas.TextBox4.Text = td.rows(0).item(0).ToString
-
                     Form_Agregar_Notas.select_materia.SelectedIndex = ID_M
                 End If
             End If
 
-            Me.input_Edit_Ide_Estu.Text = table_estudiantes.Item(0, e.RowIndex).Value.ToString
-            Me.input_Edit_Nombre_Estu.Text = Me.table_estudiantes.Item(1, e.RowIndex).Value.ToString
-            Me.input_Edit_Edad_Estu.Text = Me.table_estudiantes.Item(2, e.RowIndex).Value.ToString
+            Btn_Editar_Estudiante.Enabled = True
+            Btn_Eliminar_Estudiante.Enabled = True
 
-            If Me.table_estudiantes.Item(3, e.RowIndex).Value.ToString.Length > 1 Then
-                Dim codigo = carrera.obtenerIdCarrerasPorDescripcion(Me.table_estudiantes.Item(3, e.RowIndex).Value.ToString)
-                Dim cod = codigo.Rows(0).Item(0).ToString()
-                Me.Select_Edit_Carrera_Estu.SelectedIndex = cod
-            Else
-                Me.Select_Edit_Carrera_Estu.SelectedIndex = Me.table_estudiantes.Item(3, e.RowIndex).Value.ToString
-            End If
+            id_E = Me.table_estudiantes.Item(0, e.RowIndex).Value.ToString
+            Form_Editar_Estudiante.input_Edit_Ide_Estu.Text = id_E
+            Form_Editar_Estudiante.input_Edit_Nombre_Estu.Text = Me.table_estudiantes.Item(1, e.RowIndex).Value.ToString
+            Form_Editar_Estudiante.input_Edit_Edad_Estu.Text = Me.table_estudiantes.Item(2, e.RowIndex).Value.ToString
+            'Form_Editar_Estudiante.Select_Edit_Carrera_Estu.SelectedIndex = 1
+
+            'If Me.table_estudiantes.Item(3, e.RowIndex).Value.ToString.Length > 1 Then
+            '    Dim codigo = carrera.obtenerIdCarrerasPorDescripcion(Me.table_estudiantes.Item(3, e.RowIndex).Value.ToString)
+            '    Dim cod = codigo.Rows(0).Item(0).ToString()
+            '    Form_Editar_Estudiante.Select_Edit_Carrera_Estu.SelectedIndex = cod
+            'Else
+            '    Form_Editar_Estudiante.Select_Edit_Carrera_Estu.SelectedIndex = Me.table_estudiantes.Item(3, e.RowIndex).Value.ToString
+            'End If
+
+        Else
+            Btn_Eliminar_Estudiante.Enabled = False
+            Btn_Editar_Estudiante.Enabled = False
 
         End If
     End Sub
@@ -200,40 +186,12 @@ Public Class Aplicacion
         table_notas.DataSource = ""
     End Sub
 
-    Private Sub IconButton6_Click(sender As Object, e As EventArgs) Handles IconButton6.Click
-        'se valdia que la accion modifica no tenga campos vacios'
-        If input_Edit_Nombre_Estu.Text <> "" And input_Edit_Edad_Estu.Text <> "" And input_Edit_Usuario_Estu.Text <> "" And Select_Edit_Carrera_Estu.SelectedIndex.ToString() <> "0" Then
-            'se pregunta por la confirmacion de la edicion de datos'
-            If MessageBox.Show("¿ Estas seguro de editar los datos ?", "Actualizar los datos", MessageBoxButtons.OKCancel, MessageBoxIcon.Question, MessageBoxDefaultButton.Button1) = DialogResult.OK Then
-                Dim estudiante As New Estudiantes()
-                Dim carrera As New Carreras()
-
-                Dim codigo = carrera.obtenerIdCarrerasPorDescripcion(Select_Edit_Carrera_Estu.Text)
-                Dim cod = codigo.Rows(0).Item(0).ToString()
-
-                'se realiza la accion sql'
-                estudiante.updataEstudiante(id_Es:=input_Edit_Ide_Estu.Text, Nombre:=input_Edit_Nombre_Estu.Text, Edad:=input_Edit_Edad_Estu.Text, Carrera:=cod, Usuario_Edita:=input_Edit_Usuario_Estu.Text)
-                cargarDatos()
-
-                'se aplica reset a los textbox y combobox'
-                LimpiarFormEditar()
-
-            End If
-        Else
-            MessageBox.Show("Todo los campos son obligatorios.", "Alerta", MessageBoxButtons.OK, MessageBoxIcon.Warning)
-        End If
+    Private Sub IconButton6_Click(sender As Object, e As EventArgs) Handles Btn_Editar_Estudiante.Click
+        Form_Editar_Estudiante.ShowDialog()
     End Sub
 
-    Private Sub IconButton7_Click(sender As Object, e As EventArgs) Handles IconButton7.Click
+    Private Sub IconButton7_Click(sender As Object, e As EventArgs)
         MessageBox.Show("Para utilizar este apartado debes seleccionar un estudiante de la tabla estudiantes y posterior a ello editar sus datos.", "Apartado de ediccion", MessageBoxButtons.OK, MessageBoxIcon.Information)
-    End Sub
-
-    Private Sub IconButton8_Click(sender As Object, e As EventArgs) Handles IconButton8.Click
-        LimpiarFormEditar()
-    End Sub
-
-    Private Sub IconButton9_Click(sender As Object, e As EventArgs) Handles IconButton9.Click
-        Me.select_Eliminar_Estudiantes.SelectedIndex = 0
     End Sub
 
 #End Region

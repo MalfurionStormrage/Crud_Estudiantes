@@ -19,10 +19,6 @@ Public Class Form_Agregar_Estudiante
         Me.Close()
     End Sub
 
-    Private Sub Btn_Minimizar_Ventana_Click(sender As Object, e As EventArgs) Handles Btn_Minimizar_Ventana.Click
-        WindowState = FormWindowState.Minimized
-    End Sub
-
     Private Sub Panel1_MouseDown(sender As Object, e As MouseEventArgs) Handles Panel1.MouseDown, Label1.MouseDown
         'codigo para mover ventana a partir del panel'
         ReleaseCapture()
@@ -102,7 +98,7 @@ Public Class Form_Agregar_Estudiante
 
             'se envia el id del estudiante el cual se le asignara las notas y ademas se abre la venta de asignacion de notas'
             Form_Agregar_Notas.TextBox4.Text = Input_Identificacion.Text
-            Form_Agregar_Notas.Show()
+            Form_Agregar_Notas.ShowDialog()
 
             'cierro formulario'
             Me.Close()

@@ -60,10 +60,6 @@ Public Class Form_Agregar_Notas
 
 #Region "Control de ventana"
 
-    Private Sub IconButton2_Click(sender As Object, e As EventArgs) Handles IconButton2.Click
-        WindowState = FormWindowState.Minimized
-    End Sub
-
     Private Sub Panel1_MouseDown(sender As Object, e As MouseEventArgs) Handles Panel1.MouseDown, Label7.MouseDown
         'utilizar user32.dll para mover elementos'
         ReleaseCapture()

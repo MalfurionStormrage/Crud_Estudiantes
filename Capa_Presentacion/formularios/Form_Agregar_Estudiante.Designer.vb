@@ -26,7 +26,6 @@ Partial Class Form_Agregar_Estudiante
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.Btn_Cerrar_Ventana = New FontAwesome.Sharp.IconButton()
-        Me.Btn_Minimizar_Ventana = New FontAwesome.Sharp.IconButton()
         Me.Panel2 = New System.Windows.Forms.Panel()
         Me.Label5 = New System.Windows.Forms.Label()
         Me.Select_Carrera = New System.Windows.Forms.ComboBox()
@@ -51,7 +50,6 @@ Partial Class Form_Agregar_Estudiante
         Me.Panel1.BackColor = System.Drawing.Color.FromArgb(CType(CType(28, Byte), Integer), CType(CType(40, Byte), Integer), CType(CType(51, Byte), Integer))
         Me.Panel1.Controls.Add(Me.Label1)
         Me.Panel1.Controls.Add(Me.Btn_Cerrar_Ventana)
-        Me.Panel1.Controls.Add(Me.Btn_Minimizar_Ventana)
         Me.Panel1.Dock = System.Windows.Forms.DockStyle.Top
         Me.Panel1.Location = New System.Drawing.Point(0, 0)
         Me.Panel1.Name = "Panel1"
@@ -84,22 +82,6 @@ Partial Class Form_Agregar_Estudiante
         Me.Btn_Cerrar_Ventana.Size = New System.Drawing.Size(40, 40)
         Me.Btn_Cerrar_Ventana.TabIndex = 0
         Me.Btn_Cerrar_Ventana.UseVisualStyleBackColor = False
-        '
-        'Btn_Minimizar_Ventana
-        '
-        Me.Btn_Minimizar_Ventana.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.Btn_Minimizar_Ventana.BackColor = System.Drawing.Color.FromArgb(CType(CType(28, Byte), Integer), CType(CType(40, Byte), Integer), CType(CType(51, Byte), Integer))
-        Me.Btn_Minimizar_Ventana.FlatAppearance.BorderSize = 0
-        Me.Btn_Minimizar_Ventana.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Btn_Minimizar_Ventana.IconChar = FontAwesome.Sharp.IconChar.WindowMinimize
-        Me.Btn_Minimizar_Ventana.IconColor = System.Drawing.Color.White
-        Me.Btn_Minimizar_Ventana.IconFont = FontAwesome.Sharp.IconFont.[Auto]
-        Me.Btn_Minimizar_Ventana.IconSize = 20
-        Me.Btn_Minimizar_Ventana.Location = New System.Drawing.Point(300, 1)
-        Me.Btn_Minimizar_Ventana.Name = "Btn_Minimizar_Ventana"
-        Me.Btn_Minimizar_Ventana.Size = New System.Drawing.Size(40, 40)
-        Me.Btn_Minimizar_Ventana.TabIndex = 0
-        Me.Btn_Minimizar_Ventana.UseVisualStyleBackColor = False
         '
         'Panel2
         '
@@ -286,7 +268,6 @@ Partial Class Form_Agregar_Estudiante
     Friend WithEvents Panel1 As Panel
     Friend WithEvents Label1 As Label
     Friend WithEvents Btn_Cerrar_Ventana As FontAwesome.Sharp.IconButton
-    Friend WithEvents Btn_Minimizar_Ventana As FontAwesome.Sharp.IconButton
     Friend WithEvents Panel2 As Panel
     Friend WithEvents Label5 As Label
     Friend WithEvents Select_Carrera As ComboBox

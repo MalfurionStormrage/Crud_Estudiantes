@@ -25,7 +25,6 @@ Partial Class Form_Agregar_Notas
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Form_Agregar_Notas))
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.Label7 = New System.Windows.Forms.Label()
-        Me.IconButton2 = New FontAwesome.Sharp.IconButton()
         Me.Label6 = New System.Windows.Forms.Label()
         Me.TextBox4 = New System.Windows.Forms.TextBox()
         Me.Label5 = New System.Windows.Forms.Label()
@@ -37,10 +36,10 @@ Partial Class Form_Agregar_Notas
         Me.input_Nota1 = New System.Windows.Forms.TextBox()
         Me.input_Nota3 = New System.Windows.Forms.TextBox()
         Me.Panel2 = New System.Windows.Forms.Panel()
+        Me.TextBox1 = New System.Windows.Forms.TextBox()
         Me.input_Nota2 = New System.Windows.Forms.TextBox()
         Me.ShapeContainer1 = New Microsoft.VisualBasic.PowerPacks.ShapeContainer()
         Me.LineShape1 = New Microsoft.VisualBasic.PowerPacks.LineShape()
-        Me.TextBox1 = New System.Windows.Forms.TextBox()
         Me.Panel1.SuspendLayout()
         Me.Panel2.SuspendLayout()
         Me.SuspendLayout()
@@ -49,7 +48,6 @@ Partial Class Form_Agregar_Notas
         '
         Me.Panel1.BackColor = System.Drawing.Color.FromArgb(CType(CType(40, Byte), Integer), CType(CType(55, Byte), Integer), CType(CType(71, Byte), Integer))
         Me.Panel1.Controls.Add(Me.Label7)
-        Me.Panel1.Controls.Add(Me.IconButton2)
         Me.Panel1.Dock = System.Windows.Forms.DockStyle.Top
         Me.Panel1.Location = New System.Drawing.Point(0, 0)
         Me.Panel1.Name = "Panel1"
@@ -66,21 +64,6 @@ Partial Class Form_Agregar_Notas
         Me.Label7.Size = New System.Drawing.Size(170, 21)
         Me.Label7.TabIndex = 0
         Me.Label7.Text = "Asignacion de notas"
-        '
-        'IconButton2
-        '
-        Me.IconButton2.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.IconButton2.FlatAppearance.BorderSize = 0
-        Me.IconButton2.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.IconButton2.IconChar = FontAwesome.Sharp.IconChar.WindowMinimize
-        Me.IconButton2.IconColor = System.Drawing.Color.White
-        Me.IconButton2.IconFont = FontAwesome.Sharp.IconFont.[Auto]
-        Me.IconButton2.IconSize = 20
-        Me.IconButton2.Location = New System.Drawing.Point(340, 0)
-        Me.IconButton2.Name = "IconButton2"
-        Me.IconButton2.Size = New System.Drawing.Size(40, 40)
-        Me.IconButton2.TabIndex = 8
-        Me.IconButton2.UseVisualStyleBackColor = True
         '
         'Label6
         '
@@ -209,6 +192,15 @@ Partial Class Form_Agregar_Notas
         Me.Panel2.Size = New System.Drawing.Size(380, 450)
         Me.Panel2.TabIndex = 17
         '
+        'TextBox1
+        '
+        Me.TextBox1.Location = New System.Drawing.Point(29, 335)
+        Me.TextBox1.Name = "TextBox1"
+        Me.TextBox1.Size = New System.Drawing.Size(316, 20)
+        Me.TextBox1.TabIndex = 21
+        Me.TextBox1.Text = "false"
+        Me.TextBox1.Visible = False
+        '
         'input_Nota2
         '
         Me.input_Nota2.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
@@ -238,15 +230,6 @@ Partial Class Form_Agregar_Notas
         Me.LineShape1.Y1 = 81
         Me.LineShape1.Y2 = 81
         '
-        'TextBox1
-        '
-        Me.TextBox1.Location = New System.Drawing.Point(29, 335)
-        Me.TextBox1.Name = "TextBox1"
-        Me.TextBox1.Size = New System.Drawing.Size(316, 20)
-        Me.TextBox1.TabIndex = 21
-        Me.TextBox1.Text = "false"
-        Me.TextBox1.Visible = False
-        '
         'Form_Agregar_Notas
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -274,7 +257,6 @@ Partial Class Form_Agregar_Notas
 
     Friend WithEvents Panel1 As Panel
     Friend WithEvents Label7 As Label
-    Friend WithEvents IconButton2 As FontAwesome.Sharp.IconButton
     Friend WithEvents Label6 As Label
     Friend WithEvents TextBox4 As TextBox
     Friend WithEvents Label5 As Label

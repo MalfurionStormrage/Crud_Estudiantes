@@ -48,6 +48,11 @@
     <OptionInfer>On</OptionInfer>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="CircularProgressBar, Version=2.8.0.16, Culture=neutral, PublicKeyToken=310fd07b25df79b3, processorArchitecture=MSIL">
+      <HintPath>..\packages\CircularProgressBar.2.8.0.16\lib\net40\CircularProgressBar.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.Data.v18.1, Version=18.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Xpo.v18.1, Version=18.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="FontAwesome.Sharp">
       <HintPath>..\packages\FontAwesome.Sharp.5.15.3\lib\net472\FontAwesome.Sharp.dll</HintPath>
     </Reference>
@@ -63,6 +68,9 @@
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="System.Net.Http" />
+    <Reference Include="WinFormAnimation, Version=1.6.0.4, Culture=neutral, PublicKeyToken=310fd07b25df79b3, processorArchitecture=MSIL">
+      <HintPath>..\packages\WinFormAnimation.1.6.0.4\lib\net40\WinFormAnimation.dll</HintPath>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
     <Import Include="Microsoft.VisualBasic" />
@@ -101,6 +109,18 @@
     <Compile Include="formularios\Form_Agregar_Notas.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="formularios\Form_Editar_Estudiante.Designer.vb">
+      <DependentUpon>Form_Editar_Estudiante.vb</DependentUpon>
+    </Compile>
+    <Compile Include="formularios\Form_Editar_Estudiante.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="formularios\progresibar.Designer.vb">
+      <DependentUpon>progresibar.vb</DependentUpon>
+    </Compile>
+    <Compile Include="formularios\progresibar.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="My Project\AssemblyInfo.vb" />
     <Compile Include="My Project\Application.Designer.vb">
       <AutoGen>True</AutoGen>
@@ -127,6 +147,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="formularios\Form_Agregar_Notas.resx">
       <DependentUpon>Form_Agregar_Notas.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="formularios\Form_Editar_Estudiante.resx">
+      <DependentUpon>Form_Editar_Estudiante.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="formularios\progresibar.resx">
+      <DependentUpon>progresibar.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="My Project\Resources.resx">
       <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
