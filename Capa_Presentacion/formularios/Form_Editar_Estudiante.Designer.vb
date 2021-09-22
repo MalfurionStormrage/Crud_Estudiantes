@@ -33,9 +33,9 @@ Partial Class Form_Editar_Estudiante
         Me.input_Edit_Edad_Estu = New System.Windows.Forms.TextBox()
         Me.Label4 = New System.Windows.Forms.Label()
         Me.input_Edit_Nombre_Estu = New System.Windows.Forms.TextBox()
-        Me.IconButton6 = New FontAwesome.Sharp.IconButton()
+        Me.Btn_Editar_Datos = New FontAwesome.Sharp.IconButton()
         Me.Panel1 = New System.Windows.Forms.Panel()
-        Me.IconButton1 = New FontAwesome.Sharp.IconButton()
+        Me.Btn_Cerrar_frm = New FontAwesome.Sharp.IconButton()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.TextBox1 = New System.Windows.Forms.TextBox()
         Me.Panel2 = New System.Windows.Forms.Panel()
@@ -157,31 +157,31 @@ Partial Class Form_Editar_Estudiante
         Me.input_Edit_Nombre_Estu.Size = New System.Drawing.Size(322, 27)
         Me.input_Edit_Nombre_Estu.TabIndex = 10
         '
-        'IconButton6
+        'Btn_Editar_Datos
         '
-        Me.IconButton6.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
+        Me.Btn_Editar_Datos.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.IconButton6.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(185, Byte), Integer), CType(CType(7, Byte), Integer))
-        Me.IconButton6.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.IconButton6.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.IconButton6.ForeColor = System.Drawing.Color.White
-        Me.IconButton6.IconChar = FontAwesome.Sharp.IconChar.UserEdit
-        Me.IconButton6.IconColor = System.Drawing.Color.White
-        Me.IconButton6.IconFont = FontAwesome.Sharp.IconFont.[Auto]
-        Me.IconButton6.IconSize = 25
-        Me.IconButton6.Location = New System.Drawing.Point(24, 366)
-        Me.IconButton6.Name = "IconButton6"
-        Me.IconButton6.Size = New System.Drawing.Size(322, 53)
-        Me.IconButton6.TabIndex = 11
-        Me.IconButton6.Text = "Editar Datos"
-        Me.IconButton6.TextAlign = System.Drawing.ContentAlignment.MiddleRight
-        Me.IconButton6.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
-        Me.IconButton6.UseVisualStyleBackColor = False
+        Me.Btn_Editar_Datos.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(185, Byte), Integer), CType(CType(7, Byte), Integer))
+        Me.Btn_Editar_Datos.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Btn_Editar_Datos.Font = New System.Drawing.Font("Century Gothic", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Btn_Editar_Datos.ForeColor = System.Drawing.Color.White
+        Me.Btn_Editar_Datos.IconChar = FontAwesome.Sharp.IconChar.UserEdit
+        Me.Btn_Editar_Datos.IconColor = System.Drawing.Color.White
+        Me.Btn_Editar_Datos.IconFont = FontAwesome.Sharp.IconFont.[Auto]
+        Me.Btn_Editar_Datos.IconSize = 25
+        Me.Btn_Editar_Datos.Location = New System.Drawing.Point(24, 366)
+        Me.Btn_Editar_Datos.Name = "Btn_Editar_Datos"
+        Me.Btn_Editar_Datos.Size = New System.Drawing.Size(322, 53)
+        Me.Btn_Editar_Datos.TabIndex = 11
+        Me.Btn_Editar_Datos.Text = "Editar Datos"
+        Me.Btn_Editar_Datos.TextAlign = System.Drawing.ContentAlignment.MiddleRight
+        Me.Btn_Editar_Datos.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
+        Me.Btn_Editar_Datos.UseVisualStyleBackColor = False
         '
         'Panel1
         '
         Me.Panel1.BackColor = System.Drawing.Color.FromArgb(CType(CType(40, Byte), Integer), CType(CType(55, Byte), Integer), CType(CType(71, Byte), Integer))
-        Me.Panel1.Controls.Add(Me.IconButton1)
+        Me.Panel1.Controls.Add(Me.Btn_Cerrar_frm)
         Me.Panel1.Controls.Add(Me.Label1)
         Me.Panel1.Dock = System.Windows.Forms.DockStyle.Top
         Me.Panel1.Location = New System.Drawing.Point(0, 0)
@@ -189,19 +189,19 @@ Partial Class Form_Editar_Estudiante
         Me.Panel1.Size = New System.Drawing.Size(380, 40)
         Me.Panel1.TabIndex = 12
         '
-        'IconButton1
+        'Btn_Cerrar_frm
         '
-        Me.IconButton1.FlatAppearance.BorderSize = 0
-        Me.IconButton1.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.IconButton1.IconChar = FontAwesome.Sharp.IconChar.Times
-        Me.IconButton1.IconColor = System.Drawing.Color.White
-        Me.IconButton1.IconFont = FontAwesome.Sharp.IconFont.[Auto]
-        Me.IconButton1.IconSize = 20
-        Me.IconButton1.Location = New System.Drawing.Point(340, 0)
-        Me.IconButton1.Name = "IconButton1"
-        Me.IconButton1.Size = New System.Drawing.Size(40, 39)
-        Me.IconButton1.TabIndex = 2
-        Me.IconButton1.UseVisualStyleBackColor = True
+        Me.Btn_Cerrar_frm.FlatAppearance.BorderSize = 0
+        Me.Btn_Cerrar_frm.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Btn_Cerrar_frm.IconChar = FontAwesome.Sharp.IconChar.Times
+        Me.Btn_Cerrar_frm.IconColor = System.Drawing.Color.White
+        Me.Btn_Cerrar_frm.IconFont = FontAwesome.Sharp.IconFont.[Auto]
+        Me.Btn_Cerrar_frm.IconSize = 20
+        Me.Btn_Cerrar_frm.Location = New System.Drawing.Point(340, 0)
+        Me.Btn_Cerrar_frm.Name = "Btn_Cerrar_frm"
+        Me.Btn_Cerrar_frm.Size = New System.Drawing.Size(40, 39)
+        Me.Btn_Cerrar_frm.TabIndex = 2
+        Me.Btn_Cerrar_frm.UseVisualStyleBackColor = True
         '
         'Label1
         '
@@ -241,7 +241,7 @@ Partial Class Form_Editar_Estudiante
         Me.ClientSize = New System.Drawing.Size(380, 450)
         Me.Controls.Add(Me.TextBox1)
         Me.Controls.Add(Me.Panel1)
-        Me.Controls.Add(Me.IconButton6)
+        Me.Controls.Add(Me.Btn_Editar_Datos)
         Me.Controls.Add(Me.Label9)
         Me.Controls.Add(Me.input_Edit_Ide_Estu)
         Me.Controls.Add(Me.Select_Edit_Carrera_Estu)
@@ -275,10 +275,10 @@ Partial Class Form_Editar_Estudiante
     Friend WithEvents input_Edit_Edad_Estu As TextBox
     Friend WithEvents Label4 As Label
     Friend WithEvents input_Edit_Nombre_Estu As TextBox
-    Friend WithEvents IconButton6 As FontAwesome.Sharp.IconButton
+    Friend WithEvents Btn_Editar_Datos As FontAwesome.Sharp.IconButton
     Friend WithEvents Panel1 As Panel
     Friend WithEvents Label1 As Label
-    Friend WithEvents IconButton1 As FontAwesome.Sharp.IconButton
+    Friend WithEvents Btn_Cerrar_frm As FontAwesome.Sharp.IconButton
     Friend WithEvents TextBox1 As TextBox
     Friend WithEvents Panel2 As Panel
 End Class

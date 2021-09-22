@@ -7,7 +7,7 @@
 
     Private Sub Timer1_Tick(sender As Object, e As EventArgs) Handles Timer1.Tick
 
-        CircularProgressBar1.Value += 1
+        CircularProgressBar1.Value += 5
         CircularProgressBar1.Text = CircularProgressBar1.Value.ToString + "%"
 
         If Me.Opacity < 1 Then
@@ -22,10 +22,10 @@
 
     Private Sub Timer2_Tick(sender As Object, e As EventArgs) Handles Timer2.Tick
         Me.Opacity -= 0.05
-        'If Opacity = 0 Then
-        '    Timer2.Stop()
-        '    Aplicacion.Show()
-        '    Me.Visible = False
-        'End If
+        If Opacity = 0 Then
+            Timer2.Stop()
+            Aplicacion.Show()
+            Me.Visible = False
+        End If
     End Sub
 End Class

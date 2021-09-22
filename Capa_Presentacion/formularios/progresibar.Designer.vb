@@ -40,7 +40,7 @@ Partial Class progresibar
         Me.CircularProgressBar1.AnimationFunction = WinFormAnimation.KnownAnimationFunctions.CubicEaseIn
         Me.CircularProgressBar1.AnimationSpeed = 500
         Me.CircularProgressBar1.BackColor = System.Drawing.Color.Transparent
-        Me.CircularProgressBar1.Font = New System.Drawing.Font("Century Gothic", 20.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.CircularProgressBar1.Font = New System.Drawing.Font("Century Gothic", 24.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.CircularProgressBar1.ForeColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
         Me.CircularProgressBar1.InnerColor = System.Drawing.Color.FromArgb(CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer))
         Me.CircularProgressBar1.InnerMargin = 2
@@ -53,7 +53,7 @@ Partial Class progresibar
         Me.CircularProgressBar1.OuterWidth = 26
         Me.CircularProgressBar1.ProgressColor = System.Drawing.Color.FromArgb(CType(CType(3, Byte), Integer), CType(CType(22, Byte), Integer), CType(CType(51, Byte), Integer))
         Me.CircularProgressBar1.ProgressWidth = 25
-        Me.CircularProgressBar1.SecondaryFont = New System.Drawing.Font("Microsoft Sans Serif", 48.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.CircularProgressBar1.SecondaryFont = New System.Drawing.Font("Microsoft Sans Serif", 50.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.CircularProgressBar1.Size = New System.Drawing.Size(200, 200)
         Me.CircularProgressBar1.StartAngle = 270
         Me.CircularProgressBar1.SubscriptColor = System.Drawing.Color.FromArgb(CType(CType(166, Byte), Integer), CType(CType(166, Byte), Integer), CType(CType(166, Byte), Integer))
@@ -79,6 +79,7 @@ Partial Class progresibar
         '
         'IconButton1
         '
+        Me.IconButton1.Enabled = False
         Me.IconButton1.FlatAppearance.BorderSize = 0
         Me.IconButton1.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.IconButton1.IconChar = FontAwesome.Sharp.IconChar.HandHoldingMedical
@@ -104,11 +105,11 @@ Partial Class progresibar
         '
         'Timer1
         '
-        Me.Timer1.Interval = 30
+        Me.Timer1.Interval = 50
         '
         'Timer2
         '
-        Me.Timer2.Interval = 30
+        Me.Timer2.Interval = 50
         '
         'PictureBox1
         '

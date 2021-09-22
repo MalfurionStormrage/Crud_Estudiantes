@@ -58,10 +58,9 @@ Public Class Form_Agregar_Notas
 
 #End Region
 
-#Region "Control de ventana"
+#Region "Control de ventana y eventos"
 
-    Private Sub Panel1_MouseDown(sender As Object, e As MouseEventArgs) Handles Panel1.MouseDown, Label7.MouseDown
-        'utilizar user32.dll para mover elementos'
+    Private Sub Panel1_MouseDown(sender As Object, e As MouseEventArgs) 
         ReleaseCapture()
         SendMessage(Me.Handle, &H112&, &HF012&, 0)
     End Sub
@@ -184,6 +183,29 @@ Public Class Form_Agregar_Notas
             MessageBox.Show("Selecciona una materia para asignar las notas", "Alerta", MessageBoxButtons.OK, MessageBoxIcon.Warning)
 
         End If
+    End Sub
+
+    Private Sub Form_Agregar_Notas_Shown(sender As Object, e As EventArgs) Handles MyBase.Shown
+
+        nota1 = 0
+        nota2 = 0
+        nota3 = 0
+
+        If TextBox2.Text.Length > 1 Then
+
+            Dim carrera As New Carreras()
+            Dim codigo = carrera.obtenerIdCarrerasPorDescripcion(TextBox2.Text)
+            Dim cod = codigo.Rows(0).Item(0).ToString()
+            Form_Editar_Estudiante.Select_Edit_Carrera_Estu.SelectedIndex = cod
+
+        Else
+            Me.select_materia.SelectedIndex = Convert.ToInt64(TextBox2.Text)
+        End If
+
+    End Sub
+
+    Private Sub Btn_Cerrar_Ventana_Click(sender As Object, e As EventArgs) Handles Btn_Cerrar_Ventana.Click
+        Me.Close()
     End Sub
 
 #End Region

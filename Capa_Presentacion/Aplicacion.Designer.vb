@@ -40,10 +40,11 @@ Partial Class Aplicacion
         Me.Label11 = New System.Windows.Forms.Label()
         Me.select_Seleccionar_carreras_fil = New System.Windows.Forms.ComboBox()
         Me.Label3 = New System.Windows.Forms.Label()
-        Me.Btn_Agregar_Estudiantes = New FontAwesome.Sharp.IconButton()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.table_notas = New System.Windows.Forms.DataGridView()
         Me.Panel2 = New System.Windows.Forms.Panel()
+        Me.Btn_Agregar_Estudiantes = New FontAwesome.Sharp.IconButton()
+        Me.Btn_Consultar = New FontAwesome.Sharp.IconButton()
         Me.Btn_Eliminar_Estudiante = New FontAwesome.Sharp.IconButton()
         Me.table_estudiantes = New System.Windows.Forms.DataGridView()
         Me.IconButton5 = New FontAwesome.Sharp.IconButton()
@@ -170,7 +171,7 @@ Partial Class Aplicacion
         Me.IconButton4.IconColor = System.Drawing.Color.FromArgb(CType(CType(220, Byte), Integer), CType(CType(53, Byte), Integer), CType(CType(69, Byte), Integer))
         Me.IconButton4.IconFont = FontAwesome.Sharp.IconFont.[Auto]
         Me.IconButton4.IconSize = 20
-        Me.IconButton4.Location = New System.Drawing.Point(1155, 75)
+        Me.IconButton4.Location = New System.Drawing.Point(1157, 75)
         Me.IconButton4.Name = "IconButton4"
         Me.IconButton4.Rotation = 180.0R
         Me.IconButton4.Size = New System.Drawing.Size(30, 30)
@@ -184,7 +185,7 @@ Partial Class Aplicacion
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.Label11.AutoSize = True
         Me.Label11.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label11.Location = New System.Drawing.Point(890, 87)
+        Me.Label11.Location = New System.Drawing.Point(892, 87)
         Me.Label11.Name = "Label11"
         Me.Label11.Size = New System.Drawing.Size(246, 21)
         Me.Label11.TabIndex = 0
@@ -200,7 +201,7 @@ Partial Class Aplicacion
         Me.select_Seleccionar_carreras_fil.FormattingEnabled = True
         Me.select_Seleccionar_carreras_fil.Location = New System.Drawing.Point(890, 111)
         Me.select_Seleccionar_carreras_fil.Name = "select_Seleccionar_carreras_fil"
-        Me.select_Seleccionar_carreras_fil.Size = New System.Drawing.Size(295, 25)
+        Me.select_Seleccionar_carreras_fil.Size = New System.Drawing.Size(297, 25)
         Me.select_Seleccionar_carreras_fil.TabIndex = 5
         '
         'Label3
@@ -208,37 +209,18 @@ Partial Class Aplicacion
         Me.Label3.Anchor = System.Windows.Forms.AnchorStyles.Top
         Me.Label3.AutoSize = True
         Me.Label3.Font = New System.Drawing.Font("Century Gothic", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label3.Location = New System.Drawing.Point(490, 55)
+        Me.Label3.Location = New System.Drawing.Point(491, 55)
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(219, 24)
         Me.Label3.TabIndex = 0
         Me.Label3.Text = "Tabla De Estudiantes"
-        '
-        'Btn_Agregar_Estudiantes
-        '
-        Me.Btn_Agregar_Estudiantes.BackColor = System.Drawing.Color.FromArgb(CType(CType(25, Byte), Integer), CType(CType(135, Byte), Integer), CType(CType(86, Byte), Integer))
-        Me.Btn_Agregar_Estudiantes.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Btn_Agregar_Estudiantes.Font = New System.Drawing.Font("Century Gothic", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Btn_Agregar_Estudiantes.ForeColor = System.Drawing.Color.White
-        Me.Btn_Agregar_Estudiantes.IconChar = FontAwesome.Sharp.IconChar.AddressCard
-        Me.Btn_Agregar_Estudiantes.IconColor = System.Drawing.Color.White
-        Me.Btn_Agregar_Estudiantes.IconFont = FontAwesome.Sharp.IconFont.[Auto]
-        Me.Btn_Agregar_Estudiantes.IconSize = 30
-        Me.Btn_Agregar_Estudiantes.Location = New System.Drawing.Point(32, 106)
-        Me.Btn_Agregar_Estudiantes.Name = "Btn_Agregar_Estudiantes"
-        Me.Btn_Agregar_Estudiantes.Size = New System.Drawing.Size(280, 30)
-        Me.Btn_Agregar_Estudiantes.TabIndex = 0
-        Me.Btn_Agregar_Estudiantes.Text = "Agregar Nuevo Estudiantes"
-        Me.Btn_Agregar_Estudiantes.TextAlign = System.Drawing.ContentAlignment.MiddleRight
-        Me.Btn_Agregar_Estudiantes.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
-        Me.Btn_Agregar_Estudiantes.UseVisualStyleBackColor = False
         '
         'Label2
         '
         Me.Label2.Anchor = System.Windows.Forms.AnchorStyles.Bottom
         Me.Label2.AutoSize = True
         Me.Label2.Font = New System.Drawing.Font("Century Gothic", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label2.Location = New System.Drawing.Point(516, 499)
+        Me.Label2.Location = New System.Drawing.Point(517, 501)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(166, 24)
         Me.Label2.TabIndex = 10
@@ -254,7 +236,7 @@ Partial Class Aplicacion
         Me.table_notas.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.[Single]
         DataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
         DataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(CType(CType(8, Byte), Integer), CType(CType(66, Byte), Integer), CType(CType(152, Byte), Integer))
-        DataGridViewCellStyle1.Font = New System.Drawing.Font("Century Gothic", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle1.Font = New System.Drawing.Font("Century Gothic", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         DataGridViewCellStyle1.ForeColor = System.Drawing.Color.White
         DataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight
         DataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText
@@ -263,7 +245,7 @@ Partial Class Aplicacion
         Me.table_notas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         DataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
         DataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window
-        DataGridViewCellStyle2.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle2.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         DataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText
         DataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight
         DataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText
@@ -271,32 +253,33 @@ Partial Class Aplicacion
         Me.table_notas.DefaultCellStyle = DataGridViewCellStyle2
         Me.table_notas.EnableHeadersVisualStyles = False
         Me.table_notas.GridColor = System.Drawing.Color.Black
-        Me.table_notas.Location = New System.Drawing.Point(32, 533)
+        Me.table_notas.Location = New System.Drawing.Point(32, 535)
         Me.table_notas.Name = "table_notas"
         Me.table_notas.ReadOnly = True
+        Me.table_notas.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.[Single]
         DataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
         DataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Control
-        DataGridViewCellStyle3.Font = New System.Drawing.Font("Century Gothic", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle3.Font = New System.Drawing.Font("Century Gothic", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         DataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText
         DataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight
         DataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText
         DataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
         Me.table_notas.RowHeadersDefaultCellStyle = DataGridViewCellStyle3
         Me.table_notas.RowHeadersVisible = False
-        Me.table_notas.Size = New System.Drawing.Size(1153, 54)
+        Me.table_notas.Size = New System.Drawing.Size(1155, 54)
         Me.table_notas.TabIndex = 0
         '
         'Panel2
         '
         Me.Panel2.BackColor = System.Drawing.Color.White
-        Me.Panel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.Panel2.Controls.Add(Me.Btn_Agregar_Estudiantes)
+        Me.Panel2.Controls.Add(Me.Btn_Consultar)
         Me.Panel2.Controls.Add(Me.table_notas)
         Me.Panel2.Controls.Add(Me.Btn_Eliminar_Estudiante)
         Me.Panel2.Controls.Add(Me.table_estudiantes)
         Me.Panel2.Controls.Add(Me.IconButton5)
         Me.Panel2.Controls.Add(Me.Label2)
         Me.Panel2.Controls.Add(Me.Label3)
-        Me.Panel2.Controls.Add(Me.Btn_Agregar_Estudiantes)
         Me.Panel2.Controls.Add(Me.Btn_Editar_Estudiante)
         Me.Panel2.Controls.Add(Me.Label11)
         Me.Panel2.Controls.Add(Me.IconButton4)
@@ -307,6 +290,46 @@ Partial Class Aplicacion
         Me.Panel2.Size = New System.Drawing.Size(1200, 600)
         Me.Panel2.TabIndex = 16
         '
+        'Btn_Agregar_Estudiantes
+        '
+        Me.Btn_Agregar_Estudiantes.BackColor = System.Drawing.Color.FromArgb(CType(CType(25, Byte), Integer), CType(CType(135, Byte), Integer), CType(CType(86, Byte), Integer))
+        Me.Btn_Agregar_Estudiantes.FlatAppearance.BorderSize = 0
+        Me.Btn_Agregar_Estudiantes.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Btn_Agregar_Estudiantes.Font = New System.Drawing.Font("Century Gothic", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Btn_Agregar_Estudiantes.ForeColor = System.Drawing.Color.Black
+        Me.Btn_Agregar_Estudiantes.IconChar = FontAwesome.Sharp.IconChar.UserPlus
+        Me.Btn_Agregar_Estudiantes.IconColor = System.Drawing.Color.Black
+        Me.Btn_Agregar_Estudiantes.IconFont = FontAwesome.Sharp.IconFont.[Auto]
+        Me.Btn_Agregar_Estudiantes.IconSize = 30
+        Me.Btn_Agregar_Estudiantes.Location = New System.Drawing.Point(272, 106)
+        Me.Btn_Agregar_Estudiantes.Name = "Btn_Agregar_Estudiantes"
+        Me.Btn_Agregar_Estudiantes.Size = New System.Drawing.Size(200, 30)
+        Me.Btn_Agregar_Estudiantes.TabIndex = 12
+        Me.Btn_Agregar_Estudiantes.Text = "Agregar Nuevo Estudiantes"
+        Me.Btn_Agregar_Estudiantes.TextAlign = System.Drawing.ContentAlignment.MiddleRight
+        Me.Btn_Agregar_Estudiantes.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
+        Me.Btn_Agregar_Estudiantes.UseVisualStyleBackColor = False
+        '
+        'Btn_Consultar
+        '
+        Me.Btn_Consultar.BackColor = System.Drawing.Color.FromArgb(CType(CType(13, Byte), Integer), CType(CType(110, Byte), Integer), CType(CType(253, Byte), Integer))
+        Me.Btn_Consultar.FlatAppearance.BorderSize = 0
+        Me.Btn_Consultar.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Btn_Consultar.Font = New System.Drawing.Font("Century Gothic", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Btn_Consultar.ForeColor = System.Drawing.Color.Black
+        Me.Btn_Consultar.IconChar = FontAwesome.Sharp.IconChar.Search
+        Me.Btn_Consultar.IconColor = System.Drawing.Color.Black
+        Me.Btn_Consultar.IconFont = FontAwesome.Sharp.IconFont.[Auto]
+        Me.Btn_Consultar.IconSize = 30
+        Me.Btn_Consultar.Location = New System.Drawing.Point(32, 106)
+        Me.Btn_Consultar.Name = "Btn_Consultar"
+        Me.Btn_Consultar.Size = New System.Drawing.Size(234, 30)
+        Me.Btn_Consultar.TabIndex = 11
+        Me.Btn_Consultar.Text = "Consultar"
+        Me.Btn_Consultar.TextAlign = System.Drawing.ContentAlignment.MiddleRight
+        Me.Btn_Consultar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
+        Me.Btn_Consultar.UseVisualStyleBackColor = False
+        '
         'Btn_Eliminar_Estudiante
         '
         Me.Btn_Eliminar_Estudiante.BackColor = System.Drawing.Color.FromArgb(CType(CType(220, Byte), Integer), CType(CType(53, Byte), Integer), CType(CType(69, Byte), Integer))
@@ -314,14 +337,14 @@ Partial Class Aplicacion
         Me.Btn_Eliminar_Estudiante.FlatAppearance.BorderSize = 0
         Me.Btn_Eliminar_Estudiante.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.Btn_Eliminar_Estudiante.Font = New System.Drawing.Font("Century Gothic", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Btn_Eliminar_Estudiante.ForeColor = System.Drawing.Color.White
+        Me.Btn_Eliminar_Estudiante.ForeColor = System.Drawing.Color.Black
         Me.Btn_Eliminar_Estudiante.IconChar = FontAwesome.Sharp.IconChar.UserTimes
-        Me.Btn_Eliminar_Estudiante.IconColor = System.Drawing.Color.White
+        Me.Btn_Eliminar_Estudiante.IconColor = System.Drawing.Color.Black
         Me.Btn_Eliminar_Estudiante.IconFont = FontAwesome.Sharp.IconFont.[Auto]
         Me.Btn_Eliminar_Estudiante.IconSize = 30
-        Me.Btn_Eliminar_Estudiante.Location = New System.Drawing.Point(604, 106)
+        Me.Btn_Eliminar_Estudiante.Location = New System.Drawing.Point(684, 106)
         Me.Btn_Eliminar_Estudiante.Name = "Btn_Eliminar_Estudiante"
-        Me.Btn_Eliminar_Estudiante.Size = New System.Drawing.Size(280, 30)
+        Me.Btn_Eliminar_Estudiante.Size = New System.Drawing.Size(200, 30)
         Me.Btn_Eliminar_Estudiante.TabIndex = 0
         Me.Btn_Eliminar_Estudiante.Text = "Remover estudiante"
         Me.Btn_Eliminar_Estudiante.TextAlign = System.Drawing.ContentAlignment.MiddleRight
@@ -336,7 +359,7 @@ Partial Class Aplicacion
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.table_estudiantes.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill
         Me.table_estudiantes.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.DisplayedCells
-        Me.table_estudiantes.BorderStyle = System.Windows.Forms.BorderStyle.None
+        Me.table_estudiantes.BackgroundColor = System.Drawing.Color.White
         Me.table_estudiantes.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.[Single]
         DataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
         DataGridViewCellStyle4.BackColor = System.Drawing.Color.FromArgb(CType(CType(8, Byte), Integer), CType(CType(66, Byte), Integer), CType(CType(152, Byte), Integer))
@@ -349,7 +372,7 @@ Partial Class Aplicacion
         Me.table_estudiantes.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         DataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
         DataGridViewCellStyle5.BackColor = System.Drawing.SystemColors.Window
-        DataGridViewCellStyle5.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle5.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         DataGridViewCellStyle5.ForeColor = System.Drawing.SystemColors.ControlText
         DataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight
         DataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText
@@ -363,13 +386,15 @@ Partial Class Aplicacion
         Me.table_estudiantes.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.[Single]
         DataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
         DataGridViewCellStyle6.BackColor = System.Drawing.SystemColors.Control
-        DataGridViewCellStyle6.Font = New System.Drawing.Font("Century Gothic", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle6.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         DataGridViewCellStyle6.ForeColor = System.Drawing.SystemColors.WindowText
         DataGridViewCellStyle6.SelectionBackColor = System.Drawing.SystemColors.Highlight
         DataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText
         DataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
         Me.table_estudiantes.RowHeadersDefaultCellStyle = DataGridViewCellStyle6
-        Me.table_estudiantes.Size = New System.Drawing.Size(1153, 349)
+        Me.table_estudiantes.RowHeadersVisible = False
+        Me.table_estudiantes.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
+        Me.table_estudiantes.Size = New System.Drawing.Size(1155, 351)
         Me.table_estudiantes.TabIndex = 0
         '
         'IconButton5
@@ -382,7 +407,7 @@ Partial Class Aplicacion
         Me.IconButton5.IconColor = System.Drawing.Color.FromArgb(CType(CType(220, Byte), Integer), CType(CType(53, Byte), Integer), CType(CType(69, Byte), Integer))
         Me.IconButton5.IconFont = FontAwesome.Sharp.IconFont.[Auto]
         Me.IconButton5.IconSize = 20
-        Me.IconButton5.Location = New System.Drawing.Point(1155, 497)
+        Me.IconButton5.Location = New System.Drawing.Point(1157, 499)
         Me.IconButton5.Name = "IconButton5"
         Me.IconButton5.Rotation = 180.0R
         Me.IconButton5.Size = New System.Drawing.Size(30, 30)
@@ -393,16 +418,17 @@ Partial Class Aplicacion
         '
         Me.Btn_Editar_Estudiante.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(185, Byte), Integer), CType(CType(7, Byte), Integer))
         Me.Btn_Editar_Estudiante.Enabled = False
+        Me.Btn_Editar_Estudiante.FlatAppearance.BorderSize = 0
         Me.Btn_Editar_Estudiante.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Btn_Editar_Estudiante.Font = New System.Drawing.Font("Century Gothic", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Btn_Editar_Estudiante.ForeColor = System.Drawing.Color.White
+        Me.Btn_Editar_Estudiante.Font = New System.Drawing.Font("Century Gothic", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Btn_Editar_Estudiante.ForeColor = System.Drawing.Color.Black
         Me.Btn_Editar_Estudiante.IconChar = FontAwesome.Sharp.IconChar.UserEdit
-        Me.Btn_Editar_Estudiante.IconColor = System.Drawing.Color.White
+        Me.Btn_Editar_Estudiante.IconColor = System.Drawing.Color.Black
         Me.Btn_Editar_Estudiante.IconFont = FontAwesome.Sharp.IconFont.[Auto]
-        Me.Btn_Editar_Estudiante.IconSize = 25
-        Me.Btn_Editar_Estudiante.Location = New System.Drawing.Point(318, 106)
+        Me.Btn_Editar_Estudiante.IconSize = 30
+        Me.Btn_Editar_Estudiante.Location = New System.Drawing.Point(478, 106)
         Me.Btn_Editar_Estudiante.Name = "Btn_Editar_Estudiante"
-        Me.Btn_Editar_Estudiante.Size = New System.Drawing.Size(280, 30)
+        Me.Btn_Editar_Estudiante.Size = New System.Drawing.Size(200, 30)
         Me.Btn_Editar_Estudiante.TabIndex = 0
         Me.Btn_Editar_Estudiante.Text = "Editar Datos"
         Me.Btn_Editar_Estudiante.TextAlign = System.Drawing.ContentAlignment.MiddleRight
@@ -442,7 +468,6 @@ Partial Class Aplicacion
     Friend WithEvents Label11 As Label
     Friend WithEvents select_Seleccionar_carreras_fil As ComboBox
     Friend WithEvents Label3 As Label
-    Friend WithEvents Btn_Agregar_Estudiantes As FontAwesome.Sharp.IconButton
     Friend WithEvents Label2 As Label
     Friend WithEvents table_notas As DataGridView
     Friend WithEvents Panel2 As Panel
@@ -450,4 +475,6 @@ Partial Class Aplicacion
     Friend WithEvents table_estudiantes As DataGridView
     Friend WithEvents Btn_Eliminar_Estudiante As FontAwesome.Sharp.IconButton
     Friend WithEvents Btn_Editar_Estudiante As FontAwesome.Sharp.IconButton
+    Friend WithEvents Btn_Consultar As FontAwesome.Sharp.IconButton
+    Friend WithEvents Btn_Agregar_Estudiantes As FontAwesome.Sharp.IconButton
 End Class

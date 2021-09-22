@@ -40,6 +40,14 @@ Public Class Aplicacion
         WindowState = FormWindowState.Minimized
     End Sub
 
+    Private Sub IconButton4_Click(sender As Object, e As EventArgs) Handles IconButton4.Click
+        select_Seleccionar_carreras_fil.SelectedIndex = 0
+    End Sub
+
+    Private Sub IconButton5_Click(sender As Object, e As EventArgs) Handles IconButton5.Click
+        table_notas.DataSource = ""
+    End Sub
+
 #End Region
 
 #Region "funciones"
@@ -85,19 +93,13 @@ Public Class Aplicacion
         SendMessage(Me.Handle, &H112&, &HF012&, 0)
     End Sub
 
+    Private Sub Aplicacion_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        Me.MaximumSize = Screen.PrimaryScreen.WorkingArea.Size
+    End Sub
+
     Private Sub Aplicacion_Shown(sender As Object, e As EventArgs) Handles MyBase.Shown
         WindowState = FormWindowState.Maximized
         btnViewport()
-    End Sub
-
-    Private Sub Aplicacion_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        Me.MaximumSize = Screen.PrimaryScreen.WorkingArea.Size
-        cargarDatos()
-        Me.table_estudiantes.ClearSelection()
-    End Sub
-
-    Private Sub Btn_Agregar_Estudiantes_Click(sender As Object, e As EventArgs) Handles Btn_Agregar_Estudiantes.Click
-        Form_Agregar_Estudiante.ShowDialog()
     End Sub
 
     Private Sub select_Seleccionar_carreras_fil_SelectedIndexChanged(sender As Object, e As EventArgs) Handles select_Seleccionar_carreras_fil.SelectedIndexChanged
@@ -111,21 +113,9 @@ Public Class Aplicacion
             Me.table_estudiantes.DataSource = estudiante.getEstudiantes()
         End If
         table_notas.DataSource = ""
-    End Sub
-
-    Private Sub Btn_Eliminar_Estudiante_Click(sender As Object, e As EventArgs) Handles Btn_Eliminar_Estudiante.Click
-        If table_estudiantes.Rows.Count > 0 Then
-            If MessageBox.Show("¿  Estas seguro de eliminar este estudiante ?", "Eliminar estudiante", MessageBoxButtons.OKCancel, MessageBoxIcon.Question, MessageBoxDefaultButton.Button1) = DialogResult.OK Then
-
-                Dim estudiante = New Estudiantes()
-                estudiante.deleteEstudiante(id_E)
-                cargarDatos()
-                table_notas.DataSource = ""
-
-            End If
-        Else
-            MessageBox.Show(" Debes seleccionar un estudiante para poder eliminar. ", "Eliminar estudiante", MessageBoxButtons.OK, MessageBoxIcon.Information)
-        End If
+        Me.table_estudiantes.ClearSelection()
+        Btn_Editar_Estudiante.Enabled = False
+        Btn_Eliminar_Estudiante.Enabled = False
     End Sub
 
     Private Sub table_estudiantes_CellClick(sender As Object, e As DataGridViewCellEventArgs) Handles table_estudiantes.CellClick
@@ -151,7 +141,7 @@ Public Class Aplicacion
                 If MessageBox.Show("El presente estudiante tiene dato en cero , deseas asignar sus notas ? ", "Notas del estudiante", MessageBoxButtons.OKCancel, MessageBoxIcon.Information) = DialogResult.OK Then
                     Form_Agregar_Notas.TextBox1.Text = "true"
                     Form_Agregar_Notas.TextBox4.Text = td.rows(0).item(0).ToString
-                    Form_Agregar_Notas.select_materia.SelectedIndex = ID_M
+                    Form_Agregar_Notas.TextBox2.Text = ID_M
                     Form_Agregar_Notas.ShowDialog()
                 End If
             End If
@@ -164,16 +154,7 @@ Public Class Aplicacion
             Form_Editar_Estudiante.input_Edit_Nombre_Estu.Text = Me.table_estudiantes.Item(1, e.RowIndex).Value.ToString
             Form_Editar_Estudiante.input_Edit_Edad_Estu.Text = Me.table_estudiantes.Item(2, e.RowIndex).Value.ToString
             Form_Editar_Estudiante.TextBox1.Text = Me.table_estudiantes.Item(3, e.RowIndex).Value.ToString
-            'Form_Editar_Estudiante.Select_Edit_Carrera_Estu.SelectedIndex = 1
 
-
-            'If Me.table_estudiantes.Item(3, e.RowIndex).Value.ToString.Length > 1 Then
-            '    Dim codigo = carrera.obtenerIdCarrerasPorDescripcion(Me.table_estudiantes.Item(3, e.RowIndex).Value.ToString)
-            '    Dim cod = codigo.Rows(0).Item(0).ToString()
-            '    Form_Editar_Estudiante.Select_Edit_Carrera_Estu.SelectedIndex = cod
-            'Else
-            '    Form_Editar_Estudiante.Select_Edit_Carrera_Estu.SelectedIndex = Me.table_estudiantes.Item(3, e.RowIndex).Value.ToString
-            'End If
 
         Else
             Btn_Eliminar_Estudiante.Enabled = False
@@ -182,20 +163,34 @@ Public Class Aplicacion
         End If
     End Sub
 
-    Private Sub IconButton4_Click(sender As Object, e As EventArgs) Handles IconButton4.Click
-        select_Seleccionar_carreras_fil.SelectedIndex = 0
+    Private Sub Btn_Consultar_Click(sender As Object, e As EventArgs) Handles Btn_Consultar.Click
+        cargarDatos()
+        Me.table_estudiantes.ClearSelection()
+        Btn_Editar_Estudiante.Enabled = False
+        Btn_Eliminar_Estudiante.Enabled = False
     End Sub
 
-    Private Sub IconButton5_Click(sender As Object, e As EventArgs) Handles IconButton5.Click
-        table_notas.DataSource = ""
+    Private Sub Btn_Agregar_Estudiantes_Click(sender As Object, e As EventArgs) Handles Btn_Agregar_Estudiantes.Click
+        Form_Agregar_Estudiante.ShowDialog()
     End Sub
 
-    Private Sub IconButton6_Click(sender As Object, e As EventArgs) Handles Btn_Editar_Estudiante.Click
+    Private Sub Btn_Editar_Estudiante_Click(sender As Object, e As EventArgs) Handles Btn_Editar_Estudiante.Click
         Form_Editar_Estudiante.ShowDialog()
     End Sub
 
-    Private Sub IconButton7_Click(sender As Object, e As EventArgs)
-        MessageBox.Show("Para utilizar este apartado debes seleccionar un estudiante de la tabla estudiantes y posterior a ello editar sus datos.", "Apartado de ediccion", MessageBoxButtons.OK, MessageBoxIcon.Information)
+    Private Sub Btn_Eliminar_Estudiante_Click(sender As Object, e As EventArgs) Handles Btn_Eliminar_Estudiante.Click
+        If table_estudiantes.Rows.Count > 0 Then
+            If MessageBox.Show("¿  Estas seguro de eliminar este estudiante ?", "Eliminar estudiante", MessageBoxButtons.OKCancel, MessageBoxIcon.Question, MessageBoxDefaultButton.Button1) = DialogResult.OK Then
+
+                Dim estudiante = New Estudiantes()
+                estudiante.deleteEstudiante(id_E)
+                cargarDatos()
+                table_notas.DataSource = ""
+
+            End If
+        Else
+            MessageBox.Show(" Debes seleccionar un estudiante para poder eliminar. ", "Eliminar estudiante", MessageBoxButtons.OK, MessageBoxIcon.Information)
+        End If
     End Sub
 
 #End Region

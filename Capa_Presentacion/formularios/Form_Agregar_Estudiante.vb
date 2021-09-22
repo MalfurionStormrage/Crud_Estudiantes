@@ -15,21 +15,6 @@ Public Class Form_Agregar_Estudiante
 
 #Region "btn ventana"
 
-    Private Sub Btn_Cerrar_Ventana_Click(sender As Object, e As EventArgs) Handles Btn_Cerrar_Ventana.Click
-        Me.Close()
-    End Sub
-
-    Private Sub Panel1_MouseDown(sender As Object, e As MouseEventArgs) Handles Panel1.MouseDown, Label1.MouseDown
-        'codigo para mover ventana a partir del panel'
-        ReleaseCapture()
-        SendMessage(Me.Handle, &H112&, &HF012&, 0)
-    End Sub
-
-
-    Private Sub Form_Agregar_Estudiante_Shown(sender As Object, e As EventArgs) Handles MyBase.Shown
-        Input_Identificacion.Focus()
-    End Sub
-
     Sub comparar(e As KeyPressEventArgs)
         If e.KeyChar = Convert.ToChar(Keys.Enter) Then
             If Input_Identificacion.Text = "" Then
@@ -46,6 +31,29 @@ Public Class Form_Agregar_Estudiante
                 Btn_Agregar_Estudiantes.Focus()
             End If
         End If
+    End Sub
+
+    Private Sub Btn_Cerrar_Ventana_Click(sender As Object, e As EventArgs) Handles Btn_Cerrar_Ventana.Click
+        Me.Close()
+    End Sub
+
+    Private Sub Panel1_MouseDown(sender As Object, e As MouseEventArgs) Handles Panel1.MouseDown, Label1.MouseDown
+        'codigo para mover ventana a partir del panel'
+        ReleaseCapture()
+        SendMessage(Me.Handle, &H112&, &HF012&, 0)
+    End Sub
+
+    Private Sub Input_Nombre_KeyPress(sender As Object, e As KeyPressEventArgs) Handles Input_Nombre.KeyPress, Select_Carrera.KeyPress, Input_Usuario.KeyPress
+        comparar(e)
+    End Sub
+
+    Private Sub Form_Agregar_Estudiante_Shown(sender As Object, e As EventArgs) Handles MyBase.Shown
+        Me.Input_Identificacion.Text = ""
+        Me.Input_Nombre.Text = ""
+        Me.Input_Edad.Text = ""
+        Me.Select_Carrera.SelectedIndex = 0
+        Me.Input_Usuario.Text = ""
+        Input_Identificacion.Focus()
     End Sub
 
     Private Sub TextBox3_KeyPress(sender As Object, e As KeyPressEventArgs) Handles Input_Edad.KeyPress, Input_Identificacion.KeyPress
@@ -108,10 +116,6 @@ Public Class Form_Agregar_Estudiante
         Else
             MessageBox.Show("Todos los campos son obligatios.", "Informacion", MessageBoxButtons.OK, MessageBoxIcon.Information)
         End If
-    End Sub
-
-    Private Sub Input_Nombre_KeyPress(sender As Object, e As KeyPressEventArgs) Handles Input_Nombre.KeyPress, Select_Carrera.KeyPress, Input_Usuario.KeyPress
-        comparar(e)
     End Sub
 
 #End Region

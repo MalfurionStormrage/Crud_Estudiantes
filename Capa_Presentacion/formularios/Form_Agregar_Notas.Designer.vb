@@ -24,6 +24,7 @@ Partial Class Form_Agregar_Notas
     Private Sub InitializeComponent()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Form_Agregar_Notas))
         Me.Panel1 = New System.Windows.Forms.Panel()
+        Me.Btn_Cerrar_Ventana = New FontAwesome.Sharp.IconButton()
         Me.Label7 = New System.Windows.Forms.Label()
         Me.Label6 = New System.Windows.Forms.Label()
         Me.TextBox4 = New System.Windows.Forms.TextBox()
@@ -36,6 +37,7 @@ Partial Class Form_Agregar_Notas
         Me.input_Nota1 = New System.Windows.Forms.TextBox()
         Me.input_Nota3 = New System.Windows.Forms.TextBox()
         Me.Panel2 = New System.Windows.Forms.Panel()
+        Me.TextBox2 = New System.Windows.Forms.TextBox()
         Me.TextBox1 = New System.Windows.Forms.TextBox()
         Me.input_Nota2 = New System.Windows.Forms.TextBox()
         Me.ShapeContainer1 = New Microsoft.VisualBasic.PowerPacks.ShapeContainer()
@@ -47,12 +49,29 @@ Partial Class Form_Agregar_Notas
         'Panel1
         '
         Me.Panel1.BackColor = System.Drawing.Color.FromArgb(CType(CType(40, Byte), Integer), CType(CType(55, Byte), Integer), CType(CType(71, Byte), Integer))
+        Me.Panel1.Controls.Add(Me.Btn_Cerrar_Ventana)
         Me.Panel1.Controls.Add(Me.Label7)
         Me.Panel1.Dock = System.Windows.Forms.DockStyle.Top
         Me.Panel1.Location = New System.Drawing.Point(0, 0)
         Me.Panel1.Name = "Panel1"
         Me.Panel1.Size = New System.Drawing.Size(380, 40)
         Me.Panel1.TabIndex = 0
+        '
+        'Btn_Cerrar_Ventana
+        '
+        Me.Btn_Cerrar_Ventana.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.Btn_Cerrar_Ventana.BackColor = System.Drawing.Color.FromArgb(CType(CType(40, Byte), Integer), CType(CType(55, Byte), Integer), CType(CType(71, Byte), Integer))
+        Me.Btn_Cerrar_Ventana.FlatAppearance.BorderSize = 0
+        Me.Btn_Cerrar_Ventana.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Btn_Cerrar_Ventana.IconChar = FontAwesome.Sharp.IconChar.Times
+        Me.Btn_Cerrar_Ventana.IconColor = System.Drawing.Color.White
+        Me.Btn_Cerrar_Ventana.IconFont = FontAwesome.Sharp.IconFont.[Auto]
+        Me.Btn_Cerrar_Ventana.IconSize = 20
+        Me.Btn_Cerrar_Ventana.Location = New System.Drawing.Point(340, 0)
+        Me.Btn_Cerrar_Ventana.Name = "Btn_Cerrar_Ventana"
+        Me.Btn_Cerrar_Ventana.Size = New System.Drawing.Size(40, 40)
+        Me.Btn_Cerrar_Ventana.TabIndex = 18
+        Me.Btn_Cerrar_Ventana.UseVisualStyleBackColor = False
         '
         'Label7
         '
@@ -177,6 +196,7 @@ Partial Class Form_Agregar_Notas
         'Panel2
         '
         Me.Panel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.Panel2.Controls.Add(Me.TextBox2)
         Me.Panel2.Controls.Add(Me.TextBox1)
         Me.Panel2.Controls.Add(Me.input_Nota3)
         Me.Panel2.Controls.Add(Me.input_Nota2)
@@ -192,11 +212,22 @@ Partial Class Form_Agregar_Notas
         Me.Panel2.Size = New System.Drawing.Size(380, 450)
         Me.Panel2.TabIndex = 17
         '
+        'TextBox2
+        '
+        Me.TextBox2.Location = New System.Drawing.Point(187, 335)
+        Me.TextBox2.Name = "TextBox2"
+        Me.TextBox2.ReadOnly = True
+        Me.TextBox2.Size = New System.Drawing.Size(162, 20)
+        Me.TextBox2.TabIndex = 22
+        Me.TextBox2.Text = "0"
+        Me.TextBox2.Visible = False
+        '
         'TextBox1
         '
         Me.TextBox1.Location = New System.Drawing.Point(29, 335)
         Me.TextBox1.Name = "TextBox1"
-        Me.TextBox1.Size = New System.Drawing.Size(316, 20)
+        Me.TextBox1.ReadOnly = True
+        Me.TextBox1.Size = New System.Drawing.Size(152, 20)
         Me.TextBox1.TabIndex = 21
         Me.TextBox1.Text = "false"
         Me.TextBox1.Visible = False
@@ -272,4 +303,6 @@ Partial Class Form_Agregar_Notas
     Friend WithEvents LineShape1 As PowerPacks.LineShape
     Friend WithEvents input_Nota2 As TextBox
     Friend WithEvents TextBox1 As TextBox
+    Friend WithEvents TextBox2 As TextBox
+    Friend WithEvents Btn_Cerrar_Ventana As FontAwesome.Sharp.IconButton
 End Class
